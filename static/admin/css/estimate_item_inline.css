@@ -1,0 +1,13 @@
+.inline-group table td.field-quantity input,
+.inline-group table td.field-unit_price input,
+.inline-group table td.field-income_value input {
+  max-width: 90px;
+}
+
+/* Сохраняем выравнивание текста по левому краю */
+.inline-group table td.field-quantity input,
+.inline-group table td.field-unit_price input,
+.inline-group table td.field-income_value input {
+  text-align: left;
+}
+

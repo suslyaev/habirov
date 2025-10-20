@@ -1,0 +1,412 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+
+{% block title %}Создание транзакций по смете | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+{% endblock %}
+
+
+
+
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+{% if is_selected_action %}
+&rsaquo; <a href="{% url 'admin:control_estimateitem_changelist' %}">{% trans 'Estimate items' %}</a>
+&rsaquo; {% trans 'Create transactions for selected items' %}
+{% else %}
+&rsaquo; <a href="{% url 'admin:control_estimate_changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
+&rsaquo; <a href="{% url 'admin:control_estimate_change' estimate.pk %}">{{ estimate|truncatechars:"18" }}</a>
+&rsaquo; {% trans 'Create transactions' %}
+{% endif %}
+</div>
+{% endblock %}
+
+{% block content %}
+{% if is_selected_action %}
+<h1>Создание транзакций для выбранных позиций</h1>
+{% else %}
+<h1>Создание транзакций по смете</h1>
+{% endif %}
+
+<div class="module aligned">
+    <h2>Информация о смете</h2>
+    <div class="form-row">
+        {% if is_selected_action %}
+        <div><strong>Выбрано позиций:</strong> {{ items_data|length }}</div>
+        {% if items_data %}
+        <div><strong>Сметы:</strong> 
+            {% for item_data in items_data %}
+                {% if forloop.first %}{{ item_data.item.estimate }}{% endif %}
+                {% if not forloop.last and item_data.item.estimate != items_data.0.item.estimate %}, {{ item_data.item.estimate }}{% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% else %}
+        <div><strong>Смета:</strong> {{ estimate }}</div>
+        <div><strong>Этап:</strong> {{ estimate.stage }}</div>
+        <div><strong>Объект:</strong> {{ estimate.stage.object }}</div>
+        <div><strong>Проект:</strong> {{ estimate.stage.object.project }}</div>
+        {% endif %}
+    </div>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    
+    <div class="module aligned">
+        <h2>Подтвердите данные для создания транзакций</h2>
+        <p class="help">Проверьте и при необходимости отредактируйте суммы и категории для каждой позиции сметы.</p>
+        
+        {% for item_data in items_data %}
+        <div class="form-row" style="border: 1px solid #ddd; margin: 10px 0; padding: 15px; border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <div>
+                    <h3 style="margin: 0;">{{ item_data.item.get_item_name }}</h3>
+                    <div style="font-size: 14px; color: #666; margin-top: 5px;">
+                        <span id="total_sum_{{ item_data.item.id }}" style="font-weight: bold; color: #333;">
+                            Общая сумма: <span id="total_amount_{{ item_data.item.id }}">0.00</span> руб.
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <label style="margin-right: 15px;">
+                        <input type="checkbox" 
+                               name="include_item_{{ item_data.item.id }}" 
+                               value="1" 
+                               {% if item_data.include_expense|default:True %}checked{% endif %}
+                               onchange="toggleItemFields({{ item_data.item.id }}, this.checked)">
+                        Включить в создание транзакций
+                    </label>
+                </div>
+            </div>
+            
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <!-- Расход -->
+                <div style="flex: 1; min-width: 300px;" id="expense_section_{{ item_data.item.id }}">
+                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <h4 style="color: #dc3545; margin: 0 10px 0 0;">💸 Расход</h4>
+                        <label>
+                            <input type="checkbox" 
+                                   name="include_expense_{{ item_data.item.id }}" 
+                                   value="1" 
+                                   {% if item_data.include_expense|default:True %}checked{% endif %}
+                                   onchange="toggleExpenseFields({{ item_data.item.id }}, this.checked)">
+                            Включить расход
+                        </label>
+                    </div>
+                    <div class="form-row" id="expense_amount_row_{{ item_data.item.id }}">
+                        <label for="expense_amount_{{ item_data.item.id }}">Сумма расхода:</label>
+                        <input type="number" 
+                               name="expense_amount_{{ item_data.item.id }}" 
+                               id="expense_amount_{{ item_data.item.id }}"
+                               value="{{ item_data.expense_amount }}"
+                               step="0.01" 
+                               min="0"
+                               style="width: 120px;">
+                        <span>руб.</span>
+                    </div>
+                    <div class="form-row" id="expense_category_row_{{ item_data.item.id }}">
+                        <label for="expense_category_{{ item_data.item.id }}">Категория расхода:</label>
+                        <select name="expense_category_{{ item_data.item.id }}" 
+                                id="expense_category_{{ item_data.item.id }}"
+                                style="width: 200px;">
+                            <option value="">-- Выберите категорию --</option>
+                            {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-row" id="expense_contractor_row_{{ item_data.item.id }}">
+                        <label for="expense_contractor_{{ item_data.item.id }}">Контрагент расхода:</label>
+                        <select name="expense_contractor_{{ item_data.item.id }}" 
+                                id="expense_contractor_{{ item_data.item.id }}"
+                                style="width: 200px;">
+                            <option value="">-- Выберите контрагента --</option>
+                            {% for contractor in contractors %}
+                            <option value="{{ contractor.id }}">{{ contractor.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Доход -->
+                <div style="flex: 1; min-width: 300px;" id="income_section_{{ item_data.item.id }}">
+                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                        {% if item_data.item.income_type %}
+                        <h4 style="color: #28a745; margin: 0 10px 0 0;">💰 Доход ({{ item_data.item.get_income_display }})</h4>
+                        {% else %}
+                        <h4 style="color: #28a745; margin: 0 10px 0 0;">💰 Доход (дополнительный)</h4>
+                        {% endif %}
+                        <label>
+                            <input type="checkbox" 
+                                   name="include_income_{{ item_data.item.id }}" 
+                                   value="1" 
+                                   {% if item_data.include_income|default:item_data.item.income_type %}checked{% endif %}
+                                   onchange="toggleIncomeFields({{ item_data.item.id }}, this.checked)">
+                            Включить доход
+                        </label>
+                    </div>
+                    <div class="form-row" id="income_amount_row_{{ item_data.item.id }}">
+                        <label for="income_amount_{{ item_data.item.id }}">Сумма дохода:</label>
+                        <input type="number" 
+                               name="income_amount_{{ item_data.item.id }}" 
+                               id="income_amount_{{ item_data.item.id }}"
+                               value="{% if item_data.item.income_type %}{{ item_data.income_amount }}{% else %}0{% endif %}"
+                               step="0.01" 
+                               min="0"
+                               style="width: 120px;">
+                        <span>руб.</span>
+                    </div>
+                    <div class="form-row" id="income_category_row_{{ item_data.item.id }}">
+                        <label for="income_category_{{ item_data.item.id }}">Категория дохода:</label>
+                        <select name="income_category_{{ item_data.item.id }}" 
+                                id="income_category_{{ item_data.item.id }}"
+                                style="width: 200px;">
+                            <option value="">-- Выберите категорию --</option>
+                            {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-row" id="income_contractor_row_{{ item_data.item.id }}">
+                        <label for="income_contractor_{{ item_data.item.id }}">Контрагент дохода:</label>
+                        <select name="income_contractor_{{ item_data.item.id }}" 
+                                id="income_contractor_{{ item_data.item.id }}"
+                                style="width: 200px;">
+                            <option value="">-- Выберите контрагента --</option>
+                            {% for contractor in contractors %}
+                            <option value="{{ contractor.id }}">{{ contractor.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    {% if not item_data.item.income_type %}
+                    <div class="form-row" id="income_description_row_{{ item_data.item.id }}">
+                        <label for="income_description_{{ item_data.item.id }}">Описание дохода:</label>
+                        <input type="text" 
+                               name="income_description_{{ item_data.item.id }}" 
+                               id="income_description_{{ item_data.item.id }}"
+                               placeholder="Например: Дополнительная работа, Премия и т.д."
+                               style="width: 300px;">
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Дополнительная информация -->
+            <div style="margin-top: 10px; padding: 10px; background-color: #f8f9fa; border-radius: 4px; font-size: 12px;">
+                <strong>Детали:</strong>
+                Количество: {{ item_data.item.quantity }} {{ item_data.item.get_unit }} | 
+                Цена за единицу: {{ item_data.item.unit_price }} руб. | 
+                Базовая цена: {{ item_data.item.base_price }} руб. | 
+                Для клиента: {{ item_data.item.client_price }} руб. | 
+                Для исполнителя: {{ item_data.item.contractor_price }} руб.
+
+            </div>
+        </div>
+        {% empty %}
+        <p style="color: #6c757d; font-style: italic;">В смете нет элементов для создания транзакций.</p>
+        {% endfor %}
+    </div>
+    
+    <div class="submit-row">
+        <input type="submit" value="✅ Создать транзакции" class="default" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; font-weight: bold;">
+        {% if is_selected_action %}
+        <a href="{% url 'admin:control_estimateitem_changelist' %}" class="button" style="background-color: #6c757d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin-left: 10px;">❌ Отмена</a>
+        {% else %}
+        <a href="{% url 'admin:control_estimate_change' estimate.pk %}" class="button" style="background-color: #6c757d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin-left: 10px;">❌ Отмена</a>
+        {% endif %}
+    </div>
+</form>
+
+<style>
+.form-row {
+    margin: 10px 0;
+}
+.form-row label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+.form-row input, .form-row select {
+    margin: 0 5px;
+}
+.submit-row {
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+.disabled-section {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+</style>
+
+<script>
+function toggleItemFields(itemId, enabled) {
+    const expenseSection = document.getElementById('expense_section_' + itemId);
+    const incomeSection = document.getElementById('income_section_' + itemId);
+    
+    if (enabled) {
+        expenseSection.classList.remove('disabled-section');
+        if (incomeSection) incomeSection.classList.remove('disabled-section');
+    } else {
+        expenseSection.classList.add('disabled-section');
+        if (incomeSection) incomeSection.classList.add('disabled-section');
+    }
+}
+
+function toggleExpenseFields(itemId, enabled) {
+    const amountRow = document.getElementById('expense_amount_row_' + itemId);
+    const categoryRow = document.getElementById('expense_category_row_' + itemId);
+    const contractorRow = document.getElementById('expense_contractor_row_' + itemId);
+    
+    if (enabled) {
+        amountRow.classList.remove('disabled-section');
+        categoryRow.classList.remove('disabled-section');
+        if (contractorRow) contractorRow.classList.remove('disabled-section');
+    } else {
+        amountRow.classList.add('disabled-section');
+        categoryRow.classList.add('disabled-section');
+        if (contractorRow) contractorRow.classList.add('disabled-section');
+    }
+}
+
+function toggleIncomeFields(itemId, enabled) {
+    const amountRow = document.getElementById('income_amount_row_' + itemId);
+    const categoryRow = document.getElementById('income_category_row_' + itemId);
+    const contractorRow = document.getElementById('income_contractor_row_' + itemId);
+    const descriptionRow = document.getElementById('income_description_row_' + itemId);
+    
+    if (enabled) {
+        amountRow.classList.remove('disabled-section');
+        categoryRow.classList.remove('disabled-section');
+        if (contractorRow) contractorRow.classList.remove('disabled-section');
+        if (descriptionRow) descriptionRow.classList.remove('disabled-section');
+    } else {
+        amountRow.classList.add('disabled-section');
+        categoryRow.classList.add('disabled-section');
+        if (contractorRow) contractorRow.classList.add('disabled-section');
+        if (descriptionRow) descriptionRow.classList.add('disabled-section');
+    }
+}
+
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    // Применяем начальные состояния для всех элементов
+    {% for item_data in items_data %}
+    toggleItemFields({{ item_data.item.id }}, document.querySelector('input[name="include_item_{{ item_data.item.id }}"]').checked);
+    toggleExpenseFields({{ item_data.item.id }}, document.querySelector('input[name="include_expense_{{ item_data.item.id }}"]').checked);
+    {% if item_data.item.income_type %}
+    toggleIncomeFields({{ item_data.item.id }}, document.querySelector('input[name="include_income_{{ item_data.item.id }}"]').checked);
+    {% endif %}
+    {% endfor %}
+    
+    // Инициализируем Select2 для категорий
+    initSelect2();
+    
+    // Инициализируем подсчет сумм
+    initAmountCalculation();
+});
+
+function initSelect2() {
+    // Инициализируем Select2 для всех select полей категорий и контрагентов
+    const allSelects = document.querySelectorAll('select[name*="category"], select[name*="contractor"]');
+    allSelects.forEach(function(select) {
+        if (window.jQuery) {
+            const placeholder = select.name.includes('category') ? '-- Выберите категорию --' : '-- Выберите контрагента --';
+            window.jQuery(select).select2({
+                placeholder: placeholder,
+                allowClear: true,
+                width: '200px',
+                language: 'ru'
+            });
+        }
+    });
+}
+
+function initAmountCalculation() {
+    // Добавляем обработчики для подсчета сумм
+    {% for item_data in items_data %}
+    const expenseInput{{ item_data.item.id }} = document.getElementById('expense_amount_{{ item_data.item.id }}');
+    const incomeInput{{ item_data.item.id }} = document.getElementById('income_amount_{{ item_data.item.id }}');
+    const expenseCheckbox{{ item_data.item.id }} = document.querySelector('input[name="include_expense_{{ item_data.item.id }}"]');
+    const incomeCheckbox{{ item_data.item.id }} = document.querySelector('input[name="include_income_{{ item_data.item.id }}"]');
+    
+    if (expenseInput{{ item_data.item.id }}) {
+        expenseInput{{ item_data.item.id }}.addEventListener('input', function() {
+            calculateTotal({{ item_data.item.id }});
+        });
+    }
+    
+    if (incomeInput{{ item_data.item.id }}) {
+        incomeInput{{ item_data.item.id }}.addEventListener('input', function() {
+            calculateTotal({{ item_data.item.id }});
+        });
+    }
+    
+    if (expenseCheckbox{{ item_data.item.id }}) {
+        expenseCheckbox{{ item_data.item.id }}.addEventListener('change', function() {
+            calculateTotal({{ item_data.item.id }});
+        });
+    }
+    
+    if (incomeCheckbox{{ item_data.item.id }}) {
+        incomeCheckbox{{ item_data.item.id }}.addEventListener('change', function() {
+            calculateTotal({{ item_data.item.id }});
+        });
+    }
+    
+    // Инициализируем подсчет при загрузке
+    calculateTotal({{ item_data.item.id }});
+    {% endfor %}
+}
+
+function calculateTotal(itemId) {
+    const expenseInput = document.getElementById('expense_amount_' + itemId);
+    const incomeInput = document.getElementById('income_amount_' + itemId);
+    const expenseCheckbox = document.querySelector('input[name="include_expense_' + itemId + '"]');
+    const incomeCheckbox = document.querySelector('input[name="include_income_' + itemId + '"]');
+    const totalElement = document.getElementById('total_amount_' + itemId);
+    
+    if (!totalElement) return;
+    
+    let total = 0;
+    
+    // Добавляем расход, если включен
+    if (expenseInput && expenseCheckbox && expenseCheckbox.checked) {
+        const expenseValue = parseFloat(expenseInput.value) || 0;
+        total += expenseValue;
+    }
+    
+    // Добавляем доход, если включен
+    if (incomeInput && incomeCheckbox && incomeCheckbox.checked) {
+        const incomeValue = parseFloat(incomeInput.value) || 0;
+        total += incomeValue;
+    }
+    
+    // Обновляем отображение
+    totalElement.textContent = total.toFixed(2);
+    
+    // Меняем цвет в зависимости от суммы
+    const totalSumElement = document.getElementById('total_sum_' + itemId);
+    if (totalSumElement) {
+        if (total > 0) {
+            totalSumElement.style.color = '#28a745'; // Зеленый
+        } else {
+            totalSumElement.style.color = '#6c757d'; // Серый
+        }
+    }
+}
+
+
+</script>
+{% endblock %}

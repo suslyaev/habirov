@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual envs
+env/
+venv/
+.venv/
+
+# Django
+*.log
+local_settings.py
+media/
+staticfiles/
+
+# Databases (local)
+*.sqlite3
+*.sqlite3-journal
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDE/Editor
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node / Frontend
+node_modules/
+
+# Cursor/Agent tooling
+.cursor/
+.agent-tools/
+
+# Environment files
+.env
+.env.*
+
+# Compiled assets / Maps
+*.min.js.map
+*.map

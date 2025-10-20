@@ -1,0 +1,55 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}Экспорт сметы | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+  › <a href="{% url 'admin:control_estimate_changelist' %}">{% trans 'Estimates' %}</a>
+  › <a href="{% url 'admin:control_estimate_change' estimate.pk %}">{{ estimate|truncatechars:"18" }}</a>
+  › Экспорт
+  </div>
+{% endblock %}
+
+{% block content %}
+<h1>Экспорт сметы</h1>
+
+<form method="get" action="{% url 'admin:control_estimate_export_preview' estimate.pk %}" style="margin-bottom:16px;">
+  <fieldset class="module aligned">
+    <div class="form-row">
+      <label>Аудитория:</label>
+      <div class="audience-options">
+        <label class="aud-opt"><input type="radio" name="audience" value="self" {% if audience == 'self' %}checked{% endif %}> Для себя (себестоимость)</label>
+        <label class="aud-opt"><input type="radio" name="audience" value="client" {% if audience == 'client' %}checked{% endif %}> Для клиента</label>
+        <label class="aud-opt"><input type="radio" name="audience" value="contractor" {% if audience == 'contractor' %}checked{% endif %}> Для исполнителя</label>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="submit-row">
+    <a href="#" class="button default" onclick="this.closest('form').submit(); return false;">Предпросмотр (HTML)</a>
+    <a class="button" href="{% url 'admin:control_estimate_change' estimate.pk %}" style="margin-left:8px;">Отмена</a>
+  </div>
+</form>
+
+<script>
+(function(){
+  var style = document.createElement('style');
+  style.textContent = '.audience-options .aud-opt{display:block;margin-top:6px;}';
+  document.head.appendChild(style);
+  var form = document.querySelector('form');
+  var xlsx = document.getElementById('export-xlsx');
+  if (xlsx) {
+    xlsx.addEventListener('click', function(e){
+      e.preventDefault();
+      var audience = (form.querySelector('input[name="audience"]:checked')||{}).value || 'client';
+      var url = '{% url 'admin:control_estimate_export_xlsx' estimate.pk %}' + '?audience=' + encodeURIComponent(audience);
+      window.location.href = url;
+    });
+  }
+})();
+</script>
+{% endblock %}
+
+

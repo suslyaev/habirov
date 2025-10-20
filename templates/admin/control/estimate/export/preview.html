@@ -1,0 +1,297 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}Смета | {{ estimate.stage.object }}{% endblock %}
+
+{% block content %}
+<h1 class="screen-title">{{ estimate.stage }}</h1>
+<h1 class="print-only" style="display:none;">{{ estimate.stage }}</h1>
+<p class="audience-label">Аудитория: {% if audience == 'self' %}Для себя{% elif audience == 'contractor' %}Для исполнителя{% else %}Для клиента{% endif %}</p>
+
+<style>
+.export-table { width: 100%; table-layout: fixed; }
+.export-table colgroup col:nth-child(1) { width: 45%; }
+.export-table colgroup col:nth-child(2) { width: 12%; }
+.export-table colgroup col:nth-child(3) { width: 10%; }
+.export-table colgroup col:nth-child(4) { width: 15%; }
+.export-table colgroup col:nth-child(5) { width: 14%; }
+.export-table colgroup col:nth-child(6) { width: 4%; }
+.num { text-align: right; }
+.muted { color:#666; }
+.ctrl { margin: 10px 0; }
+.ctrl .button { margin-left: 8px; }
+input[type=number] { width: 100%; box-sizing: border-box; }
+input[type=text] { width: 100%; box-sizing: border-box; }
+tfoot td { font-weight: 600; }
+.num input { text-align: right; }
+.print-only { display: none; }
+.print-val { display: none; }
+/* Печать: скрыть админ-хром и кнопки */
+@media print {
+  #header, .breadcrumbs, .object-tools, .submit-row, .ctrl { display: none !important; }
+  .audience-label, .screen-title { display: none !important; }
+  .print-only { display: block !important; }
+  input, textarea, select { display: none !important; }
+  .print-val { display: inline !important; }
+  /* убрать спиннеры у числовых полей, чтобы выглядело как текст */
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type=number] { -moz-appearance: textfield; }
+  /* скрыть иконки удаления в печати */
+  .del-row, .del-extra { display: none !important; }
+  /* на печати числа показываем с двумя знаками через data-value */
+  .qty, .extra-qty, .extra-price { appearance: none; }
+}
+</style>
+
+<h2>Стоимость материалов</h2>
+<table class="listing export-table" id="tbl-materials">
+  <colgroup>
+    <col><col><col><col><col><col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Наименование</th>
+      <th>Ед.</th>
+      <th class="num">Кол-во</th>
+      <th class="num">Цена</th>
+      <th class="num">Сумма</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in materials_data %}
+    <tr>
+      <td>{{ item.name }}</td>
+      <td>{{ item.unit }}</td>
+      <td class="num"><span class="qty" data-value="{{ item.quantity|floatformat:2 }}">{{ item.quantity|floatformat:2 }}</span></td>
+      <td class="num"><input type="number" class="unit-price" value="{{ item.unit_price_str }}" step="0.01" min="0"><span class="print-val price-print">{{ item.unit_price_str }}</span></td>
+      <td class="num total">{{ item.total_str }}</td>
+      <td class="num"><a href="#" class="del-row" title="Удалить">🗑</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4" class="num">Итого по материалам:</td>
+      <td class="num" id="sum-materials">{{ total_materials_str }}</td>
+    </tr>
+  </tfoot>
+</table>
+<div class="ctrl">
+  <button type="button" class="button" id="add-material-row">Добавить строку</button>
+  <span class="muted">(в раздел материалов)</span>
+</div>
+
+<h2>Стоимость работ</h2>
+<table class="listing export-table" id="tbl-works">
+  <colgroup>
+    <col><col><col><col><col><col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Наименование</th>
+      <th>Ед.</th>
+      <th class="num">Кол-во</th>
+      <th class="num">Цена</th>
+      <th class="num">Сумма</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in works_data %}
+    <tr>
+      <td>{{ item.name }}</td>
+      <td>{{ item.unit }}</td>
+      <td class="num"><span class="qty" data-value="{{ item.quantity|floatformat:2 }}">{{ item.quantity|floatformat:2 }}</span></td>
+      <td class="num"><input type="number" class="unit-price" value="{{ item.unit_price_str }}" step="0.01" min="0"><span class="print-val price-print">{{ item.unit_price_str }}</span></td>
+      <td class="num total">{{ item.total_str }}</td>
+      <td class="num"><a href="#" class="del-row" title="Удалить">🗑</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4" class="num">Итого по работам:</td>
+      <td class="num" id="sum-works">{{ total_works_str }}</td>
+    </tr>
+  </tfoot>
+</table>
+<div class="ctrl">
+  <button type="button" class="button" id="add-work-row">Добавить строку</button>
+  <span class="muted">(в раздел работ)</span>
+</div>
+
+<div id="extras-section">
+<h2>Дополнительные расходы</h2>
+<table class="listing export-table" id="tbl-extras">
+  <colgroup>
+    <col><col><col><col><col><col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Наименование</th>
+      <th class="muted">Ед.</th>
+      <th class="muted num">Кол-во</th>
+      <th class="num">Цена</th>
+      <th class="num">Сумма</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4" class="num">Итого доп. расходы:</td>
+      <td class="num" id="sum-extras">0.00</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+<div class="ctrl">
+  <button type="button" class="button" id="add-extra">Добавить строку</button>
+</div>
+</div>
+
+<h2>Итого</h2>
+<p style="text-align:right; font-size:16px; font-weight:700;">Общая сумма: <span id="sum-overall">{{ overall_total_str }}</span></p>
+
+<div class="submit-row" style="margin-top:12px;">
+  <a href="{% url 'admin:control_estimate_export' estimate.pk %}" class="button">Назад</a>
+  <a href="#" class="button" onclick="handlePrint(); return false;">Печать</a>
+  <a href="{% url 'admin:control_estimate_change' estimate.pk %}" class="button">Закрыть</a>
+  </div>
+<script>
+(function(){
+  function recalcTable(tblId, sumCellId){
+    var tbl = document.getElementById(tblId); if(!tbl) return 0;
+    var sum = 0;
+    tbl.querySelectorAll('tbody tr').forEach(function(tr){
+      var qtyEl = tr.querySelector('.qty');
+      var qtyInp = tr.querySelector('.qty-input');
+      var upEl = tr.querySelector('.unit-price');
+      var totalEl = tr.querySelector('.total');
+      var qty = qtyInp ? (parseFloat(qtyInp.value.replace(',', '.'))||0) : (parseFloat(qtyEl && qtyEl.getAttribute('data-value'))||0);
+      var up = parseFloat(upEl && upEl.value) || 0;
+      var total = qty * up;
+      if (qtyEl) { qtyEl.setAttribute('data-value', qty.toFixed(2)); qtyEl.textContent = qty.toFixed(2); }
+      if (totalEl) totalEl.textContent = total.toFixed(2);
+      sum += total;
+    });
+    var cell = document.getElementById(sumCellId); if(cell) cell.textContent = sum.toFixed(2);
+    return sum;
+  }
+  function recalcExtras(){
+    var tbl = document.getElementById('tbl-extras'); if(!tbl) return 0;
+    var sum = 0;
+    tbl.querySelectorAll('tbody tr').forEach(function(tr){
+      var qty = parseFloat((tr.querySelector('.extra-qty')||{}).value?.toString().replace(',', '.')) || 0;
+      var price = parseFloat((tr.querySelector('.extra-price')||{}).value?.toString().replace(',', '.')) || 0;
+      var total = qty * price;
+      var totalEl = tr.querySelector('.extra-total'); if (totalEl) totalEl.textContent = total.toFixed(2);
+      sum += total;
+    });
+    var cell = document.getElementById('sum-extras'); if(cell) cell.textContent = sum.toFixed(2);
+    return sum;
+  }
+  function recalcAll(){
+    var m = recalcTable('tbl-materials','sum-materials');
+    var w = recalcTable('tbl-works','sum-works');
+    var e = recalcExtras();
+    var overall = document.getElementById('sum-overall');
+    if (overall) overall.textContent = (m + w + e).toFixed(2);
+  }
+  function bindInputs(){
+    document.querySelectorAll('.unit-price').forEach(function(inp){
+      inp.addEventListener('input', function(){
+        var v = parseFloat((inp.value||'').toString().replace(',', '.')) || 0;
+        var span = inp.parentElement.querySelector('.price-print');
+        if (span) span.textContent = v.toFixed(2);
+        recalcAll();
+      });
+      inp.addEventListener('change', function(){
+        var v = parseFloat((inp.value||'').toString().replace(',', '.')) || 0;
+        var span = inp.parentElement.querySelector('.price-print');
+        if (span) span.textContent = v.toFixed(2);
+        recalcAll();
+      });
+    });
+    document.querySelectorAll('.del-row').forEach(function(a){
+      a.addEventListener('click', function(e){ e.preventDefault(); var tr=this.closest('tr'); tr?.remove(); recalcAll(); });
+    });
+  }
+  function addExtraRow(){
+    var tbody = document.querySelector('#tbl-extras tbody');
+    if(!tbody) return;
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td><input type="text" class="extra-name" placeholder="Описание"/><span class="print-val extra-name-print"></span></td>'+
+                   '<td class="muted"></td>'+
+                   '<td class="num"><input type="number" class="extra-qty" step="0.01" min="0" value="1"/><span class="print-val extra-qty-print">1.00</span></td>'+
+                   '<td class="num"><input type="number" class="extra-price" step="0.01" min="0" value="0.00"/><span class="print-val extra-price-print">0.00</span></td>'+
+                   '<td class="num extra-total">0.00</td>'+
+                   '<td><a href="#" class="del-extra" title="Удалить">🗑</a></td>';
+    tbody.appendChild(tr);
+    tr.querySelector('.extra-name').addEventListener('input', function(){
+      var s = tr.querySelector('.extra-name-print'); if (s) s.textContent = this.value || '';
+    });
+    tr.querySelector('.extra-qty').addEventListener('input', function(){
+      var v = parseFloat((this.value||'').toString().replace(',', '.')) || 0;
+      var s = tr.querySelector('.extra-qty-print'); if (s) s.textContent = v.toFixed(2);
+      recalcAll();
+    });
+    tr.querySelector('.extra-price').addEventListener('input', function(){
+      var v = parseFloat((this.value||'').toString().replace(',', '.')) || 0;
+      var s = tr.querySelector('.extra-price-print'); if (s) s.textContent = v.toFixed(2);
+      recalcAll();
+    });
+    tr.querySelector('.del-extra').addEventListener('click', function(e){ e.preventDefault(); tr.remove(); recalcAll(); });
+    recalcAll();
+  }
+  function addRowTo(tableId){
+    var tbody = document.querySelector('#'+tableId+' tbody'); if(!tbody) return;
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td><input type="text" class="name-input" placeholder="Наименование"/><span class="print-val name-print"></span></td>'+
+                   '<td><input type="text" class="unit-input" placeholder="ед."/></td>'+
+                   '<td class="num"><input type="number" class="qty-input" step="0.01" min="0" value="1"/><span class="print-val qty-print">1.00</span></td>'+
+                   '<td class="num"><input type="number" class="unit-price" step="0.01" min="0" value="0.00"/><span class="print-val price-print">0.00</span></td>'+
+                   '<td class="num total">0.00</td>'+
+                   '<td class="num"><a href="#" class="del-row" title="Удалить">🗑</a></td>';
+    tbody.appendChild(tr);
+    tr.querySelector('.name-input').addEventListener('input', function(){
+      var s = tr.querySelector('.name-print'); if (s) s.textContent = this.value || '';
+    });
+    tr.querySelector('.qty-input').addEventListener('input', function(){
+      var v = parseFloat((this.value||'').toString().replace(',', '.')) || 0;
+      var s = tr.querySelector('.qty-print'); if (s) s.textContent = v.toFixed(2);
+      recalcAll();
+    });
+    tr.querySelector('.unit-price').addEventListener('input', function(){
+      var v = parseFloat((this.value||'').toString().replace(',', '.')) || 0;
+      var s = tr.querySelector('.price-print'); if (s) s.textContent = v.toFixed(2);
+      recalcAll();
+    });
+    tr.querySelector('.del-row').addEventListener('click', function(e){ e.preventDefault(); tr.remove(); recalcAll(); });
+    recalcAll();
+  }
+  document.getElementById('add-extra')?.addEventListener('click', addExtraRow);
+  document.getElementById('add-material-row')?.addEventListener('click', function(){ addRowTo('tbl-materials'); });
+  document.getElementById('add-work-row')?.addEventListener('click', function(){ addRowTo('tbl-works'); });
+  bindInputs();
+  recalcAll();
+})();
+function handlePrint(){
+  var extras = document.getElementById('extras-section');
+  var tbody = document.querySelector('#tbl-extras tbody');
+  var hadExtras = true;
+  if (extras && tbody && tbody.children.length === 0) {
+    hadExtras = false;
+    extras.style.display = 'none';
+  }
+  window.print();
+  // вернуть видимость после печати
+  if (!hadExtras && extras) { extras.style.display = ''; }
+}
+</script>
+{% endblock %}
+
+

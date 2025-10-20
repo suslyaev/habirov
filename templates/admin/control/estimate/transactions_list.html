@@ -1,0 +1,171 @@
+{% load i18n %}
+<div id="tx-list" data-base-url="{{ base_url }}" data-per-page="{{ per_page }}">
+  <div id="tx-msg" style="display:none; margin-bottom:6px; padding:6px 8px; border:1px solid #f0ad4e; background:#fff3cd; color:#8a6d3b;"></div>
+  <div id="tx-totals" style="font-weight:600; margin-bottom:8px;">
+    <span>Доход (все): <span id="tx-all-income">{{ all_total_income }}</span></span>
+    <span style="margin-left:12px;">Расход (все): <span id="tx-all-expense">{{ all_total_expense }}</span></span>
+    <span style="margin-left:12px;">Итог (все): <span id="tx-all-net">{{ all_total_net }}</span></span>
+    <span style="margin-left:18px;">Выбрано — Доход: <span id="tx-sel-income">0.00</span></span>
+    <span style="margin-left:12px;">Расход: <span id="tx-sel-expense">0.00</span></span>
+    <span style="margin-left:12px;">Итог: <span id="tx-sel-net">0.00</span></span>
+  </div>
+
+  <table class="listing full-width" style="width:100%">
+    <thead>
+      <tr>
+        <th style="width:28px;"><input type="checkbox" id="tx-select-all"></th>
+        <th>{% trans 'Дата' %}</th>
+        <th>{% trans 'Тип' %}</th>
+        <th>{% trans 'Категория' %}</th>
+        <th>{% trans 'Контрагент' %}</th>
+        <th style="text-align:right;">{% trans 'Сумма' %}</th>
+        <th>{% trans 'Описание' %}</th>
+        <th style="text-align:center; width:110px;">{% trans 'Действия' %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for tx in page_obj.object_list %}
+      <tr>
+        <td><input type="checkbox" class="tx-select" value="{{ tx.id }}" data-type="{{ tx.transaction_type }}" data-amount="{{ tx.amount }}"></td>
+        <td>{{ tx.date }}</td>
+        <td>{{ tx.get_transaction_type_display }}</td>
+        <td>{{ tx.category }}</td>
+        <td>{{ tx.contractor }}</td>
+        <td style="text-align:right; white-space:nowrap;">{{ tx.amount }}</td>
+        <td>{{ tx.description }}</td>
+        <td style="text-align:center; white-space:nowrap;">
+          <a href="{% url 'admin:control_transaction_change' tx.pk %}" title="Изменить" style="text-decoration:none; margin-right:6px;">✏</a>
+          <a href="{% url 'admin:control_transaction_delete' tx.pk %}" title="Удалить" style="text-decoration:none; color:#dc3545;">🗑</a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="7" style="color:#666; font-style:italic;">Нет транзакций</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="paginator" style="margin-top:8px; display:flex; justify-content:space-between; align-items:center; gap: 12px;">
+    <div>
+      {% if page_obj.has_previous %}
+        <a href="#" class="tx-page" data-page="{{ page_obj.previous_page_number }}">«</a>
+      {% else %}
+        <span class="disabled">«</span>
+      {% endif %}
+      <span class="curr">Стр. {{ page_obj.number }} из {{ paginator.num_pages }}</span>
+      {% if page_obj.has_next %}
+        <a href="#" class="tx-page" data-page="{{ page_obj.next_page_number }}">»</a>
+      {% else %}
+        <span class="disabled">»</span>
+      {% endif %}
+    </div>
+    <div>
+      <label for="tx-per-page">На странице:</label>
+      <input id="tx-per-page" type="number" min="5" max="500" step="5" value="{{ per_page|default:20 }}" style="width:80px;">
+      <button type="button" id="tx-per-page-apply" class="button" style="margin-left:6px;">Применить</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function initTxList(rootEl){
+    var listContainer = rootEl; // #tx-list
+    var baseUrl = listContainer.getAttribute('data-base-url') || '';
+    var msg = listContainer.querySelector('#tx-msg');
+
+    function log(msgText){
+      try { console.log('[TX]', msgText); } catch(e) {}
+    }
+    function showMsg(text){
+      if (!msg) return; msg.textContent = text; msg.style.display = 'block';
+      setTimeout(function(){ if (msg) msg.style.display = 'none'; }, 2500);
+    }
+    log('init list; per_page=' + ((listContainer.querySelector('#tx-per-page')||{}).value || 'n/a'));
+
+    function recalcSelectedTotals() {
+      var checkboxes = listContainer.querySelectorAll('.tx-select:checked');
+      var income = 0, expense = 0;
+      checkboxes.forEach(function(cb){
+        var type = cb.getAttribute('data-type');
+        var amount = parseFloat(cb.getAttribute('data-amount')) || 0;
+        if (type === 'income') income += amount; else expense += amount;
+      });
+      var net = income - expense;
+      var elI = listContainer.querySelector('#tx-sel-income'); if (elI) elI.textContent = income.toFixed(2);
+      var elE = listContainer.querySelector('#tx-sel-expense'); if (elE) elE.textContent = expense.toFixed(2);
+      var elN = listContainer.querySelector('#tx-sel-net'); if (elN) elN.textContent = net.toFixed(2);
+    }
+
+    // select all
+    var selectAll = listContainer.querySelector('#tx-select-all');
+    if (selectAll) {
+      selectAll.addEventListener('change', function(){
+        listContainer.querySelectorAll('.tx-select').forEach(function(cb){ cb.checked = selectAll.checked; });
+        recalcSelectedTotals();
+      });
+    }
+    listContainer.querySelectorAll('.tx-select').forEach(function(cb){
+      cb.addEventListener('change', recalcSelectedTotals);
+    });
+
+    // pagination links
+    listContainer.querySelectorAll('a.tx-page').forEach(function(a){
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        var page = this.getAttribute('data-page');
+        var perPage = (listContainer.querySelector('#tx-per-page') || {}).value || (listContainer.getAttribute('data-per-page') || '20');
+        var url = baseUrl + '?page=' + encodeURIComponent(page) + '&per_page=' + encodeURIComponent(perPage);
+        log('paginate click -> ' + url);
+        fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' }})
+          .then(function(r){ if(!r.ok){ throw new Error('HTTP ' + r.status); } return r.text(); })
+          .then(function(html){
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(html, 'text/html');
+            var newList = doc.querySelector('#tx-list');
+            if (newList) {
+              listContainer.replaceWith(newList);
+              initTxList(newList);
+              log('paginate success');
+            } else {
+              log('no #tx-list in response; fallback navigation');
+              window.location.href = url;
+            }
+          })
+          .catch(function(err){ showMsg('Ошибка загрузки: ' + err.message); log('fetch error: ' + err.message); });
+      });
+    });
+
+    // per-page changer
+    var pp = listContainer.querySelector('#tx-per-page');
+    var ppApply = listContainer.querySelector('#tx-per-page-apply');
+    function applyPerPage(){
+      var val = parseInt(pp.value, 10);
+      if (isNaN(val)) val = 20;
+      if (val < 5) val = 5; if (val > 500) val = 500;
+      var url = baseUrl + '?per_page=' + String(val) + '&page=1';
+      log('per-page apply -> ' + url);
+      fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' }})
+        .then(function(r){ if(!r.ok){ throw new Error('HTTP ' + r.status); } return r.text(); })
+        .then(function(html){
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(html, 'text/html');
+          var newList = doc.querySelector('#tx-list');
+          if (newList) {
+            listContainer.replaceWith(newList);
+            initTxList(newList);
+            log('per-page success');
+          } else {
+            log('no #tx-list in response; fallback navigation');
+            window.location.href = url;
+          }
+        })
+        .catch(function(err){ showMsg('Ошибка загрузки: ' + err.message); log('fetch error: ' + err.message); });
+    }
+    if (ppApply) ppApply.addEventListener('click', applyPerPage);
+  }
+
+  var root = document.getElementById('tx-list');
+  if (root) initTxList(root);
+})();
+</script>
+

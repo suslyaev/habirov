@@ -1,0 +1,16 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block object-tools-items %}
+{{ block.super }}
+{% if original.pk %}
+<li>
+  <a href="{% url 'admin:control_estimate_create_transactions' original.pk %}" class="historylink">{% trans 'СОЗДАТЬ ТРАНЗАКЦИИ' %}</a>
+ </li>
+<li>
+  <a href="{% url 'admin:control_estimate_export' original.pk %}" class="historylink">{% trans 'СКАЧАТЬ' %}</a>
+ </li>
+{% endif %}
+{% endblock %}
+
+
