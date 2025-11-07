@@ -217,8 +217,28 @@ tfoot td { font-weight: 600; }
       });
     });
     document.querySelectorAll('.del-row').forEach(function(a){
-      a.addEventListener('click', function(e){ e.preventDefault(); var tr=this.closest('tr'); tr?.remove(); recalcAll(); });
+      a.addEventListener('click', function(e){ e.preventDefault(); var tr=this.closest('tr'); tr?.remove(); recalcSums(); });
     });
+  }
+  
+  function recalcSums(){
+    // Пересчет только итоговых сумм на основе существующих total значений
+    var sumM = 0, sumW = 0;
+    document.querySelectorAll('#tbl-materials tbody tr').forEach(function(tr){
+      var total = parseFloat(tr.querySelector('.total')?.textContent) || 0;
+      sumM += total;
+    });
+    document.querySelectorAll('#tbl-works tbody tr').forEach(function(tr){
+      var total = parseFloat(tr.querySelector('.total')?.textContent) || 0;
+      sumW += total;
+    });
+    var sumE = recalcExtras();
+    var cellM = document.getElementById('sum-materials');
+    var cellW = document.getElementById('sum-works');
+    var overall = document.getElementById('sum-overall');
+    if (cellM) cellM.textContent = sumM.toFixed(2);
+    if (cellW) cellW.textContent = sumW.toFixed(2);
+    if (overall) overall.textContent = (sumM + sumW + sumE).toFixed(2);
   }
   function addExtraRow(){
     var tbody = document.querySelector('#tbl-extras tbody');
@@ -277,7 +297,7 @@ tfoot td { font-weight: 600; }
   document.getElementById('add-material-row')?.addEventListener('click', function(){ addRowTo('tbl-materials'); });
   document.getElementById('add-work-row')?.addEventListener('click', function(){ addRowTo('tbl-works'); });
   bindInputs();
-  recalcAll();
+  recalcSums();  // Используем recalcSums вместо recalcAll при загрузке
 })();
 function handlePrint(){
   var extras = document.getElementById('extras-section');
