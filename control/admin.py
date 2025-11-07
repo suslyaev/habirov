@@ -18,16 +18,14 @@ class CategoryAutocompleteFilter(AutocompleteFilter):
     title = 'Категория'
     field_name = 'category'
 
-class ContractorAutocompleteFilter(AutocompleteFilter):
-    title = 'Контрагент'
-    field_name = 'contractor'
+# ContractorAutocompleteFilter удален - теперь используем CustomUser
 DropdownFilter = ChoiceDropdownFilter = RelatedDropdownFilter = None
 from django.contrib.auth.admin import UserAdmin
 from django import forms
 from .models import (
     CustomUser, Project, Object, Stage, Estimate, EstimateItem,
     WorkType, MaterialType, PriceItem,
-    Contractor, Category, Transaction
+    Category, Transaction
 )
 from .utils import (
     get_transactions_for_estimate_item, get_transactions_for_estimate,
@@ -55,15 +53,7 @@ class ObjectForm(forms.ModelForm):
         }
 
 
-class ContractorForm(forms.ModelForm):
-    class Meta:
-        model = Contractor
-        fields = '__all__'
-        widgets = {
-            'contacts': forms.Textarea(attrs={'rows': 2, 'cols': 40}),
-            'address': forms.Textarea(attrs={'rows': 2, 'cols': 40}),
-            'bank_details': forms.Textarea(attrs={'rows': 2, 'cols': 40}),
-        }
+# ContractorForm удален - больше не нужен
 
 
 class CategoryForm(forms.ModelForm):
@@ -365,14 +355,14 @@ class EstimateAdmin(admin.ModelAdmin):
     def _show_confirmation_form(self, request, estimate):
         """Показать форму подтверждения с редактируемыми полями"""
         from django.shortcuts import render
-        from .models import Category, Contractor
+        from .models import Category
         
         # Получаем все элементы сметы
         items = estimate.items.all()
         
         # Получаем категории и контрагентов для выбора
         categories = Category.objects.filter(is_active=True)
-        contractors = Contractor.objects.filter(is_active=True)
+        contractors = CustomUser.objects.filter(is_active=True)
         
         # Подготавливаем данные для каждого элемента
         items_data = []
@@ -797,7 +787,7 @@ class EstimateItemAdmin(admin.ModelAdmin):
         
         # GET запрос - показываем форму
         categories = Category.objects.filter(is_active=True)
-        contractors = Contractor.objects.filter(is_active=True)
+        contractors = CustomUser.objects.filter(is_active=True)
         
         # Подготавливаем данные для каждой выбранной позиции
         items_data = []
@@ -1375,15 +1365,7 @@ class PriceItemAdmin(admin.ModelAdmin):
     autocomplete_fields = ['material', 'work_type']
 
 
-class ContractorAdmin(admin.ModelAdmin):
-    """Админка для контрагентов"""
-    form = ContractorForm
-    list_display = [
-        'name', 'inn', 'kpp', 'is_active', 'created_at'
-    ]
-    list_filter = ['is_active', 'created_at']
-    search_fields = ['name', 'inn', 'kpp', 'contacts']
-    readonly_fields = ['created_at', 'updated_at']
+# ContractorAdmin удален - теперь контрагенты = пользователи
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -1405,13 +1387,13 @@ class TransactionAdmin(admin.ModelAdmin):
     list_filter = (
         'transaction_type',
         CategoryAutocompleteFilter,
-        ContractorAutocompleteFilter,
         EstimateAutocompleteFilter,
         EstimateItemAutocompleteFilter,
         'date', 'created_at'
     )
     search_fields = [
-        'description', 'contractor__name', 'category__name',
+        'description', 'contractor__first_name', 'contractor__last_name', 
+        'contractor__phone', 'category__name',
         'estimate__stage__name', 'estimate__stage__object__name'
     ]
     readonly_fields = ['created_at', 'updated_at']
@@ -1468,6 +1450,6 @@ admin.site.register(EstimateItem, EstimateItemAdmin)
 admin.site.register(PriceItem, PriceItemAdmin)
 admin.site.register(WorkType, WorkTypeAdmin)
 admin.site.register(MaterialType, MaterialTypeAdmin)
-admin.site.register(Contractor, ContractorAdmin)
+# Contractor удален - используем CustomUser
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Transaction, TransactionAdmin)

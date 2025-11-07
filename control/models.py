@@ -182,25 +182,7 @@ class PriceItem(models.Model):
     def __str__(self):
         return self.name or 'Позиция прайса'
 
-class Contractor(models.Model):
-    """Контрагенты (поставщики, подрядчики, клиенты)"""
-    name = models.CharField('Название', max_length=200)
-    contacts = models.TextField('Контакты', blank=True)
-    address = models.TextField('Адрес', blank=True)
-    inn = models.CharField('ИНН', max_length=12, blank=True)
-    kpp = models.CharField('КПП', max_length=9, blank=True)
-    bank_details = models.TextField('Банковские реквизиты', blank=True)
-    is_active = models.BooleanField('Активен', default=True)
-    created_at = models.DateTimeField('Дата создания', auto_now_add=True)
-    updated_at = models.DateTimeField('Дата обновления', auto_now=True)
-
-    class Meta:
-        verbose_name = 'Контрагент'
-        verbose_name_plural = 'Контрагенты'
-        ordering = ['name']
-
-    def __str__(self):
-        return self.name
+# Модель Contractor удалена - теперь используем CustomUser для контрагентов
 
 
 class Category(models.Model):
@@ -227,7 +209,7 @@ class Project(models.Model):
     name = models.CharField('Название', max_length=200)
     description = models.TextField('Описание', blank=True)
     contractor = models.ForeignKey(
-        Contractor, 
+        CustomUser, 
         on_delete=models.CASCADE, 
         verbose_name='Заказчик',
         related_name='projects'
@@ -242,7 +224,7 @@ class Project(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        return f"{self.name} ({self.contractor.name})"
+        return f"{self.name} ({self.contractor})"
 
 
 class Object(models.Model):
@@ -485,7 +467,7 @@ class Transaction(models.Model):
     amount = models.DecimalField('Сумма', max_digits=15, decimal_places=2)
     transaction_type = models.CharField('Тип операции', max_length=20, choices=TRANSACTION_TYPE_CHOICES)
     category = models.ForeignKey(Category, on_delete=models.PROTECT, verbose_name='Категория')
-    contractor = models.ForeignKey(Contractor, on_delete=models.PROTECT, verbose_name='Контрагент', null=True, blank=True)
+    contractor = models.ForeignKey(CustomUser, on_delete=models.PROTECT, verbose_name='Контрагент', null=True, blank=True)
     
     description = models.CharField('Описание', max_length=200, null=True, blank=True)
     date = models.DateField('Дата', default=timezone.now)

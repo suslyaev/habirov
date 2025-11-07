@@ -1,0 +1,6392 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-09-01T16:10:18.875Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "dssd",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-09-01T16:10:21.492Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "sdfds (dssd)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-09-01T16:10:24.166Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "weffwe - sdfds",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-09-01T16:10:26.828Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "weffwe - fwefwe (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-09-01T16:10:42.509Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Песок",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-09-01T16:10:47.990Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Бетон",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-09-01T16:11:03.196Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета fwefwe - Черновик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u0440\\u043e\\u0447\\u0435\\u0435 - \\u0421\\u043c\\u0435\\u0442\\u0430 fwefwe - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u0440\\u043e\\u0447\\u0435\\u0435 - \\u0421\\u043c\\u0435\\u0442\\u0430 fwefwe - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-09-01T16:11:39.188Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета fwefwe - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d - \\u0421\\u043c\\u0435\\u0442\\u0430 fwefwe - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-09-01T19:13:18.956Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "weffwe - fwefwe (этап 1)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-09-01T19:19:30.506Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "1",
+    "object_repr": "Бензин",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-09-01T19:19:36.479Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Филимон",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-09-01T19:19:42.925Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета fwefwe - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 500 \\u0440\\u0443\\u0431. (2025-09-01)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-09-01T19:28:04.368Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета fwefwe - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-09-02T05:38:01.211Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "ЗЕМЛЯНИЧНАЯ ПОЛЯНА (Филимон)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-09-02T05:38:22.339Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Одноэтажный дом - ЗЕМЛЯНИЧНАЯ ПОЛЯНА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u0410\\u0434\\u0440\\u0435\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-09-02T05:52:49.982Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета fwefwe - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-09-02T06:14:17.260Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "Расход - 2000 руб. (2025-09-02)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-09-02T09:05:26.176Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "Одноэтажный дом - Плита (этап 1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-09-02T09:05:42.796Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "Одноэтажный дом - Стены (этап 2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-09-02T09:06:06.909Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Одноэтажный дом - Армопояс (этап 3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-09-02T09:13:31.401Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "2",
+    "object_repr": "Аванс",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-09-02T09:14:12.376Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Осьминушкин Сергей",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-09-02T09:14:38.504Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "Доход - 2700000 руб. (2025-09-01)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\", \"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\", \"\\u0421\\u0443\\u043c\\u043c\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u042d\\u0442\\u0430\\u043f\", \"\\u0421\\u043c\\u0435\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-09-02T09:15:50.909Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u0435\\u0441\\u043e\\u043a - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u041c\\u0430\\u0442\\u0435\\u0440\\u0438\\u0430\\u043b\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\", \"\\u0426\\u0435\\u043d\\u0430 \\u0437\\u0430 \\u0435\\u0434\\u0438\\u043d\\u0438\\u0446\\u0443\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-09-02T09:16:26.255Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u0435\\u0441\\u043e\\u043a - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u041f\\u0440\\u043e\\u0446\\u0435\\u043d\\u0442\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u0422\\u0438\\u043f \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430\", \"\\u041c\\u0430\\u0442\\u0435\\u0440\\u0438\\u0430\\u043b\", \"\\u0426\\u0435\\u043d\\u0430 \\u0437\\u0430 \\u0435\\u0434\\u0438\\u043d\\u0438\\u0446\\u0443\", \"\\u0412\\u0438\\u0434 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\", \"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-09-02T09:17:15.735Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Арматура",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-09-02T09:17:34.013Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u0422\\u0438\\u043f \\u044d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442\\u0430\", \"\\u041c\\u0430\\u0442\\u0435\\u0440\\u0438\\u0430\\u043b\", \"\\u0426\\u0435\\u043d\\u0430 \\u0437\\u0430 \\u0435\\u0434\\u0438\\u043d\\u0438\\u0446\\u0443\", \"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-09-02T09:18:03.495Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-09-02T09:19:30.104Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Услуги экскаватора jsb",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-09-02T09:20:07.037Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Услуги экскаватора jsb",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-09-02T09:20:33.427Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0423\\u0441\\u043b\\u0443\\u0433\\u0438 \\u044d\\u043a\\u0441\\u043a\\u0430\\u0432\\u0430\\u0442\\u043e\\u0440\\u0430 jsb - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-09-02T09:20:52.294Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Работа",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-09-02T09:20:59.215Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-09-02T09:21:25.004Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Организационные расходы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-09-02T09:21:34.210Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0446\\u0438\\u043e\\u043d\\u043d\\u044b\\u0435 \\u0440\\u0430\\u0441\\u0445\\u043e\\u0434\\u044b - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-09-02T09:21:55.427Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Планер и стульчик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-09-02T09:22:00.747Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Планер и стульчик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0415\\u0434\\u0438\\u043d\\u0438\\u0446\\u0430 \\u0438\\u0437\\u043c\\u0435\\u0440\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-09-02T09:22:14.136Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u043b\\u0430\\u043d\\u0435\\u0440 \\u0438 \\u0441\\u0442\\u0443\\u043b\\u044c\\u0447\\u0438\\u043a - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-09-02T09:22:28.876Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "Аренда виброплиты",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-09-02T09:22:41.286Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u0435\\u043d\\u0434\\u0430 \\u0432\\u0438\\u0431\\u0440\\u043e\\u043f\\u043b\\u0438\\u0442\\u044b - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0423\\u0441\\u043b\\u0443\\u0433\\u0438 \\u044d\\u043a\\u0441\\u043a\\u0430\\u0432\\u0430\\u0442\\u043e\\u0440\\u0430 jsb - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u041f\\u0440\\u043e\\u0446\\u0435\\u043d\\u0442\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u041f\\u0440\\u043e\\u0446\\u0435\\u043d\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-09-02T09:29:03.919Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-09-02T10:14:59.157Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "1",
+    "object_repr": "Арматура шт 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-09-02T10:59:25.321Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-09-02T11:19:56.905Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u0412\\u0438\\u0434 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\", \"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\", \"\\u041f\\u0440\\u043e\\u0446\\u0435\\u043d\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-09-02T11:30:00.864Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u0412\\u0438\\u0434 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-09-02T11:52:55.364Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "4",
+    "object_repr": "Доход - 600.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-09-02T11:52:55.364Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "3",
+    "object_repr": "Расход - 6000.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-09-02T11:53:00.881Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "Расход - 2000.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-09-02T12:14:18.696Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "1",
+    "object_repr": "Песок ам",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u041c\\u0430\\u0442\\u0435\\u0440\\u0438\\u0430\\u043b\", \"\\u0415\\u0434\\u0438\\u043d\\u0438\\u0446\\u0430 \\u0438\\u0437\\u043c\\u0435\\u0440\\u0435\\u043d\\u0438\\u044f\", \"\\u0426\\u0435\\u043d\\u0430 \\u0437\\u0430 \\u0435\\u0434\\u0438\\u043d\\u0438\\u0446\\u0443\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-09-02T12:14:39.035Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "2",
+    "object_repr": "Бетон",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-09-02T12:14:45.297Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "2",
+    "object_repr": "Бетон т",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-09-02T12:15:00.476Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "3",
+    "object_repr": "Арматура",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-09-02T12:15:33.447Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Планер",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-09-02T12:15:48.136Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "4",
+    "object_repr": "Плантер шт",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-09-02T12:16:00.530Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Стульчик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-09-02T12:16:06.409Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "5",
+    "object_repr": "Стульчик шт",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-09-02T12:16:17.003Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "Откат",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-09-02T12:17:17.029Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u0435\\u0441\\u043e\\u043a \\u0430\\u043c - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\", \"\\u0426\\u0435\\u043d\\u0430 \\u0437\\u0430 \\u0435\\u0434\\u0438\\u043d\\u0438\\u0446\\u0443\", \"\\u0412\\u0438\\u0434 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\", \"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\", \"\\u041f\\u0440\\u043e\\u0446\\u0435\\u043d\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-09-02T12:18:38.658Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\", \"\\u0426\\u0435\\u043d\\u0430 \\u0437\\u0430 \\u0435\\u0434\\u0438\\u043d\\u0438\\u0446\\u0443\", \"\\u0412\\u0438\\u0434 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\", \"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-09-02T12:18:55.075Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u0440\\u043e\\u0446\\u0435\\u043d\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-09-02T12:20:22.793Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "6",
+    "object_repr": "Аренда виброплиты ед 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-09-02T12:20:27.710Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "7",
+    "object_repr": "Организационные расходы ед 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-09-02T12:20:31.036Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "8",
+    "object_repr": "Откат ед 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-09-02T12:20:35.635Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "9",
+    "object_repr": "Работа ед 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-09-02T12:20:38.872Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "10",
+    "object_repr": "Услуги экскаватора jsb ед 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-09-02T12:21:43.248Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0423\\u0441\\u043b\\u0443\\u0433\\u0438 \\u044d\\u043a\\u0441\\u043a\\u0430\\u0432\\u0430\\u0442\\u043e\\u0440\\u0430 jsb \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430 \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0446\\u0438\\u043e\\u043d\\u043d\\u044b\\u0435 \\u0440\\u0430\\u0441\\u0445\\u043e\\u0434\\u044b \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u043b\\u0430\\u043d\\u0442\\u0435\\u0440 \\u0448\\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u0426\\u0435\\u043d\\u0430 \\u0437\\u0430 \\u0435\\u0434\\u0438\\u043d\\u0438\\u0446\\u0443\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0421\\u0442\\u0443\\u043b\\u044c\\u0447\\u0438\\u043a \\u0448\\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u041f\\u043e\\u0437\\u0438\\u0446\\u0438\\u044f \\u043f\\u0440\\u0430\\u0439\\u0441\\u0430\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u0426\\u0435\\u043d\\u0430 \\u0437\\u0430 \\u0435\\u0434\\u0438\\u043d\\u0438\\u0446\\u0443\", \"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-09-02T12:21:55.079Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u0435\\u043d\\u0434\\u0430 \\u0432\\u0438\\u0431\\u0440\\u043e\\u043f\\u043b\\u0438\\u0442\\u044b \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-09-02T12:23:34.502Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "3",
+    "object_repr": "Оплата материалов",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-09-02T12:23:42.853Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "4",
+    "object_repr": "Доставка",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-09-02T12:23:53.797Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "5",
+    "object_repr": "Откат",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-09-02T12:24:01.269Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "6",
+    "object_repr": "Оплата работы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-09-02T12:25:04.711Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Какой-то поставщик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-09-02T12:25:15.106Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "ИП Хабиров",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-09-02T12:33:34.624Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "18",
+    "object_repr": "Расход - 5101.20 руб. (2025-09-02)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-09-02T12:33:39.226Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "16",
+    "object_repr": "Расход - 6000.00 руб. (2025-09-02)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-09-02T12:33:43.601Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "11",
+    "object_repr": "Расход - 5040.00 руб. (2025-09-02)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-09-02T12:33:47.190Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "9",
+    "object_repr": "Расход - 153630.00 руб. (2025-09-02)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-09-02T12:33:51.665Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "7",
+    "object_repr": "Расход - 70099.00 руб. (2025-09-02)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-09-02T12:33:55.702Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "Расход - 2700000.00 руб. (2025-09-01)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-09-02T12:44:15.206Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 6000.00 \\u0440\\u0443\\u0431. (2025-09-02)\", \"fields\": [\"\\u041a\\u043e\\u043d\\u0442\\u0440\\u0430\\u0433\\u0435\\u043d\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-09-02T12:47:19.696Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 6000.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 5101.20 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 34008.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 6000.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 34000.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 15000.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 690000.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 25000.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 5040.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 30960.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 153630.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 943750.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 70099.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 430610.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 209000.00 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0414\\u0430\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-09-02T12:52:20.906Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0414\\u043e\\u0445\\u043e\\u0434 - 543 \\u0440\\u0443\\u0431. (2025-09-02)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-09-02T12:53:21.393Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 342 \\u0440\\u0443\\u0431. (2025-09-02)\"}}, {\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 234 \\u0440\\u0443\\u0431. (2025-09-02)\"}}, {\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 23425 \\u0440\\u0443\\u0431. (2025-09-02)\"}}, {\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 324 \\u0440\\u0443\\u0431. (2025-09-02)\"}}, {\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 234 \\u0440\\u0443\\u0431. (2025-09-02)\"}}, {\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 42352 \\u0440\\u0443\\u0431. (2025-09-02)\"}}, {\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 234 \\u0440\\u0443\\u0431. (2025-09-02)\"}}, {\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 252253 \\u0440\\u0443\\u0431. (2025-09-02)\"}}, {\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 235 \\u0440\\u0443\\u0431. (2025-09-02)\"}}, {\"added\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 25 \\u0440\\u0443\\u0431. (2025-09-02)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-09-02T13:06:10.763Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "Доход - 2700000.00 руб. (2025-09-01)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-09-02T13:06:25.362Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "Доход - 2700000.00 руб. (2025-09-01)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u0435\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-09-02T13:14:51.998Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "30",
+    "object_repr": "Расход - 25.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.304Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "29",
+    "object_repr": "Расход - 235.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.304Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "28",
+    "object_repr": "Расход - 252253.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.305Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "27",
+    "object_repr": "Расход - 234.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.305Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "26",
+    "object_repr": "Расход - 42352.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.305Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "25",
+    "object_repr": "Расход - 234.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.305Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "24",
+    "object_repr": "Расход - 324.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.305Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "23",
+    "object_repr": "Расход - 23425.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.305Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "22",
+    "object_repr": "Расход - 234.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.305Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "21",
+    "object_repr": "Расход - 342.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-09-02T13:23:42.305Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "20",
+    "object_repr": "Доход - 543.00 руб. (2025-09-02)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-09-02T13:57:41.972Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0421\\u0442\\u0443\\u043b\\u044c\\u0447\\u0438\\u043a \\u0448\\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041f\\u043b\\u0438\\u0442\\u0430 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\", \"fields\": [\"\\u0412\\u0438\\u0434 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-09-02T13:59:09.747Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Плита - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 5102 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0421\\u0443\\u043c\\u043c\\u0430\"]}}, {\"changed\": {\"name\": \"\\u0422\\u0440\\u0430\\u043d\\u0437\\u0430\\u043a\\u0446\\u0438\\u044f\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434 - 28906 \\u0440\\u0443\\u0431. (2025-09-01)\", \"fields\": [\"\\u0421\\u0443\\u043c\\u043c\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-09-09T05:07:23.941Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Смета Стены - Черновик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-09-09T05:12:00.677Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "11",
+    "object_repr": "Бетон кубометр 8200",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-09-09T05:12:21.631Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "Доставка",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-09-09T05:12:59.931Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "12",
+    "object_repr": "Доставка ед 700",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-09-09T05:14:17.580Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Смета Стены - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u043a\\u0443\\u0431\\u043e\\u043c\\u0435\\u0442\\u0440 8200 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430 \\u0435\\u0434 700 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430 \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-09-09T05:14:51.483Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Смета Стены - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u043a\\u0443\\u0431\\u043e\\u043c\\u0435\\u0442\\u0440 8200 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u0412\\u0438\\u0434 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\", \"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430 \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u0412\\u0438\\u0434 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\", \"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2025-09-09T05:15:10.879Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Смета Стены - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u043a\\u0443\\u0431\\u043e\\u043c\\u0435\\u0442\\u0440 8200 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u041f\\u0440\\u043e\\u0446\\u0435\\u043d\\u0442\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430 \\u0435\\u0434 700 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u0412\\u0438\\u0434 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\", \"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}, {\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430 \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u041f\\u0440\\u043e\\u0446\\u0435\\u043d\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2025-09-09T05:19:27.337Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Смета Стены - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430 \\u0435\\u0434 700 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\", \"fields\": [\"\\u0417\\u043d\\u0430\\u0447\\u0435\\u043d\\u0438\\u0435 \\u0434\\u043e\\u0445\\u043e\\u0434\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2025-09-09T05:20:37.188Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Смета Стены - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0421\\u0442\\u0435\\u043d\\u044b - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "32",
+    "object_repr": "Расход - 10000.00 руб. (2025-09-09)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "31",
+    "object_repr": "Расход - 65000.00 руб. (2025-09-09)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "19",
+    "object_repr": "Расход - 6000.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "18",
+    "object_repr": "Расход - 5102.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "17",
+    "object_repr": "Расход - 28906.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "16",
+    "object_repr": "Расход - 6000.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "15",
+    "object_repr": "Расход - 34000.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "14",
+    "object_repr": "Расход - 15000.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "13",
+    "object_repr": "Расход - 690000.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "12",
+    "object_repr": "Расход - 25000.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.683Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "11",
+    "object_repr": "Расход - 5040.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.684Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "10",
+    "object_repr": "Расход - 30960.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.684Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "9",
+    "object_repr": "Расход - 153630.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.684Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "8",
+    "object_repr": "Расход - 943750.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.684Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "7",
+    "object_repr": "Расход - 70099.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.684Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "6",
+    "object_repr": "Расход - 430610.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.684Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "5",
+    "object_repr": "Расход - 209000.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2025-10-20T12:07:38.684Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "Доход - 2700000.00 руб. (2025-09-01)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2025-10-20T12:09:51.614Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "Одноэтажный дом - Фундамент (этап 1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2025-10-20T12:09:56.782Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Одноэтажный дом - Крыша (этап 3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2025-10-20T12:10:11.754Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "Одноэтажный дом - Фасад (этап 4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2025-10-20T12:19:21.681Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Жена мера",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2025-10-20T12:19:33.989Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "Яхт клуб (Жена мера)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2025-10-20T12:19:42.664Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "Магазин (Жена мера)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2025-10-20T12:21:13.477Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "хим авто",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2025-10-20T12:21:23.887Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "доброград",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2025-10-20T12:21:39.304Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "4",
+    "object_repr": "обьект гороховец (хим авто)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2025-10-20T12:24:30.623Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Баня - Яхт клуб",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2025-10-20T12:25:04.036Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "ХимАвто",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2025-10-20T12:25:09.317Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Доброград",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2025-10-20T12:27:53.414Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "5",
+    "object_repr": "Баня - Шлифовка, потолок, покраска, плитка, водосточка (этап 0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2025-10-20T12:29:41.963Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "5",
+    "object_repr": "Баня - Шлифовка, потолок, покраска, плитка, водосточка (этап 1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2025-10-20T12:30:09.187Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Гостевой дом - Яхт клуб",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2025-10-20T12:30:21.185Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Уличные работы - Яхт клуб",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2025-10-20T12:30:31.444Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "Гараж - Яхт клуб",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2025-10-20T12:30:44.680Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "4",
+    "object_repr": "Обьект Гороховец (ХимАвто)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2025-10-20T12:31:18.895Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "Магазин Белинского 11 - Магазин",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2025-10-20T12:32:09.967Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "6",
+    "object_repr": "Гостевой дом - Отделка второго этажа, отделка сарая, отделка гаража, водосточная система и подшив (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2025-10-20T12:32:43.905Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "7",
+    "object_repr": "Уличные работы - Забор, бетон площадки, брусчатка (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2025-10-20T12:32:57.799Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "8",
+    "object_repr": "Гараж - Переделка стен байрамиксом, монтаж плинтуса, короб на несущие конструкции (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2025-10-20T12:33:11.784Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "9",
+    "object_repr": "Магазин Белинского 11 - 1 этап Обслуживание (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2025-10-20T12:35:56.473Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "Гостевой дом - Обьект Гороховец",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2025-10-20T12:36:09.453Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "Беседка - Обьект Гороховец",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2025-10-20T12:36:17.378Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "Уличные работы - Обьект Гороховец",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2025-10-20T12:36:24.410Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "10",
+    "object_repr": "Сарай - Обьект Гороховец",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2025-10-20T12:36:47.231Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "10",
+    "object_repr": "Гостевой дом - 1 этап Фасад (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2025-10-20T12:36:58.995Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "11",
+    "object_repr": "Гостевой дом - 2 этап Отделка дома (этап 2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2025-10-20T12:40:47.095Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "12",
+    "object_repr": "Беседка - Реставрация камина (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2025-10-20T12:40:57.861Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "13",
+    "object_repr": "Беседка - Внутренняя отделка (этап 2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2025-10-20T12:41:09.960Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "14",
+    "object_repr": "Уличные работы - Уупель (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2025-10-20T12:41:21.007Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "15",
+    "object_repr": "Уличные работы - Освещение (этап 2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2025-10-20T12:41:31.234Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "16",
+    "object_repr": "Уличные работы - Ручейки (этап 3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2025-10-20T12:41:39.844Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "17",
+    "object_repr": "Сарай - Реставрация сарая (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2025-10-20T13:02:49.852Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "33",
+    "object_repr": "Расход - 5000 руб. (2025-10-20)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2025-10-22T12:42:42.080Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Сан Саныч",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043d\\u0442\\u0430\\u043a\\u0442\\u044b\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2025-10-22T12:44:30.346Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "5",
+    "object_repr": "Доброград (Сан Саныч)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2025-10-22T12:46:10.617Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "Дом - Доброград",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2025-10-22T12:46:34.442Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "12",
+    "object_repr": "Баня - Доброград",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2025-10-22T12:46:41.738Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "13",
+    "object_repr": "Уличные работы - Доброград",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2025-10-24T12:31:04.421Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "18",
+    "object_repr": "Баня - Установка банной печи (этап 1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2025-10-24T12:31:09.532Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "18",
+    "object_repr": "Баня - Установка банной печи (этап 1)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2025-10-24T12:31:37.587Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u042d\\u0442\\u0430\\u043f\"]}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u0435\\u0441\\u043e\\u043a \\u0430\\u043c - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0423\\u0441\\u043b\\u0443\\u0433\\u0438 \\u044d\\u043a\\u0441\\u043a\\u0430\\u0432\\u0430\\u0442\\u043e\\u0440\\u0430 jsb \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430 \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0446\\u0438\\u043e\\u043d\\u043d\\u044b\\u0435 \\u0440\\u0430\\u0441\\u0445\\u043e\\u0434\\u044b \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u043b\\u0430\\u043d\\u0442\\u0435\\u0440 \\u0448\\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0421\\u0442\\u0443\\u043b\\u044c\\u0447\\u0438\\u043a \\u0448\\u0442 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u0435\\u043d\\u0434\\u0430 \\u0432\\u0438\\u0431\\u0440\\u043e\\u043f\\u043b\\u0438\\u0442\\u044b \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2025-10-24T12:32:19.866Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "19",
+    "object_repr": "Баня - Облицовка изранцевой плиткой (этап 2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2025-10-24T12:33:33.160Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Смета Облицовка изранцевой плиткой - Черновик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u042d\\u0442\\u0430\\u043f\"]}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0435\\u0442\\u043e\\u043d \\u043a\\u0443\\u0431\\u043e\\u043c\\u0435\\u0442\\u0440 8200 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041e\\u0431\\u043b\\u0438\\u0446\\u043e\\u0432\\u043a\\u0430 \\u0438\\u0437\\u0440\\u0430\\u043d\\u0446\\u0435\\u0432\\u043e\\u0439 \\u043f\\u043b\\u0438\\u0442\\u043a\\u043e\\u0439 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0414\\u043e\\u0441\\u0442\\u0430\\u0432\\u043a\\u0430 \\u0435\\u0434 700 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041e\\u0431\\u043b\\u0438\\u0446\\u043e\\u0432\\u043a\\u0430 \\u0438\\u0437\\u0440\\u0430\\u043d\\u0446\\u0435\\u0432\\u043e\\u0439 \\u043f\\u043b\\u0438\\u0442\\u043a\\u043e\\u0439 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0420\\u0430\\u0431\\u043e\\u0442\\u0430 \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041e\\u0431\\u043b\\u0438\\u0446\\u043e\\u0432\\u043a\\u0430 \\u0438\\u0437\\u0440\\u0430\\u043d\\u0446\\u0435\\u0432\\u043e\\u0439 \\u043f\\u043b\\u0438\\u0442\\u043a\\u043e\\u0439 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}, {\"deleted\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0440\\u043c\\u0430\\u0442\\u0443\\u0440\\u0430 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u041e\\u0431\\u043b\\u0438\\u0446\\u043e\\u0432\\u043a\\u0430 \\u0438\\u0437\\u0440\\u0430\\u043d\\u0446\\u0435\\u0432\\u043e\\u0439 \\u043f\\u043b\\u0438\\u0442\\u043a\\u043e\\u0439 - \\u0427\\u0435\\u0440\\u043d\\u043e\\u0432\\u0438\\u043a\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2025-10-24T12:43:02.856Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Заслонка поворотная",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2025-10-24T12:43:14.378Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "13",
+    "object_repr": "Заслонка поворотная шт 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2025-10-24T12:43:23.709Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0417\\u0430\\u0441\\u043b\\u043e\\u043d\\u043a\\u0430 \\u043f\\u043e\\u0432\\u043e\\u0440\\u043e\\u0442\\u043d\\u0430\\u044f \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2025-10-24T12:45:43.944Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "13",
+    "object_repr": "Заслонка поворотная шт 1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430 \\u0437\\u0430 \\u0435\\u0434\\u0438\\u043d\\u0438\\u0446\\u0443\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2025-10-24T12:48:18.027Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Адаптор переход с врезкой охлаждения",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2025-10-24T12:48:28.485Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "14",
+    "object_repr": "Адаптор переход с врезкой охлаждения шт 12150",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2025-10-24T12:48:34.628Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0410\\u0434\\u0430\\u043f\\u0442\\u043e\\u0440 \\u043f\\u0435\\u0440\\u0435\\u0445\\u043e\\u0434 \\u0441 \\u0432\\u0440\\u0435\\u0437\\u043a\\u043e\\u0439 \\u043e\\u0445\\u043b\\u0430\\u0436\\u0434\\u0435\\u043d\\u0438\\u044f \\u0448\\u0442 12150 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2025-10-24T12:49:02.472Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "Труба утепленная",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2025-10-24T12:49:16.874Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "15",
+    "object_repr": "Труба утепленная м 12450",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2025-10-24T12:49:21.761Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0422\\u0440\\u0443\\u0431\\u0430 \\u0443\\u0442\\u0435\\u043f\\u043b\\u0435\\u043d\\u043d\\u0430\\u044f \\u043c 12450 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2025-10-24T12:49:50.879Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "16",
+    "object_repr": "Труба утепленная 0,5м 7500",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2025-10-24T12:49:54.266Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0422\\u0440\\u0443\\u0431\\u0430 \\u0443\\u0442\\u0435\\u043f\\u043b\\u0435\\u043d\\u043d\\u0430\\u044f 0,5\\u043c 7500 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2025-10-24T12:50:16.035Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "Верхнее окончание",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2025-10-24T12:50:25.458Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "17",
+    "object_repr": "Верхнее окончание шт 5700",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2025-10-24T12:50:26.938Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0412\\u0435\\u0440\\u0445\\u043d\\u0435\\u0435 \\u043e\\u043a\\u043e\\u043d\\u0447\\u0430\\u043d\\u0438\\u0435 \\u0448\\u0442 5700 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2025-10-24T12:50:39.173Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "Дефлектор",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2025-10-24T12:50:47.484Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "18",
+    "object_repr": "Дефлектор шт 7300",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2025-10-24T12:50:49.624Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0414\\u0435\\u0444\\u043b\\u0435\\u043a\\u0442\\u043e\\u0440 \\u0448\\u0442 7300 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2025-10-24T12:52:38.997Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "12",
+    "object_repr": "Проходной узел кровли",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2025-10-24T12:52:47.360Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "19",
+    "object_repr": "Проходной узел кровли шт 9350",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2025-10-24T12:52:50.155Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u0440\\u043e\\u0445\\u043e\\u0434\\u043d\\u043e\\u0439 \\u0443\\u0437\\u0435\\u043b \\u043a\\u0440\\u043e\\u0432\\u043b\\u0438 \\u0448\\u0442 9350 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 193,
+  "fields": {
+    "action_time": "2025-10-24T12:53:04.885Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "13",
+    "object_repr": "Проходной узел перекрытия",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 194,
+  "fields": {
+    "action_time": "2025-10-24T12:53:14.077Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "20",
+    "object_repr": "Проходной узел перекрытия шт 9700",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 195,
+  "fields": {
+    "action_time": "2025-10-24T12:53:16.633Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u0440\\u043e\\u0445\\u043e\\u0434\\u043d\\u043e\\u0439 \\u0443\\u0437\\u0435\\u043b \\u043f\\u0435\\u0440\\u0435\\u043a\\u0440\\u044b\\u0442\\u0438\\u044f \\u0448\\u0442 9700 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 196,
+  "fields": {
+    "action_time": "2025-10-24T12:53:46.111Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "14",
+    "object_repr": "Декоративная накладка разрезная диам.300",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 197,
+  "fields": {
+    "action_time": "2025-10-24T12:53:56.855Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "21",
+    "object_repr": "Декоративная накладка разрезная диам.300 шт 5250",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 198,
+  "fields": {
+    "action_time": "2025-10-24T12:53:58.820Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0414\\u0435\\u043a\\u043e\\u0440\\u0430\\u0442\\u0438\\u0432\\u043d\\u0430\\u044f \\u043d\\u0430\\u043a\\u043b\\u0430\\u0434\\u043a\\u0430 \\u0440\\u0430\\u0437\\u0440\\u0435\\u0437\\u043d\\u0430\\u044f \\u0434\\u0438\\u0430\\u043c.300 \\u0448\\u0442 5250 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 199,
+  "fields": {
+    "action_time": "2025-10-24T12:54:22.808Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "15",
+    "object_repr": "Труба не утепленная диам.150",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 200,
+  "fields": {
+    "action_time": "2025-10-24T12:54:33.864Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "22",
+    "object_repr": "Труба не утепленная диам.150 м 4300",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 201,
+  "fields": {
+    "action_time": "2025-10-24T12:54:37.104Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0422\\u0440\\u0443\\u0431\\u0430 \\u043d\\u0435 \\u0443\\u0442\\u0435\\u043f\\u043b\\u0435\\u043d\\u043d\\u0430\\u044f \\u0434\\u0438\\u0430\\u043c.150 \\u043c 4300 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 202,
+  "fields": {
+    "action_time": "2025-10-24T13:04:12.731Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "16",
+    "object_repr": "Труба контура протока + заглушка",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 203,
+  "fields": {
+    "action_time": "2025-10-24T13:04:28.550Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "23",
+    "object_repr": "Труба контура протока + заглушка шт 3350",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 204,
+  "fields": {
+    "action_time": "2025-10-24T13:04:49.902Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "17",
+    "object_repr": "Теплообменник",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 205,
+  "fields": {
+    "action_time": "2025-10-24T13:04:59.557Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "24",
+    "object_repr": "Теплообменник шт 8400",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 206,
+  "fields": {
+    "action_time": "2025-10-24T13:05:31.726Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "18",
+    "object_repr": "Бак для воды 100 литров нерж 2 мм AlSl 304, герметичный, 5 штуцеров",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 207,
+  "fields": {
+    "action_time": "2025-10-24T13:05:48.940Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "25",
+    "object_repr": "Бак для воды 100 литров нерж 2 мм AlSl 304, герметичный, 5 штуцеров шт 35000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 208,
+  "fields": {
+    "action_time": "2025-10-24T13:06:17.213Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "19",
+    "object_repr": "Гофра нержавеющая, краны, фитинги",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 209,
+  "fields": {
+    "action_time": "2025-10-24T13:06:22.148Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "26",
+    "object_repr": "Гофра нержавеющая, краны, фитинги шт 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 210,
+  "fields": {
+    "action_time": "2025-10-24T13:06:30.446Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0422\\u0440\\u0443\\u0431\\u0430 \\u043a\\u043e\\u043d\\u0442\\u0443\\u0440\\u0430 \\u043f\\u0440\\u043e\\u0442\\u043e\\u043a\\u0430 + \\u0437\\u0430\\u0433\\u043b\\u0443\\u0448\\u043a\\u0430 \\u0448\\u0442 3350 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0422\\u0435\\u043f\\u043b\\u043e\\u043e\\u0431\\u043c\\u0435\\u043d\\u043d\\u0438\\u043a \\u0448\\u0442 8400 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0430\\u043a \\u0434\\u043b\\u044f \\u0432\\u043e\\u0434\\u044b 100 \\u043b\\u0438\\u0442\\u0440\\u043e\\u0432 \\u043d\\u0435\\u0440\\u0436 2 \\u043c\\u043c AlSl 304, \\u0433\\u0435\\u0440\\u043c\\u0435\\u0442\\u0438\\u0447\\u043d\\u044b\\u0439, 5 \\u0448\\u0442\\u0443\\u0446\\u0435\\u0440\\u043e\\u0432 \\u0448\\u0442 35000 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0413\\u043e\\u0444\\u0440\\u0430 \\u043d\\u0435\\u0440\\u0436\\u0430\\u0432\\u0435\\u044e\\u0449\\u0430\\u044f, \\u043a\\u0440\\u0430\\u043d\\u044b, \\u0444\\u0438\\u0442\\u0438\\u043d\\u0433\\u0438 \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 211,
+  "fields": {
+    "action_time": "2025-10-24T13:11:46.164Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "20",
+    "object_repr": "Кирпич «Витебский»",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 212,
+  "fields": {
+    "action_time": "2025-10-24T13:12:58.294Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "27",
+    "object_repr": "Кирпич «Витебский» шт 59.5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 213,
+  "fields": {
+    "action_time": "2025-10-24T13:13:04.579Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041a\\u0438\\u0440\\u043f\\u0438\\u0447 \\u00ab\\u0412\\u0438\\u0442\\u0435\\u0431\\u0441\\u043a\\u0438\\u0439\\u00bb \\u0448\\u0442 59.5 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 214,
+  "fields": {
+    "action_time": "2025-10-24T13:13:35.798Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "21",
+    "object_repr": "Кладочная смесь (основа глина)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 215,
+  "fields": {
+    "action_time": "2025-10-24T13:13:46.990Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "28",
+    "object_repr": "Кладочная смесь (основа глина) мешок 860",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 216,
+  "fields": {
+    "action_time": "2025-10-24T13:14:08.096Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041a\\u043b\\u0430\\u0434\\u043e\\u0447\\u043d\\u0430\\u044f \\u0441\\u043c\\u0435\\u0441\\u044c (\\u043e\\u0441\\u043d\\u043e\\u0432\\u0430 \\u0433\\u043b\\u0438\\u043d\\u0430) \\u043c\\u0435\\u0448\\u043e\\u043a 860 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 217,
+  "fields": {
+    "action_time": "2025-10-24T13:14:32.153Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "22",
+    "object_repr": "Базальтокартон",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 218,
+  "fields": {
+    "action_time": "2025-10-24T13:14:39.926Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "29",
+    "object_repr": "Базальтокартон лист 500",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 219,
+  "fields": {
+    "action_time": "2025-10-24T13:14:45.198Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0411\\u0430\\u0437\\u0430\\u043b\\u044c\\u0442\\u043e\\u043a\\u0430\\u0440\\u0442\\u043e\\u043d \\u043b\\u0438\\u0441\\u0442 500 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 220,
+  "fields": {
+    "action_time": "2025-10-24T13:15:07.855Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "23",
+    "object_repr": "Смесь М150",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 221,
+  "fields": {
+    "action_time": "2025-10-24T13:15:23.956Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "30",
+    "object_repr": "Смесь М150 мешок 200",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 222,
+  "fields": {
+    "action_time": "2025-10-24T13:15:31.258Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0421\\u043c\\u0435\\u0441\\u044c \\u041c150 \\u043c\\u0435\\u0448\\u043e\\u043a 200 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 223,
+  "fields": {
+    "action_time": "2025-10-24T13:15:49.340Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "24",
+    "object_repr": "Проволока и сетка кладочная",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 224,
+  "fields": {
+    "action_time": "2025-10-24T13:15:53.060Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "31",
+    "object_repr": "Проволока и сетка кладочная шт 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 225,
+  "fields": {
+    "action_time": "2025-10-24T13:15:58.896Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u0440\\u043e\\u0432\\u043e\\u043b\\u043e\\u043a\\u0430 \\u0438 \\u0441\\u0435\\u0442\\u043a\\u0430 \\u043a\\u043b\\u0430\\u0434\\u043e\\u0447\\u043d\\u0430\\u044f \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 226,
+  "fields": {
+    "action_time": "2025-10-24T13:16:31.817Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "25",
+    "object_repr": "Термоизоляция Суперизол(1000*1200)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 227,
+  "fields": {
+    "action_time": "2025-10-24T13:16:46.464Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "32",
+    "object_repr": "Термоизоляция Суперизол(1000*1200) лист 6850",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 228,
+  "fields": {
+    "action_time": "2025-10-24T13:16:51.234Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0422\\u0435\\u0440\\u043c\\u043e\\u0438\\u0437\\u043e\\u043b\\u044f\\u0446\\u0438\\u044f \\u0421\\u0443\\u043f\\u0435\\u0440\\u0438\\u0437\\u043e\\u043b(1000*1200) \\u043b\\u0438\\u0441\\u0442 6850 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 229,
+  "fields": {
+    "action_time": "2025-10-24T13:17:17.704Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "26",
+    "object_repr": "Термоизоляция Супервулл",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 230,
+  "fields": {
+    "action_time": "2025-10-24T13:17:25.988Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "33",
+    "object_repr": "Термоизоляция Супервулл уп 5600",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 231,
+  "fields": {
+    "action_time": "2025-10-24T13:17:41.790Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "27",
+    "object_repr": "Клей плиточный термостойкий",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 232,
+  "fields": {
+    "action_time": "2025-10-24T13:17:53.402Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "34",
+    "object_repr": "Клей плиточный термостойкий мешок 1350",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 233,
+  "fields": {
+    "action_time": "2025-10-24T13:18:01.184Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0422\\u0435\\u0440\\u043c\\u043e\\u0438\\u0437\\u043e\\u043b\\u044f\\u0446\\u0438\\u044f \\u0421\\u0443\\u043f\\u0435\\u0440\\u0432\\u0443\\u043b\\u043b \\u0443\\u043f 5600 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041a\\u043b\\u0435\\u0439 \\u043f\\u043b\\u0438\\u0442\\u043e\\u0447\\u043d\\u044b\\u0439 \\u0442\\u0435\\u0440\\u043c\\u043e\\u0441\\u0442\\u043e\\u0439\\u043a\\u0438\\u0439 \\u043c\\u0435\\u0448\\u043e\\u043a 1350 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 234,
+  "fields": {
+    "action_time": "2025-10-24T13:18:46.796Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "28",
+    "object_repr": "Декоративный камень Талькохлорид (рваный камень)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 235,
+  "fields": {
+    "action_time": "2025-10-24T13:19:12.030Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "35",
+    "object_repr": "Декоративный камень Талькохлорид (рваный камень) м2 14500",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 236,
+  "fields": {
+    "action_time": "2025-10-24T13:19:35.362Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "29",
+    "object_repr": "Плитка полированная Талькохлорид (подиум под печь)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 237,
+  "fields": {
+    "action_time": "2025-10-24T13:19:48.543Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "36",
+    "object_repr": "Плитка полированная Талькохлорид (подиум под печь) м2 13700",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 238,
+  "fields": {
+    "action_time": "2025-10-24T13:19:54.731Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0414\\u0435\\u043a\\u043e\\u0440\\u0430\\u0442\\u0438\\u0432\\u043d\\u044b\\u0439 \\u043a\\u0430\\u043c\\u0435\\u043d\\u044c \\u0422\\u0430\\u043b\\u044c\\u043a\\u043e\\u0445\\u043b\\u043e\\u0440\\u0438\\u0434 (\\u0440\\u0432\\u0430\\u043d\\u044b\\u0439 \\u043a\\u0430\\u043c\\u0435\\u043d\\u044c) \\u043c2 14500 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u041f\\u043b\\u0438\\u0442\\u043a\\u0430 \\u043f\\u043e\\u043b\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\\u043d\\u0430\\u044f \\u0422\\u0430\\u043b\\u044c\\u043a\\u043e\\u0445\\u043b\\u043e\\u0440\\u0438\\u0434 (\\u043f\\u043e\\u0434\\u0438\\u0443\\u043c \\u043f\\u043e\\u0434 \\u043f\\u0435\\u0447\\u044c) \\u043c2 13700 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 239,
+  "fields": {
+    "action_time": "2025-10-24T13:20:21.417Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "30",
+    "object_repr": "Расходные материалы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 240,
+  "fields": {
+    "action_time": "2025-10-24T13:20:25.199Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "37",
+    "object_repr": "Расходные материалы шт 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 241,
+  "fields": {
+    "action_time": "2025-10-24T13:20:55.248Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "7",
+    "object_repr": "Транспортные услуги",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 242,
+  "fields": {
+    "action_time": "2025-10-24T13:21:00.257Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "38",
+    "object_repr": "Транспортные услуги ед 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 243,
+  "fields": {
+    "action_time": "2025-10-24T13:21:08.143Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Смета Установка банной печи - Утвержден",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0420\\u0430\\u0441\\u0445\\u043e\\u0434\\u043d\\u044b\\u0435 \\u043c\\u0430\\u0442\\u0435\\u0440\\u0438\\u0430\\u043b\\u044b \\u0448\\u0442 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}, {\"added\": {\"name\": \"\\u042d\\u043b\\u0435\\u043c\\u0435\\u043d\\u0442 \\u0441\\u043c\\u0435\\u0442\\u044b\", \"object\": \"\\u0422\\u0440\\u0430\\u043d\\u0441\\u043f\\u043e\\u0440\\u0442\\u043d\\u044b\\u0435 \\u0443\\u0441\\u043b\\u0443\\u0433\\u0438 \\u0435\\u0434 1 - \\u0421\\u043c\\u0435\\u0442\\u0430 \\u0423\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043a\\u0430 \\u0431\\u0430\\u043d\\u043d\\u043e\\u0439 \\u043f\\u0435\\u0447\\u0438 - \\u0423\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\"}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add Заказчик",
+    "content_type": 6,
+    "codename": "add_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change Заказчик",
+    "content_type": 6,
+    "codename": "change_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete Заказчик",
+    "content_type": 6,
+    "codename": "delete_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view Заказчик",
+    "content_type": 6,
+    "codename": "view_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Контрагент",
+    "content_type": 7,
+    "codename": "add_contractor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Контрагент",
+    "content_type": 7,
+    "codename": "change_contractor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Контрагент",
+    "content_type": 7,
+    "codename": "delete_contractor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Контрагент",
+    "content_type": 7,
+    "codename": "view_contractor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Смета",
+    "content_type": 8,
+    "codename": "add_estimate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Смета",
+    "content_type": 8,
+    "codename": "change_estimate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Смета",
+    "content_type": 8,
+    "codename": "delete_estimate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Смета",
+    "content_type": 8,
+    "codename": "view_estimate"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Вид расхода",
+    "content_type": 9,
+    "codename": "add_expensetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Вид расхода",
+    "content_type": 9,
+    "codename": "change_expensetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Вид расхода",
+    "content_type": 9,
+    "codename": "delete_expensetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Вид расхода",
+    "content_type": 9,
+    "codename": "view_expensetype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add Вид материала",
+    "content_type": 10,
+    "codename": "add_materialtype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change Вид материала",
+    "content_type": 10,
+    "codename": "change_materialtype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete Вид материала",
+    "content_type": 10,
+    "codename": "delete_materialtype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view Вид материала",
+    "content_type": 10,
+    "codename": "view_materialtype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Объект",
+    "content_type": 11,
+    "codename": "add_object"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Объект",
+    "content_type": 11,
+    "codename": "change_object"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Объект",
+    "content_type": 11,
+    "codename": "delete_object"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Объект",
+    "content_type": 11,
+    "codename": "view_object"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Вид работ",
+    "content_type": 12,
+    "codename": "add_worktype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Вид работ",
+    "content_type": 12,
+    "codename": "change_worktype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Вид работ",
+    "content_type": 12,
+    "codename": "delete_worktype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Вид работ",
+    "content_type": 12,
+    "codename": "view_worktype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Пользователя",
+    "content_type": 13,
+    "codename": "add_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Пользователя",
+    "content_type": 13,
+    "codename": "change_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Пользователя",
+    "content_type": 13,
+    "codename": "delete_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Пользователя",
+    "content_type": 13,
+    "codename": "view_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Элемент сметы",
+    "content_type": 14,
+    "codename": "add_estimateitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Элемент сметы",
+    "content_type": 14,
+    "codename": "change_estimateitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Элемент сметы",
+    "content_type": 14,
+    "codename": "delete_estimateitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Элемент сметы",
+    "content_type": 14,
+    "codename": "view_estimateitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add Расход",
+    "content_type": 15,
+    "codename": "add_expense"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change Расход",
+    "content_type": 15,
+    "codename": "change_expense"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete Расход",
+    "content_type": 15,
+    "codename": "delete_expense"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view Расход",
+    "content_type": 15,
+    "codename": "view_expense"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add Доход",
+    "content_type": 16,
+    "codename": "add_income"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change Доход",
+    "content_type": 16,
+    "codename": "change_income"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete Доход",
+    "content_type": 16,
+    "codename": "delete_income"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view Доход",
+    "content_type": 16,
+    "codename": "view_income"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add Проект",
+    "content_type": 17,
+    "codename": "add_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change Проект",
+    "content_type": 17,
+    "codename": "change_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete Проект",
+    "content_type": 17,
+    "codename": "delete_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view Проект",
+    "content_type": 17,
+    "codename": "view_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add Платеж",
+    "content_type": 18,
+    "codename": "add_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change Платеж",
+    "content_type": 18,
+    "codename": "change_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete Платеж",
+    "content_type": 18,
+    "codename": "delete_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view Платеж",
+    "content_type": 18,
+    "codename": "view_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add Долг",
+    "content_type": 19,
+    "codename": "add_debt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change Долг",
+    "content_type": 19,
+    "codename": "change_debt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete Долг",
+    "content_type": 19,
+    "codename": "delete_debt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view Долг",
+    "content_type": 19,
+    "codename": "view_debt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add Этап",
+    "content_type": 20,
+    "codename": "add_stage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change Этап",
+    "content_type": 20,
+    "codename": "change_stage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete Этап",
+    "content_type": 20,
+    "codename": "delete_stage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view Этап",
+    "content_type": 20,
+    "codename": "view_stage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add Категория",
+    "content_type": 21,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change Категория",
+    "content_type": 21,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete Категория",
+    "content_type": 21,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view Категория",
+    "content_type": 21,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add Транзакция",
+    "content_type": 22,
+    "codename": "add_transaction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change Транзакция",
+    "content_type": 22,
+    "codename": "change_transaction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete Транзакция",
+    "content_type": 22,
+    "codename": "delete_transaction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view Транзакция",
+    "content_type": 22,
+    "codename": "view_transaction"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add Позиция прайса",
+    "content_type": 23,
+    "codename": "add_priceitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change Позиция прайса",
+    "content_type": 23,
+    "codename": "change_priceitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete Позиция прайса",
+    "content_type": 23,
+    "codename": "delete_priceitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view Позиция прайса",
+    "content_type": 23,
+    "codename": "view_priceitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "control",
+    "model": "client"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "control",
+    "model": "contractor"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "control",
+    "model": "estimate"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "control",
+    "model": "expensetype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "control",
+    "model": "materialtype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "control",
+    "model": "object"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "control",
+    "model": "worktype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "control",
+    "model": "customuser"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "control",
+    "model": "estimateitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "control",
+    "model": "expense"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "control",
+    "model": "income"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "control",
+    "model": "project"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "control",
+    "model": "payment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "control",
+    "model": "debt"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "control",
+    "model": "stage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "control",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "control",
+    "model": "transaction"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "control",
+    "model": "priceitem"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "142ln23dveihwstnygq9qw83e17rt20x",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe-yNbKysclalPScwdr1BweQLcVJFXF3sJQC2jczbwfH25rd1uLi5gAXQDj9bsL-GUsH4cHlXpWvZV1mUV1RB23qVkN8XQ_37yBzy71ONGo7CGISDmeDNulEOI0TCVlNwYgY6wekyEyoE3s0XlCi_hqG4f0B4cA4HQ:1vCGpK:0twH6scsB2Gp47ivdhJNoEUyZ2S1mAo6llaUPXFHRPo",
+    "expire_date": "2025-11-07T12:23:26.018Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5x9i56tvjvgnn3e5pupybfz5xq8zl23m",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe-yNbKysclalPScwdr1BweQLcVJFXF3sJQC2jczbwfH25rd1uLi5gAXQDj9bsL-GUsH4cHlXpWvZV1mUV1RB23qVkN8XQ_37yBzy71ONGo7CGISDmeDNulEOI0TCVlNwYgY6wekyEyoE3s0XlCi_hqG4f0B4cA4HQ:1vAoY7:CghXleAMQ8bRM-WEdIHwWJ8o_LK-ugQ03lSlYzwP5Gs",
+    "expire_date": "2025-11-03T11:59:39.136Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7689rovqn1v4hetgjfjelkfoy5mbdfnk",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe-yNbKysclalPScwdr1BweQLcVJFXF3sJQC2jczbwfH25rd1uLi5gAXQDj9bsL-GUsH4cHlXpWvZV1mUV1RB23qVkN8XQ_37yBzy71ONGo7CGISDmeDNulEOI0TCVlNwYgY6wekyEyoE3s0XlCi_hqG4f0B4cA4HQ:1ut76X:YvTD8VPWVU_rIp3Ypo1Ni5aZz-CwsZayLkvJqlTNVhE",
+    "expire_date": "2025-09-15T16:10:01.329Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a8u0tu2mcbq8rromg4uv66rfl3eyap8z",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe-yNbKysclalPScwdr1BweQLcVJFXF3sJQC2jczbwfH25rd1uLi5gAXQDj9bsL-GUsH4cHlXpWvZV1mUV1RB23qVkN8XQ_37yBzy71ONGo7CGISDmeDNulEOI0TCVlNwYgY6wekyEyoE3s0XlCi_hqG4f0B4cA4HQ:1utS6M:dLZ2TuiNQctbnfWqy7NTvLQkjVZUsPTHVwGEMAtDGHA",
+    "expire_date": "2025-09-16T14:35:14.742Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hh9a7f3wb18sg254cpqdrcvru0lw3qop",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe-yNbKysclalPScwdr1BweQLcVJFXF3sJQC2jczbwfH25rd1uLi5gAXQDj9bsL-GUsH4cHlXpWvZV1mUV1RB23qVkN8XQ_37yBzy71ONGo7CGISDmeDNulEOI0TCVlNwYgY6wekyEyoE3s0XlCi_hqG4f0B4cA4HQ:1ut9lh:nNNXHJZVt18nrzs368IvsySWV8bgakJvFWBKQ0xnp1Q",
+    "expire_date": "2025-09-15T19:00:41.847Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hvpe4iaqq0tluiiu0xfen3y1whmzx7sy",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBOwUK6dO8JjCEzMFi0LUmhK-PdbZMudPvf--8tHK51cGvhxaUgegHi9LsR-hfPOwhPnB9Z-jzXJZHcFXnQIq858Hg53L_AgGXY39G0yjYEEAnDWYONKhro2s6QscoETaStb8AwogEV0YP2BMRqMzRu0cIj-8rBcalpwsouVZ6K6G_q_vkCH85DNw:1utPQu:6YgBug8zQC6BreYBIlYme9aqGCv6D9VfbMcF68h7DRQ",
+    "expire_date": "2025-09-16T11:44:16.287Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "q6n3ep7kboe9rgx9dirbk57fn7e4l1ru",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe-yNbKysclalPScwdr1BweQLcVJFXF3sJQC2jczbwfH25rd1uLi5gAXQDj9bsL-GUsH4cHlXpWvZV1mUV1RB23qVkN8XQ_37yBzy71ONGo7CGISDmeDNulEOI0TCVlNwYgY6wekyEyoE3s0XlCi_hqG4f0B4cA4HQ:1uvqqt:uliAEwKYAIsfdx90uOtWMQkawkoNA8m3YORBj7JziUI",
+    "expire_date": "2025-09-23T05:25:11.608Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w78g2oh23p2w7mfz4onxqxvx5je78pw9",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe-yNbKysclalPScwdr1BweQLcVJFXF3sJQC2jczbwfH25rd1uLi5gAXQDj9bsL-GUsH4cHlXpWvZV1mUV1RB23qVkN8XQ_37yBzy71ONGo7CGISDmeDNulEOI0TCVlNwYgY6wekyEyoE3s0XlCi_hqG4f0B4cA4HQ:1vBXuF:8v10DLGelizGgj5LNyhn1HVbQS2BI_q7wgmHqAS_gzY",
+    "expire_date": "2025-11-05T12:25:31.997Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ymz65802yzfihb9edfmpabia5mkls4g0",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe-yNbKysclalPScwdr1BweQLcVJFXF3sJQC2jczbwfH25rd1uLi5gAXQDj9bsL-GUsH4cHlXpWvZV1mUV1RB23qVkN8XQ_37yBzy71ONGo7CGISDmeDNulEOI0TCVlNwYgY6wekyEyoE3s0XlCi_hqG4f0B4cA4HQ:1utjQZ:-X-fQ1OUUOHSkKI7GNYPyvEHPx5fsNSiAKKFmdSuUDM",
+    "expire_date": "2025-09-17T09:05:15.796Z"
+  }
+},
+{
+  "model": "control.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$bpVNws6NsetHo5XX9OkfQR$+08F6O5vrd8VMgwCwO3kpLghpNUXr6uFt7ow7w0hGME=",
+    "last_login": "2025-10-24T12:23:26.014Z",
+    "is_superuser": true,
+    "phone": "+70000000000",
+    "first_name": null,
+    "last_name": null,
+    "ext_id": null,
+    "is_active": true,
+    "is_staff": true,
+    "auth_token": null,
+    "date_joined": "2025-09-01T16:09:42.113Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "control.worktype",
+  "pk": 1,
+  "fields": {
+    "name": "Услуги экскаватора jsb",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T09:20:07.036Z"
+  }
+},
+{
+  "model": "control.worktype",
+  "pk": 2,
+  "fields": {
+    "name": "Работа",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T09:20:52.293Z"
+  }
+},
+{
+  "model": "control.worktype",
+  "pk": 3,
+  "fields": {
+    "name": "Организационные расходы",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T09:21:25.003Z"
+  }
+},
+{
+  "model": "control.worktype",
+  "pk": 4,
+  "fields": {
+    "name": "Аренда виброплиты",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T09:22:28.875Z"
+  }
+},
+{
+  "model": "control.worktype",
+  "pk": 5,
+  "fields": {
+    "name": "Откат",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T12:16:17.002Z"
+  }
+},
+{
+  "model": "control.worktype",
+  "pk": 6,
+  "fields": {
+    "name": "Доставка",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-09T05:12:21.629Z"
+  }
+},
+{
+  "model": "control.worktype",
+  "pk": 7,
+  "fields": {
+    "name": "Транспортные услуги",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:20:55.247Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 1,
+  "fields": {
+    "name": "Песок",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-01T16:10:42.508Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 2,
+  "fields": {
+    "name": "Бетон",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-01T16:10:47.989Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 3,
+  "fields": {
+    "name": "Арматура",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T09:17:15.734Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 4,
+  "fields": {
+    "name": "Услуги экскаватора jsb",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T09:19:30.103Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 5,
+  "fields": {
+    "name": "Планер",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T09:21:55.426Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 6,
+  "fields": {
+    "name": "Стульчик",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T12:16:00.528Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 7,
+  "fields": {
+    "name": "Заслонка поворотная",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T12:43:02.854Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 8,
+  "fields": {
+    "name": "Адаптор переход с врезкой охлаждения",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T12:48:18.025Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 9,
+  "fields": {
+    "name": "Труба утепленная",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T12:49:02.471Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 10,
+  "fields": {
+    "name": "Верхнее окончание",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T12:50:16.034Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 11,
+  "fields": {
+    "name": "Дефлектор",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T12:50:39.173Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 12,
+  "fields": {
+    "name": "Проходной узел кровли",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T12:52:38.988Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 13,
+  "fields": {
+    "name": "Проходной узел перекрытия",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T12:53:04.884Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 14,
+  "fields": {
+    "name": "Декоративная накладка разрезная диам.300",
+    "description": "Диаметр 300",
+    "is_active": true,
+    "created_at": "2025-10-24T12:53:46.109Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 15,
+  "fields": {
+    "name": "Труба не утепленная диам.150",
+    "description": "Диаметр 150",
+    "is_active": true,
+    "created_at": "2025-10-24T12:54:22.807Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 16,
+  "fields": {
+    "name": "Труба контура протока + заглушка",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:04:12.729Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 17,
+  "fields": {
+    "name": "Теплообменник",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:04:49.901Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 18,
+  "fields": {
+    "name": "Бак для воды 100 литров нерж 2 мм AlSl 304, герметичный, 5 штуцеров",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:05:31.725Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 19,
+  "fields": {
+    "name": "Гофра нержавеющая, краны, фитинги",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:06:17.212Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 20,
+  "fields": {
+    "name": "Кирпич «Витебский»",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:11:46.162Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 21,
+  "fields": {
+    "name": "Кладочная смесь (основа глина)",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:13:35.797Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 22,
+  "fields": {
+    "name": "Базальтокартон",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:14:32.152Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 23,
+  "fields": {
+    "name": "Смесь М150",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:15:07.854Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 24,
+  "fields": {
+    "name": "Проволока и сетка кладочная",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:15:49.339Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 25,
+  "fields": {
+    "name": "Термоизоляция Суперизол(1000*1200)",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:16:31.816Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 26,
+  "fields": {
+    "name": "Термоизоляция Супервулл",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:17:17.703Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 27,
+  "fields": {
+    "name": "Клей плиточный термостойкий",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:17:41.789Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 28,
+  "fields": {
+    "name": "Декоративный камень Талькохлорид (рваный камень)",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:18:46.792Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 29,
+  "fields": {
+    "name": "Плитка полированная Талькохлорид (подиум под печь)",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:19:35.361Z"
+  }
+},
+{
+  "model": "control.materialtype",
+  "pk": 30,
+  "fields": {
+    "name": "Расходные материалы",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-10-24T13:20:21.416Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 1,
+  "fields": {
+    "name": "Песок ам",
+    "material": 1,
+    "work_type": null,
+    "unit": "ам",
+    "price_per_unit": "9500.00",
+    "is_active": true,
+    "created_at": "2025-09-02T10:14:59.156Z",
+    "updated_at": "2025-09-02T12:14:18.694Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 2,
+  "fields": {
+    "name": "Бетон т",
+    "material": 2,
+    "work_type": null,
+    "unit": "т",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-09-02T12:14:39.034Z",
+    "updated_at": "2025-09-02T12:14:45.295Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 3,
+  "fields": {
+    "name": "Арматура",
+    "material": 3,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-09-02T12:15:00.475Z",
+    "updated_at": "2025-09-02T12:15:00.475Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 4,
+  "fields": {
+    "name": "Плантер шт",
+    "material": 5,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-09-02T12:15:48.135Z",
+    "updated_at": "2025-09-02T12:15:48.135Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 5,
+  "fields": {
+    "name": "Стульчик шт",
+    "material": 6,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-09-02T12:16:06.408Z",
+    "updated_at": "2025-09-02T12:16:06.408Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 6,
+  "fields": {
+    "name": "Аренда виброплиты ед 1",
+    "material": null,
+    "work_type": 4,
+    "unit": "ед",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-09-02T12:20:22.792Z",
+    "updated_at": "2025-09-02T12:20:22.792Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 7,
+  "fields": {
+    "name": "Организационные расходы ед 1",
+    "material": null,
+    "work_type": 3,
+    "unit": "ед",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-09-02T12:20:27.709Z",
+    "updated_at": "2025-09-02T12:20:27.709Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 8,
+  "fields": {
+    "name": "Откат ед 1",
+    "material": null,
+    "work_type": 5,
+    "unit": "ед",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-09-02T12:20:31.035Z",
+    "updated_at": "2025-09-02T12:20:31.035Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 9,
+  "fields": {
+    "name": "Работа ед 1",
+    "material": null,
+    "work_type": 2,
+    "unit": "ед",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-09-02T12:20:35.634Z",
+    "updated_at": "2025-09-02T12:20:35.634Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 10,
+  "fields": {
+    "name": "Услуги экскаватора jsb ед 1",
+    "material": null,
+    "work_type": 1,
+    "unit": "ед",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-09-02T12:20:38.871Z",
+    "updated_at": "2025-09-02T12:20:38.871Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 11,
+  "fields": {
+    "name": "Бетон кубометр 8200",
+    "material": 2,
+    "work_type": null,
+    "unit": "кубометр",
+    "price_per_unit": "8200.00",
+    "is_active": true,
+    "created_at": "2025-09-09T05:12:00.674Z",
+    "updated_at": "2025-09-09T05:12:00.674Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 12,
+  "fields": {
+    "name": "Доставка ед 700",
+    "material": null,
+    "work_type": 6,
+    "unit": "ед",
+    "price_per_unit": "700.00",
+    "is_active": true,
+    "created_at": "2025-09-09T05:12:59.930Z",
+    "updated_at": "2025-09-09T05:12:59.930Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 13,
+  "fields": {
+    "name": "Заслонка поворотная шт 1",
+    "material": 7,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "3800.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:43:14.377Z",
+    "updated_at": "2025-10-24T12:45:43.943Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 14,
+  "fields": {
+    "name": "Адаптор переход с врезкой охлаждения шт 12150",
+    "material": 8,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "12150.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:48:28.484Z",
+    "updated_at": "2025-10-24T12:48:28.484Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 15,
+  "fields": {
+    "name": "Труба утепленная м 12450",
+    "material": 9,
+    "work_type": null,
+    "unit": "м",
+    "price_per_unit": "12450.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:49:16.874Z",
+    "updated_at": "2025-10-24T12:49:16.874Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 16,
+  "fields": {
+    "name": "Труба утепленная 0,5м 7500",
+    "material": 9,
+    "work_type": null,
+    "unit": "0,5м",
+    "price_per_unit": "7500.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:49:50.879Z",
+    "updated_at": "2025-10-24T12:49:50.879Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 17,
+  "fields": {
+    "name": "Верхнее окончание шт 5700",
+    "material": 10,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "5700.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:50:25.457Z",
+    "updated_at": "2025-10-24T12:50:25.457Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 18,
+  "fields": {
+    "name": "Дефлектор шт 7300",
+    "material": 11,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "7300.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:50:47.484Z",
+    "updated_at": "2025-10-24T12:50:47.484Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 19,
+  "fields": {
+    "name": "Проходной узел кровли шт 9350",
+    "material": 12,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "9350.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:52:47.359Z",
+    "updated_at": "2025-10-24T12:52:47.359Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 20,
+  "fields": {
+    "name": "Проходной узел перекрытия шт 9700",
+    "material": 13,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "9700.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:53:14.076Z",
+    "updated_at": "2025-10-24T12:53:14.076Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 21,
+  "fields": {
+    "name": "Декоративная накладка разрезная диам.300 шт 5250",
+    "material": 14,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "5250.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:53:56.854Z",
+    "updated_at": "2025-10-24T12:53:56.854Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 22,
+  "fields": {
+    "name": "Труба не утепленная диам.150 м 4300",
+    "material": 15,
+    "work_type": null,
+    "unit": "м",
+    "price_per_unit": "4300.00",
+    "is_active": true,
+    "created_at": "2025-10-24T12:54:33.863Z",
+    "updated_at": "2025-10-24T12:54:33.863Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 23,
+  "fields": {
+    "name": "Труба контура протока + заглушка шт 3350",
+    "material": 16,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "3350.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:04:28.549Z",
+    "updated_at": "2025-10-24T13:04:28.549Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 24,
+  "fields": {
+    "name": "Теплообменник шт 8400",
+    "material": 17,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "8400.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:04:59.556Z",
+    "updated_at": "2025-10-24T13:04:59.556Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 25,
+  "fields": {
+    "name": "Бак для воды 100 литров нерж 2 мм AlSl 304, герметичный, 5 штуцеров шт 35000",
+    "material": 18,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "35000.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:05:48.939Z",
+    "updated_at": "2025-10-24T13:05:48.939Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 26,
+  "fields": {
+    "name": "Гофра нержавеющая, краны, фитинги шт 1",
+    "material": 19,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:06:22.147Z",
+    "updated_at": "2025-10-24T13:06:22.147Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 27,
+  "fields": {
+    "name": "Кирпич «Витебский» шт 59.5",
+    "material": 20,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "59.50",
+    "is_active": true,
+    "created_at": "2025-10-24T13:12:58.294Z",
+    "updated_at": "2025-10-24T13:12:58.294Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 28,
+  "fields": {
+    "name": "Кладочная смесь (основа глина) мешок 860",
+    "material": 21,
+    "work_type": null,
+    "unit": "мешок",
+    "price_per_unit": "860.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:13:46.990Z",
+    "updated_at": "2025-10-24T13:13:46.990Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 29,
+  "fields": {
+    "name": "Базальтокартон лист 500",
+    "material": 22,
+    "work_type": null,
+    "unit": "лист",
+    "price_per_unit": "500.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:14:39.925Z",
+    "updated_at": "2025-10-24T13:14:39.925Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 30,
+  "fields": {
+    "name": "Смесь М150 мешок 200",
+    "material": 23,
+    "work_type": null,
+    "unit": "мешок",
+    "price_per_unit": "200.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:15:23.956Z",
+    "updated_at": "2025-10-24T13:15:23.956Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 31,
+  "fields": {
+    "name": "Проволока и сетка кладочная шт 1",
+    "material": 24,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:15:53.059Z",
+    "updated_at": "2025-10-24T13:15:53.059Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 32,
+  "fields": {
+    "name": "Термоизоляция Суперизол(1000*1200) лист 6850",
+    "material": 25,
+    "work_type": null,
+    "unit": "лист",
+    "price_per_unit": "6850.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:16:46.463Z",
+    "updated_at": "2025-10-24T13:16:46.463Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 33,
+  "fields": {
+    "name": "Термоизоляция Супервулл уп 5600",
+    "material": 26,
+    "work_type": null,
+    "unit": "уп",
+    "price_per_unit": "5600.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:17:25.987Z",
+    "updated_at": "2025-10-24T13:17:25.987Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 34,
+  "fields": {
+    "name": "Клей плиточный термостойкий мешок 1350",
+    "material": 27,
+    "work_type": null,
+    "unit": "мешок",
+    "price_per_unit": "1350.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:17:53.401Z",
+    "updated_at": "2025-10-24T13:17:53.401Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 35,
+  "fields": {
+    "name": "Декоративный камень Талькохлорид (рваный камень) м2 14500",
+    "material": 28,
+    "work_type": null,
+    "unit": "м2",
+    "price_per_unit": "14500.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:19:12.029Z",
+    "updated_at": "2025-10-24T13:19:12.029Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 36,
+  "fields": {
+    "name": "Плитка полированная Талькохлорид (подиум под печь) м2 13700",
+    "material": 29,
+    "work_type": null,
+    "unit": "м2",
+    "price_per_unit": "13700.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:19:48.540Z",
+    "updated_at": "2025-10-24T13:19:48.540Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 37,
+  "fields": {
+    "name": "Расходные материалы шт 1",
+    "material": 30,
+    "work_type": null,
+    "unit": "шт",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:20:25.198Z",
+    "updated_at": "2025-10-24T13:20:25.198Z"
+  }
+},
+{
+  "model": "control.priceitem",
+  "pk": 38,
+  "fields": {
+    "name": "Транспортные услуги ед 1",
+    "material": null,
+    "work_type": 7,
+    "unit": "ед",
+    "price_per_unit": "1.00",
+    "is_active": true,
+    "created_at": "2025-10-24T13:21:00.256Z",
+    "updated_at": "2025-10-24T13:21:00.256Z"
+  }
+},
+{
+  "model": "control.contractor",
+  "pk": 1,
+  "fields": {
+    "name": "Осьминушкин Сергей",
+    "contacts": "",
+    "address": "",
+    "inn": "",
+    "kpp": "",
+    "bank_details": "",
+    "is_active": true,
+    "created_at": "2025-09-01T19:19:36.477Z",
+    "updated_at": "2025-09-02T09:14:12.375Z"
+  }
+},
+{
+  "model": "control.contractor",
+  "pk": 2,
+  "fields": {
+    "name": "Жена мера",
+    "contacts": "",
+    "address": "",
+    "inn": "",
+    "kpp": "",
+    "bank_details": "",
+    "is_active": true,
+    "created_at": "2025-09-02T12:25:04.710Z",
+    "updated_at": "2025-10-20T12:19:21.679Z"
+  }
+},
+{
+  "model": "control.contractor",
+  "pk": 3,
+  "fields": {
+    "name": "ИП Хабиров",
+    "contacts": "",
+    "address": "",
+    "inn": "",
+    "kpp": "",
+    "bank_details": "",
+    "is_active": true,
+    "created_at": "2025-09-02T12:25:15.105Z",
+    "updated_at": "2025-09-02T12:25:15.105Z"
+  }
+},
+{
+  "model": "control.contractor",
+  "pk": 4,
+  "fields": {
+    "name": "ХимАвто",
+    "contacts": "",
+    "address": "",
+    "inn": "",
+    "kpp": "",
+    "bank_details": "",
+    "is_active": true,
+    "created_at": "2025-10-20T12:21:13.476Z",
+    "updated_at": "2025-10-20T12:25:04.034Z"
+  }
+},
+{
+  "model": "control.contractor",
+  "pk": 5,
+  "fields": {
+    "name": "Сан Саныч",
+    "contacts": "Доброград",
+    "address": "",
+    "inn": "",
+    "kpp": "",
+    "bank_details": "",
+    "is_active": true,
+    "created_at": "2025-10-20T12:21:23.886Z",
+    "updated_at": "2025-10-22T12:42:42.076Z"
+  }
+},
+{
+  "model": "control.category",
+  "pk": 1,
+  "fields": {
+    "name": "Бензин",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-01T19:19:30.504Z"
+  }
+},
+{
+  "model": "control.category",
+  "pk": 2,
+  "fields": {
+    "name": "Аванс",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T09:13:31.400Z"
+  }
+},
+{
+  "model": "control.category",
+  "pk": 3,
+  "fields": {
+    "name": "Оплата материалов",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T12:23:34.500Z"
+  }
+},
+{
+  "model": "control.category",
+  "pk": 4,
+  "fields": {
+    "name": "Доставка",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T12:23:42.852Z"
+  }
+},
+{
+  "model": "control.category",
+  "pk": 5,
+  "fields": {
+    "name": "Откат",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T12:23:53.796Z"
+  }
+},
+{
+  "model": "control.category",
+  "pk": 6,
+  "fields": {
+    "name": "Оплата работы",
+    "description": "",
+    "is_active": true,
+    "created_at": "2025-09-02T12:24:01.269Z"
+  }
+},
+{
+  "model": "control.project",
+  "pk": 1,
+  "fields": {
+    "name": "ЗЕМЛЯНИЧНАЯ ПОЛЯНА",
+    "description": "",
+    "contractor": 1,
+    "created_at": "2025-09-01T16:10:21.490Z",
+    "updated_at": "2025-09-02T05:38:01.208Z",
+    "is_active": true
+  }
+},
+{
+  "model": "control.project",
+  "pk": 2,
+  "fields": {
+    "name": "Яхт клуб",
+    "description": "",
+    "contractor": 2,
+    "created_at": "2025-10-20T12:19:33.988Z",
+    "updated_at": "2025-10-20T12:19:33.988Z",
+    "is_active": true
+  }
+},
+{
+  "model": "control.project",
+  "pk": 3,
+  "fields": {
+    "name": "Магазин",
+    "description": "",
+    "contractor": 2,
+    "created_at": "2025-10-20T12:19:42.663Z",
+    "updated_at": "2025-10-20T12:19:42.663Z",
+    "is_active": true
+  }
+},
+{
+  "model": "control.project",
+  "pk": 4,
+  "fields": {
+    "name": "Обьект Гороховец",
+    "description": "",
+    "contractor": 4,
+    "created_at": "2025-10-20T12:21:39.304Z",
+    "updated_at": "2025-10-20T12:30:44.679Z",
+    "is_active": true
+  }
+},
+{
+  "model": "control.project",
+  "pk": 5,
+  "fields": {
+    "name": "Доброград",
+    "description": "",
+    "contractor": 5,
+    "created_at": "2025-10-22T12:44:30.342Z",
+    "updated_at": "2025-10-22T12:44:30.342Z",
+    "is_active": true
+  }
+},
+{
+  "model": "control.object",
+  "pk": 1,
+  "fields": {
+    "name": "Одноэтажный дом",
+    "project": 1,
+    "address": "Земляничная поляна, 112",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-09-01T16:10:24.165Z",
+    "updated_at": "2025-09-02T05:38:22.338Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 2,
+  "fields": {
+    "name": "Баня",
+    "project": 2,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:24:30.622Z",
+    "updated_at": "2025-10-20T12:24:30.622Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 3,
+  "fields": {
+    "name": "Гостевой дом",
+    "project": 2,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:30:09.186Z",
+    "updated_at": "2025-10-20T12:30:09.186Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 4,
+  "fields": {
+    "name": "Уличные работы",
+    "project": 2,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:30:21.185Z",
+    "updated_at": "2025-10-20T12:30:21.185Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 5,
+  "fields": {
+    "name": "Гараж",
+    "project": 2,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:30:31.443Z",
+    "updated_at": "2025-10-20T12:30:31.443Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 6,
+  "fields": {
+    "name": "Магазин Белинского 11",
+    "project": 3,
+    "address": "Нижний Новгород, ул. Белинского, д.11",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:31:18.895Z",
+    "updated_at": "2025-10-20T12:31:18.895Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 7,
+  "fields": {
+    "name": "Гостевой дом",
+    "project": 4,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:35:56.472Z",
+    "updated_at": "2025-10-20T12:35:56.472Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 8,
+  "fields": {
+    "name": "Беседка",
+    "project": 4,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:36:09.453Z",
+    "updated_at": "2025-10-20T12:36:09.453Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 9,
+  "fields": {
+    "name": "Уличные работы",
+    "project": 4,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:36:17.377Z",
+    "updated_at": "2025-10-20T12:36:17.378Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 10,
+  "fields": {
+    "name": "Сарай",
+    "project": 4,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:36:24.408Z",
+    "updated_at": "2025-10-20T12:36:24.408Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 11,
+  "fields": {
+    "name": "Дом",
+    "project": 5,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-22T12:46:10.613Z",
+    "updated_at": "2025-10-22T12:46:10.613Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 12,
+  "fields": {
+    "name": "Баня",
+    "project": 5,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-22T12:46:34.438Z",
+    "updated_at": "2025-10-22T12:46:34.439Z"
+  }
+},
+{
+  "model": "control.object",
+  "pk": 13,
+  "fields": {
+    "name": "Уличные работы",
+    "project": 5,
+    "address": "",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "actual_end_date": null,
+    "estimated_budget": null,
+    "is_active": true,
+    "created_at": "2025-10-22T12:46:41.735Z",
+    "updated_at": "2025-10-22T12:46:41.735Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "object": 1,
+    "name": "Фундамент",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-09-01T16:10:26.827Z",
+    "updated_at": "2025-10-20T12:09:51.611Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 2,
+  "fields": {
+    "order": 2,
+    "object": 1,
+    "name": "Стены",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-09-02T09:05:42.795Z",
+    "updated_at": "2025-09-02T09:05:42.795Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 3,
+  "fields": {
+    "order": 3,
+    "object": 1,
+    "name": "Крыша",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-09-02T09:06:06.908Z",
+    "updated_at": "2025-10-20T12:09:56.781Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 4,
+  "fields": {
+    "order": 4,
+    "object": 1,
+    "name": "Фасад",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:10:11.753Z",
+    "updated_at": "2025-10-20T12:10:11.753Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 5,
+  "fields": {
+    "order": 1,
+    "object": 2,
+    "name": "Шлифовка, потолок, покраска, плитка, водосточка",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:27:53.413Z",
+    "updated_at": "2025-10-20T12:29:41.963Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 6,
+  "fields": {
+    "order": 1,
+    "object": 3,
+    "name": "Отделка второго этажа, отделка сарая, отделка гаража, водосточная система и подшив",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:32:09.966Z",
+    "updated_at": "2025-10-20T12:32:09.966Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 7,
+  "fields": {
+    "order": 1,
+    "object": 4,
+    "name": "Забор, бетон площадки, брусчатка",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:32:43.904Z",
+    "updated_at": "2025-10-20T12:32:43.904Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 8,
+  "fields": {
+    "order": 1,
+    "object": 5,
+    "name": "Переделка стен байрамиксом, монтаж плинтуса, короб на несущие конструкции",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:32:57.798Z",
+    "updated_at": "2025-10-20T12:32:57.798Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 9,
+  "fields": {
+    "order": 1,
+    "object": 6,
+    "name": "1 этап Обслуживание",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:33:11.784Z",
+    "updated_at": "2025-10-20T12:33:11.784Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 10,
+  "fields": {
+    "order": 1,
+    "object": 7,
+    "name": "1 этап Фасад",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:36:47.230Z",
+    "updated_at": "2025-10-20T12:36:47.230Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 11,
+  "fields": {
+    "order": 2,
+    "object": 7,
+    "name": "2 этап Отделка дома",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:36:58.994Z",
+    "updated_at": "2025-10-20T12:36:58.994Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 12,
+  "fields": {
+    "order": 1,
+    "object": 8,
+    "name": "Реставрация камина",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:40:47.093Z",
+    "updated_at": "2025-10-20T12:40:47.093Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 13,
+  "fields": {
+    "order": 2,
+    "object": 8,
+    "name": "Внутренняя отделка",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:40:57.860Z",
+    "updated_at": "2025-10-20T12:40:57.860Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 14,
+  "fields": {
+    "order": 1,
+    "object": 9,
+    "name": "Уупель",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:41:09.959Z",
+    "updated_at": "2025-10-20T12:41:09.959Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 15,
+  "fields": {
+    "order": 2,
+    "object": 9,
+    "name": "Освещение",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:41:21.006Z",
+    "updated_at": "2025-10-20T12:41:21.006Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 16,
+  "fields": {
+    "order": 3,
+    "object": 9,
+    "name": "Ручейки",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:41:31.233Z",
+    "updated_at": "2025-10-20T12:41:31.233Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 17,
+  "fields": {
+    "order": 1,
+    "object": 10,
+    "name": "Реставрация сарая",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-20T12:41:39.843Z",
+    "updated_at": "2025-10-20T12:41:39.844Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 18,
+  "fields": {
+    "order": 1,
+    "object": 12,
+    "name": "Установка банной печи",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-24T12:31:04.419Z",
+    "updated_at": "2025-10-24T12:31:09.531Z"
+  }
+},
+{
+  "model": "control.stage",
+  "pk": 19,
+  "fields": {
+    "order": 2,
+    "object": 12,
+    "name": "Облицовка изранцевой плиткой",
+    "planned_start_date": null,
+    "planned_end_date": null,
+    "is_active": true,
+    "created_at": "2025-10-24T12:32:19.865Z",
+    "updated_at": "2025-10-24T12:32:19.865Z"
+  }
+},
+{
+  "model": "control.estimate",
+  "pk": 1,
+  "fields": {
+    "stage": 18,
+    "status": "approved",
+    "created_at": "2025-09-01T16:11:03.193Z",
+    "updated_at": "2025-10-24T13:21:08.141Z"
+  }
+},
+{
+  "model": "control.estimate",
+  "pk": 2,
+  "fields": {
+    "stage": 19,
+    "status": "draft",
+    "created_at": "2025-09-09T05:07:23.931Z",
+    "updated_at": "2025-10-24T12:33:33.150Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 15,
+  "fields": {
+    "estimate": 1,
+    "price_item": 13,
+    "description": "Заслонка поворотная",
+    "quantity": "1.00",
+    "unit_price": "3800.00",
+    "base_price": "3800.00",
+    "income_amount": "0.00",
+    "client_price": "3800.00",
+    "contractor_price": "3800.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:43:23.708Z",
+    "updated_at": "2025-10-24T12:43:23.708Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 16,
+  "fields": {
+    "estimate": 1,
+    "price_item": 14,
+    "description": "Адаптор переход с врезкой охлаждения",
+    "quantity": "1.00",
+    "unit_price": "12150.00",
+    "base_price": "12150.00",
+    "income_amount": "0.00",
+    "client_price": "12150.00",
+    "contractor_price": "12150.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:48:34.628Z",
+    "updated_at": "2025-10-24T12:48:34.628Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 17,
+  "fields": {
+    "estimate": 1,
+    "price_item": 15,
+    "description": "Труба утепленная",
+    "quantity": "6.00",
+    "unit_price": "12450.00",
+    "base_price": "74700.00",
+    "income_amount": "0.00",
+    "client_price": "74700.00",
+    "contractor_price": "74700.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:49:21.761Z",
+    "updated_at": "2025-10-24T12:49:21.761Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 18,
+  "fields": {
+    "estimate": 1,
+    "price_item": 16,
+    "description": "Труба утепленная",
+    "quantity": "3.00",
+    "unit_price": "7500.00",
+    "base_price": "22500.00",
+    "income_amount": "0.00",
+    "client_price": "22500.00",
+    "contractor_price": "22500.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:49:54.266Z",
+    "updated_at": "2025-10-24T12:49:54.266Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 19,
+  "fields": {
+    "estimate": 1,
+    "price_item": 17,
+    "description": "Верхнее окончание",
+    "quantity": "1.00",
+    "unit_price": "5700.00",
+    "base_price": "5700.00",
+    "income_amount": "0.00",
+    "client_price": "5700.00",
+    "contractor_price": "5700.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:50:26.938Z",
+    "updated_at": "2025-10-24T12:50:26.938Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 20,
+  "fields": {
+    "estimate": 1,
+    "price_item": 18,
+    "description": "Дефлектор",
+    "quantity": "1.00",
+    "unit_price": "7300.00",
+    "base_price": "7300.00",
+    "income_amount": "0.00",
+    "client_price": "7300.00",
+    "contractor_price": "7300.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:50:49.623Z",
+    "updated_at": "2025-10-24T12:50:49.623Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 21,
+  "fields": {
+    "estimate": 1,
+    "price_item": 19,
+    "description": "Проходной узел кровли",
+    "quantity": "1.00",
+    "unit_price": "9350.00",
+    "base_price": "9350.00",
+    "income_amount": "0.00",
+    "client_price": "9350.00",
+    "contractor_price": "9350.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:52:50.154Z",
+    "updated_at": "2025-10-24T12:52:50.154Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 22,
+  "fields": {
+    "estimate": 1,
+    "price_item": 20,
+    "description": "Проходной узел перекрытия",
+    "quantity": "1.00",
+    "unit_price": "9700.00",
+    "base_price": "9700.00",
+    "income_amount": "0.00",
+    "client_price": "9700.00",
+    "contractor_price": "9700.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:53:16.632Z",
+    "updated_at": "2025-10-24T12:53:16.632Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 23,
+  "fields": {
+    "estimate": 1,
+    "price_item": 21,
+    "description": "Декоративная накладка разрезная диам.300",
+    "quantity": "1.00",
+    "unit_price": "5250.00",
+    "base_price": "5250.00",
+    "income_amount": "0.00",
+    "client_price": "5250.00",
+    "contractor_price": "5250.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:53:58.819Z",
+    "updated_at": "2025-10-24T12:53:58.819Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 24,
+  "fields": {
+    "estimate": 1,
+    "price_item": 22,
+    "description": "Труба не утепленная диам.150",
+    "quantity": "2.00",
+    "unit_price": "4300.00",
+    "base_price": "8600.00",
+    "income_amount": "0.00",
+    "client_price": "8600.00",
+    "contractor_price": "8600.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T12:54:37.103Z",
+    "updated_at": "2025-10-24T12:54:37.103Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 25,
+  "fields": {
+    "estimate": 1,
+    "price_item": 23,
+    "description": "Труба контура протока + заглушка",
+    "quantity": "1.00",
+    "unit_price": "3350.00",
+    "base_price": "3350.00",
+    "income_amount": "0.00",
+    "client_price": "3350.00",
+    "contractor_price": "3350.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:06:30.444Z",
+    "updated_at": "2025-10-24T13:06:30.444Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 26,
+  "fields": {
+    "estimate": 1,
+    "price_item": 24,
+    "description": "Теплообменник",
+    "quantity": "1.00",
+    "unit_price": "8400.00",
+    "base_price": "8400.00",
+    "income_amount": "0.00",
+    "client_price": "8400.00",
+    "contractor_price": "8400.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:06:30.445Z",
+    "updated_at": "2025-10-24T13:06:30.445Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 27,
+  "fields": {
+    "estimate": 1,
+    "price_item": 25,
+    "description": "Бак для воды 100 литров нерж 2 мм AlSl 304, герметичный, 5 штуцеров",
+    "quantity": "1.00",
+    "unit_price": "35000.00",
+    "base_price": "35000.00",
+    "income_amount": "0.00",
+    "client_price": "35000.00",
+    "contractor_price": "35000.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:06:30.445Z",
+    "updated_at": "2025-10-24T13:06:30.445Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 28,
+  "fields": {
+    "estimate": 1,
+    "price_item": 26,
+    "description": "Гофра нержавеющая, краны, фитинги",
+    "quantity": "1.00",
+    "unit_price": "10600.00",
+    "base_price": "10600.00",
+    "income_amount": "0.00",
+    "client_price": "10600.00",
+    "contractor_price": "10600.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:06:30.445Z",
+    "updated_at": "2025-10-24T13:06:30.445Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 29,
+  "fields": {
+    "estimate": 1,
+    "price_item": 27,
+    "description": "Кирпич «Витебский»",
+    "quantity": "430.00",
+    "unit_price": "59.50",
+    "base_price": "25585.00",
+    "income_amount": "0.00",
+    "client_price": "25585.00",
+    "contractor_price": "25585.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:13:04.578Z",
+    "updated_at": "2025-10-24T13:13:04.578Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 30,
+  "fields": {
+    "estimate": 1,
+    "price_item": 28,
+    "description": "Кладочная смесь (основа глина)",
+    "quantity": "15.00",
+    "unit_price": "860.00",
+    "base_price": "12900.00",
+    "income_amount": "0.00",
+    "client_price": "12900.00",
+    "contractor_price": "12900.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:14:08.095Z",
+    "updated_at": "2025-10-24T13:14:08.095Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 31,
+  "fields": {
+    "estimate": 1,
+    "price_item": 29,
+    "description": "Базальтокартон",
+    "quantity": "2.00",
+    "unit_price": "500.00",
+    "base_price": "1000.00",
+    "income_amount": "0.00",
+    "client_price": "1000.00",
+    "contractor_price": "1000.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:14:45.197Z",
+    "updated_at": "2025-10-24T13:14:45.197Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 32,
+  "fields": {
+    "estimate": 1,
+    "price_item": 30,
+    "description": "Смесь М150",
+    "quantity": "3.00",
+    "unit_price": "200.00",
+    "base_price": "600.00",
+    "income_amount": "0.00",
+    "client_price": "600.00",
+    "contractor_price": "600.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:15:31.257Z",
+    "updated_at": "2025-10-24T13:15:31.257Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 33,
+  "fields": {
+    "estimate": 1,
+    "price_item": 31,
+    "description": "Проволока и сетка кладочная",
+    "quantity": "1.00",
+    "unit_price": "1500.00",
+    "base_price": "1500.00",
+    "income_amount": "0.00",
+    "client_price": "1500.00",
+    "contractor_price": "1500.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:15:58.896Z",
+    "updated_at": "2025-10-24T13:15:58.896Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 34,
+  "fields": {
+    "estimate": 1,
+    "price_item": 32,
+    "description": "Термоизоляция Суперизол(1000*1200)",
+    "quantity": "3.00",
+    "unit_price": "6850.00",
+    "base_price": "20550.00",
+    "income_amount": "0.00",
+    "client_price": "20550.00",
+    "contractor_price": "20550.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:16:51.233Z",
+    "updated_at": "2025-10-24T13:16:51.233Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 35,
+  "fields": {
+    "estimate": 1,
+    "price_item": 33,
+    "description": "Термоизоляция Супервулл",
+    "quantity": "1.00",
+    "unit_price": "5600.00",
+    "base_price": "5600.00",
+    "income_amount": "0.00",
+    "client_price": "5600.00",
+    "contractor_price": "5600.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:18:01.183Z",
+    "updated_at": "2025-10-24T13:18:01.183Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 36,
+  "fields": {
+    "estimate": 1,
+    "price_item": 34,
+    "description": "Клей плиточный термостойкий",
+    "quantity": "4.00",
+    "unit_price": "1350.00",
+    "base_price": "5400.00",
+    "income_amount": "0.00",
+    "client_price": "5400.00",
+    "contractor_price": "5400.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:18:01.184Z",
+    "updated_at": "2025-10-24T13:18:01.184Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 37,
+  "fields": {
+    "estimate": 1,
+    "price_item": 35,
+    "description": "Декоративный камень Талькохлорид (рваный камень)",
+    "quantity": "6.00",
+    "unit_price": "14500.00",
+    "base_price": "87000.00",
+    "income_amount": "0.00",
+    "client_price": "87000.00",
+    "contractor_price": "87000.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:19:54.730Z",
+    "updated_at": "2025-10-24T13:19:54.730Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 38,
+  "fields": {
+    "estimate": 1,
+    "price_item": 36,
+    "description": "Плитка полированная Талькохлорид (подиум под печь)",
+    "quantity": "1.50",
+    "unit_price": "13700.00",
+    "base_price": "20550.00",
+    "income_amount": "0.00",
+    "client_price": "20550.00",
+    "contractor_price": "20550.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:19:54.730Z",
+    "updated_at": "2025-10-24T13:19:54.730Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 39,
+  "fields": {
+    "estimate": 1,
+    "price_item": 37,
+    "description": "Расходные материалы",
+    "quantity": "1.00",
+    "unit_price": "7500.00",
+    "base_price": "7500.00",
+    "income_amount": "0.00",
+    "client_price": "7500.00",
+    "contractor_price": "7500.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:21:08.142Z",
+    "updated_at": "2025-10-24T13:21:08.142Z"
+  }
+},
+{
+  "model": "control.estimateitem",
+  "pk": 40,
+  "fields": {
+    "estimate": 1,
+    "price_item": 38,
+    "description": "Транспортные услуги",
+    "quantity": "1.00",
+    "unit_price": "25000.00",
+    "base_price": "25000.00",
+    "income_amount": "0.00",
+    "client_price": "25000.00",
+    "contractor_price": "25000.00",
+    "income_type": "",
+    "income_value": "0.00",
+    "is_percentage": false,
+    "created_at": "2025-10-24T13:21:08.143Z",
+    "updated_at": "2025-10-24T13:21:08.143Z"
+  }
+},
+{
+  "model": "control.transaction",
+  "pk": 33,
+  "fields": {
+    "amount": "5000.00",
+    "transaction_type": "expense",
+    "category": 6,
+    "contractor": null,
+    "description": "аа",
+    "date": "2025-10-20",
+    "stage": 5,
+    "estimate": null,
+    "estimate_item": null,
+    "created_at": "2025-10-20T13:02:49.849Z",
+    "updated_at": "2025-10-20T13:02:49.849Z"
+  }
+}
+]
