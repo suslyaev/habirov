@@ -49,10 +49,12 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     """
     Кастомная модель пользователя с логином по телефону.
+    Также используется для контрагентов.
     """
     phone = models.CharField(max_length=20, unique=True, verbose_name='Телефон')
     first_name = models.CharField(max_length=150, blank=True, null=True, verbose_name='Имя')
     last_name = models.CharField(max_length=150, blank=True, null=True, verbose_name='Фамилия')
+    comment = models.TextField('Комментарий', blank=True)
 
     ext_id = models.CharField(max_length=150, blank=True, null=True, verbose_name='Внешний ID')
     
@@ -234,7 +236,7 @@ class Object(models.Model):
         Project, 
         on_delete=models.CASCADE, 
         verbose_name='Проект',
-        related_name='objects'
+        related_name='build_objects'
     )
     address = models.TextField('Адрес', blank=True)
     planned_start_date = models.DateField('Плановая дата начала', null=True, blank=True)

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор иконок</title>
+</head>
+<body>
+    <h2>Инструкция по созданию иконок:</h2>
+    <ol>
+        <li>Откройте icon.svg в любом редакторе (Figma, Inkscape, Adobe Illustrator)</li>
+        <li>Экспортируйте в PNG:
+            <ul>
+                <li>icon-192.png (192x192 пикселей)</li>
+                <li>icon-512.png (512x512 пикселей)</li>
+            </ul>
+        </li>
+        <li>Или используйте онлайн конвертер: <a href="https://cloudconvert.com/svg-to-png" target="_blank">CloudConvert</a></li>
+    </ol>
+    
+    <p><strong>Временно:</strong> Создаю минимальные PNG иконки...</p>
+    
+    <canvas id="canvas192" width="192" height="192"></canvas>
+    <canvas id="canvas512" width="512" height="512"></canvas>
+    
+    <script>
+        function createIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Фон
+            ctx.fillStyle = '#007bff';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Монетка
+            ctx.fillStyle = '#FFD700';
+            ctx.beginPath();
+            ctx.arc(size/2, size*0.4, size*0.15, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Рубль
+            ctx.fillStyle = 'white';
+            ctx.font = `bold ${size*0.15}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('₽', size/2, size*0.4);
+            
+            // Галочка
+            ctx.strokeStyle = '#28a745';
+            ctx.lineWidth = size * 0.04;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.beginPath();
+            ctx.moveTo(size*0.35, size*0.7);
+            ctx.lineTo(size*0.43, size*0.78);
+            ctx.lineTo(size*0.65, size*0.55);
+            ctx.stroke();
+            
+            // Скачивание
+            canvas.toBlob(blob => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `icon-${size}.png`;
+                a.click();
+            });
+        }
+        
+        createIcon('canvas192', 192);
+        createIcon('canvas512', 512);
+    </script>
+</body>
+</html>

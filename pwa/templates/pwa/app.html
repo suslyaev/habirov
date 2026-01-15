@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#007bff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Учет">
+    
+    <title>Хабиров Учет</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'pwa/icons/icon-192.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'pwa/icons/icon-192.png' %}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'pwa/css/app.css' %}">
+</head>
+<body>
+    <!-- Экран загрузки -->
+    <div id="loading-screen" class="screen active">
+        <div class="spinner"></div>
+        <p>Загрузка...</p>
+    </div>
+
+    <!-- Экран авторизации -->
+    <div id="login-screen" class="screen">
+        <div class="container">
+            <div class="logo">📊</div>
+            <h1>Хабиров Учет</h1>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+70000000000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Войти</button>
+                
+                <div id="login-error" class="error hidden"></div>
+            </form>
+            
+            <div class="connection-status" id="connection-status"></div>
+        </div>
+    </div>
+
+    <!-- Главный экран -->
+    <div id="main-screen" class="screen">
+        <!-- Хедер -->
+        <header class="app-header">
+            <h1>💰 Учет</h1>
+            <div class="header-actions">
+                <span id="sync-status" class="sync-status"></span>
+                <button id="sync-btn" class="btn-icon" title="Синхронизация">🔄</button>
+                <button id="logout-btn" class="btn-icon" title="Выход">🚪</button>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="app-nav">
+            <button class="nav-btn active" data-view="transactions">📋 Транзакции</button>
+            <button class="nav-btn" data-view="create">➕ Создать</button>
+        </nav>
+
+        <!-- Контент -->
+        <main class="app-content">
+            <!-- Список транзакций -->
+            <div id="transactions-view" class="view active">
+                <div class="filters">
+                    <select id="filter-project" class="form-control">
+                        <option value="">Все проекты</option>
+                    </select>
+                </div>
+                
+                <div id="transactions-list" class="transactions-list">
+                    <!-- Транзакции загружаются динамически -->
+                </div>
+                
+                <div id="no-transactions" class="empty-state hidden">
+                    <p>📭 Нет транзакций</p>
+                </div>
+            </div>
+
+            <!-- Форма создания транзакции -->
+            <div id="create-view" class="view">
+                <form id="transaction-form">
+                    <div class="form-group">
+                        <label for="tr-date">Дата *</label>
+                        <input type="date" id="tr-date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tr-type">Тип операции *</label>
+                        <select id="tr-type" name="transaction_type" required>
+                            <option value="income">Доход</option>
+                            <option value="expense">Расход</option>
+                            <option value="transfer">Перевод</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tr-amount">Сумма *</label>
+                        <input type="number" id="tr-amount" name="amount" step="0.01" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tr-category">Категория *</label>
+                        <select id="tr-category" name="category" required>
+                            <option value="">Выберите категорию</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tr-contractor">Контрагент</label>
+                        <select id="tr-contractor" name="contractor">
+                            <option value="">Не указан</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tr-project">Проект</label>
+                        <select id="tr-project" name="project">
+                            <option value="">Не указан</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tr-stage">Этап</label>
+                        <select id="tr-stage" name="stage">
+                            <option value="">Не указан</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tr-estimate">Смета</label>
+                        <select id="tr-estimate" name="estimate">
+                            <option value="">Не указана</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tr-description">Описание</label>
+                        <input type="text" id="tr-description" name="description">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Создать транзакцию</button>
+                    
+                    <div id="form-error" class="error hidden"></div>
+                    <div id="form-success" class="success hidden"></div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Индикатор соединения -->
+        <div id="offline-banner" class="offline-banner hidden">
+            ⚠️ Нет соединения с сервером. Работаем в оффлайн режиме.
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'pwa/js/db.js' %}"></script>
+    <script src="{% static 'pwa/js/api.js' %}"></script>
+    <script src="{% static 'pwa/js/sync.js' %}"></script>
+    <script src="{% static 'pwa/js/app.js' %}"></script>
+    
+    <script>
+        // Регистрация Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('✅ Service Worker зарегистрирован'))
+                .catch(err => console.error('❌ Ошибка регистрации SW:', err));
+        }
+    </script>
+</body>
+</html>
+

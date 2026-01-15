@@ -1,0 +1,13 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фон -->
+  <rect width="512" height="512" fill="#007bff" rx="80"/>
+  
+  <!-- Иконка монетки/денег -->
+  <circle cx="256" cy="200" r="80" fill="#FFD700" stroke="#FFA500" stroke-width="8"/>
+  <text x="256" y="220" font-size="60" text-anchor="middle" fill="#007bff" font-weight="bold">₽</text>
+  
+  <!-- Галочка (символ учета) -->
+  <path d="M 180 360 L 220 400 L 340 280" stroke="#28a745" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+

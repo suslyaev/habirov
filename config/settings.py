@@ -29,9 +29,10 @@ load_dotenv(BASE_DIR / '.env')
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'change-me-in-.env')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+# По умолчанию True для разработки, на продакшене установите DEBUG=False в .env
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['iphabirov.ru', 'www.iphabirov.ru', '84.54.29.30', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['iphabirov.ru', 'www.iphabirov.ru', '84.54.29.30', 'localhost', '127.0.0.1', '192.168.31.42']
 
 
 # Application definition
@@ -43,8 +44,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_simplejwt',
     'admin_auto_filters',
     'control.apps.ControlConfig',
+    'api.apps.ApiConfig',
+    'pwa.apps.PwaConfig',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +146,26 @@ CSRF_TRUSTED_ORIGINS = ['https://iphabirov.ru', 'http://iphabirov.ru']
 
 # Кастомная модель пользователя
 AUTH_USER_MODEL = 'control.CustomUser'
+
+# Django REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 50,
+}
+
+# JWT Settings
+from datetime import timedelta
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': False,
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}
