@@ -152,6 +152,19 @@ class API {
         });
     }
 
+    async updateTransaction(id, data) {
+        return await this.request(`/transactions/${id}/`, {
+            method: 'PUT',
+            body: JSON.stringify(data),
+        });
+    }
+
+    async deleteTransaction(id) {
+        return await this.request(`/transactions/${id}/`, {
+            method: 'DELETE',
+        });
+    }
+
     // === Справочники ===
     async getCategories() {
         return await this.request('/categories/');

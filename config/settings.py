@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'api.middleware.DisableCSRFForAPI',  # Отключаем CSRF для API
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -142,7 +143,13 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://iphabirov.ru', 'http://iphabirov.ru']
+CSRF_TRUSTED_ORIGINS = [
+    'https://iphabirov.ru',
+    'http://iphabirov.ru',
+    'http://localhost:4000',
+    'http://127.0.0.1:4000',
+    'http://192.168.31.42:4000',
+]
 
 # Кастомная модель пользователя
 AUTH_USER_MODEL = 'control.CustomUser'
@@ -151,7 +158,8 @@ AUTH_USER_MODEL = 'control.CustomUser'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
+        # SessionAuthentication убран, т.к. требует CSRF токен
+        # Для API используем только JWT
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',

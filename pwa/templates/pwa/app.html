@@ -108,6 +108,82 @@
                 </div>
             </div>
 
+            <!-- Карточка транзакции (редактирование) -->
+            <div id="transaction-card-view" class="view">
+                <div class="card-header">
+                    <button id="card-back-btn" class="btn-icon">← Назад</button>
+                    <h2>Редактирование транзакции</h2>
+                </div>
+                <form id="transaction-card-form">
+                    <input type="hidden" id="card-tx-id" name="id">
+                    <input type="hidden" id="card-tx-pending" name="is_pending">
+                    
+                    <div class="form-group">
+                        <label for="card-date">Дата *</label>
+                        <input type="date" id="card-date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-type">Тип операции *</label>
+                        <select id="card-type" name="transaction_type" required>
+                            <option value="income">Доход</option>
+                            <option value="expense">Расход</option>
+                            <option value="transfer">Перевод</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-amount">Сумма *</label>
+                        <input type="number" id="card-amount" name="amount" step="0.01" min="0" inputmode="decimal" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-category">Категория *</label>
+                        <select id="card-category" name="category" required>
+                            <option value="">Выберите категорию</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-contractor">Контрагент</label>
+                        <select id="card-contractor" name="contractor">
+                            <option value="">Не указан</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-project">Проект</label>
+                        <select id="card-project" name="project">
+                            <option value="">Не указан</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-stage">Этап</label>
+                        <select id="card-stage" name="stage">
+                            <option value="">Не указан</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-estimate">Смета</label>
+                        <select id="card-estimate" name="estimate">
+                            <option value="">Не указана</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-description">Описание</label>
+                        <input type="text" id="card-description" name="description">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Сохранить изменения</button>
+                    
+                    <div id="card-form-error" class="error hidden"></div>
+                    <div id="card-form-success" class="success hidden"></div>
+                </form>
+            </div>
+
             <!-- Форма создания транзакции -->
             <div id="create-view" class="view">
                 <form id="transaction-form">
@@ -127,7 +203,7 @@
                     
                     <div class="form-group">
                         <label for="tr-amount">Сумма *</label>
-                        <input type="number" id="tr-amount" name="amount" step="0.01" min="0" required>
+                        <input type="number" id="tr-amount" name="amount" step="0.01" min="0" inputmode="decimal" required>
                     </div>
                     
                     <div class="form-group">

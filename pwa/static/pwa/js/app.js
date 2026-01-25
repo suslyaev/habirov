@@ -86,6 +86,7 @@ class App {
         // Настраиваем UI
         this.setupNavigation();
         this.setupTransactionForm();
+        this.setupTransactionCardForm();
         this.setupButtons();
     }
 
@@ -141,12 +142,112 @@ class App {
 
         // Контрагенты
         const contractorSelect = document.getElementById('tr-contractor');
-        contractorSelect.innerHTML = '<option value="">Не указан</option>';
-        this.referenceData.contractors.forEach(contr => {
-            const name = contr.first_name && contr.last_name 
-                ? `${contr.first_name} ${contr.last_name}` 
-                : contr.phone;
-            contractorSelect.innerHTML += `<option value="${contr.id}">${name}</option>`;
+        const cardContractorSelect = document.getElementById('card-contractor');
+        [contractorSelect, cardContractorSelect].forEach(select => {
+            if (select) {
+                select.innerHTML = '<option value="">Не указан</option>';
+                this.referenceData.contractors.forEach(contr => {
+                    const name = contr.first_name && contr.last_name 
+                        ? `${contr.first_name} ${contr.last_name}` 
+                        : contr.phone;
+                    select.innerHTML += `<option value="${contr.id}">${name}</option>`;
+                });
+            }
+        });
+        
+        // Категории для карточки
+        const cardCategorySelect = document.getElementById('card-category');
+        if (cardCategorySelect) {
+            cardCategorySelect.innerHTML = '<option value="">Выберите категорию</option>';
+            this.referenceData.categories.forEach(cat => {
+                cardCategorySelect.innerHTML += `<option value="${cat.id}">${cat.name}</option>`;
+            });
+        }
+        
+        // Проекты для карточки
+        const cardProjectSelect = document.getElementById('card-project');
+        if (cardProjectSelect) {
+            cardProjectSelect.innerHTML = '<option value="">Не указан</option>';
+            this.referenceData.projects.forEach(proj => {
+                cardProjectSelect.innerHTML += `<option value="${proj.id}">${proj.name}</option>`;
+            });
+        }
+        
+        // Настраиваем зависимые списки
+        this.setupDependentSelects();
+    }
+    
+    setupDependentSelects() {
+        // Для формы создания
+        const createProject = document.getElementById('tr-project');
+        const createStage = document.getElementById('tr-stage');
+        const createEstimate = document.getElementById('tr-estimate');
+        
+        if (createProject) {
+            createProject.addEventListener('change', () => {
+                this.updateStagesSelect(createProject.value, createStage);
+                createEstimate.innerHTML = '<option value="">Не указана</option>';
+            });
+        }
+        
+        if (createStage) {
+            createStage.addEventListener('change', () => {
+                this.updateEstimatesSelect(createStage.value, createEstimate);
+            });
+        }
+        
+        // Для карточки
+        const cardProject = document.getElementById('card-project');
+        const cardStage = document.getElementById('card-stage');
+        const cardEstimate = document.getElementById('card-estimate');
+        
+        if (cardProject) {
+            cardProject.addEventListener('change', () => {
+                this.updateStagesSelect(cardProject.value, cardStage);
+                cardEstimate.innerHTML = '<option value="">Не указана</option>';
+            });
+        }
+        
+        if (cardStage) {
+            cardStage.addEventListener('change', () => {
+                this.updateEstimatesSelect(cardStage.value, cardEstimate);
+            });
+        }
+    }
+    
+    updateStagesSelect(projectId, stageSelect) {
+        if (!stageSelect) return;
+        
+        stageSelect.innerHTML = '<option value="">Не указан</option>';
+        
+        if (!projectId) {
+            return;
+        }
+        
+        const projectIdNum = parseInt(projectId);
+        const projectObjects = (this.referenceData.objects || []).filter(o => o.project === projectIdNum);
+        const projectObjectIds = projectObjects.map(o => o.id);
+        const projectStages = (this.referenceData.stages || []).filter(s => projectObjectIds.includes(s.object));
+        
+        projectStages.forEach(stage => {
+            stageSelect.innerHTML += `<option value="${stage.id}">${stage.name}</option>`;
+        });
+    }
+    
+    updateEstimatesSelect(stageId, estimateSelect) {
+        if (!estimateSelect) return;
+        
+        estimateSelect.innerHTML = '<option value="">Не указана</option>';
+        
+        if (!stageId) {
+            return;
+        }
+        
+        const stageIdNum = parseInt(stageId);
+        const stageEstimates = (this.referenceData.estimates || []).filter(e => e.stage === stageIdNum);
+        
+        stageEstimates.forEach(est => {
+            estimateSelect.innerHTML += `<option value="${est.id}">${est.stage_name || est.id}</option>`;
         });
     }
 
@@ -154,6 +255,13 @@ class App {
     async loadTransactions() {
         try {
             const allTransactions = await localDB.getTransactions();
+            
+            // Сортируем по дате (последние сверху)
+            allTransactions.sort((a, b) => {
+                const dateA = new Date(a.date || a.created_at);
+                const dateB = new Date(b.date || b.created_at);
+                return dateB - dateA; // По убыванию (новые сверху)
+            });
             
             // Применяем фильтры
             let filtered = this.applyFilters(allTransactions);
@@ -270,7 +378,7 @@ class App {
             const isPending = tx.sync_status === 'pending';
             
             return `
-                <div class="transaction-item ${tx.sync_status}" data-tx-id="${txId}" data-tx-pending="${isPending}">
+                <div class="transaction-item ${tx.sync_status}" data-tx-id="${txId}" data-tx-pending="${isPending}" data-tx-data='${JSON.stringify(tx).replace(/'/g, "&apos;")}'>
                     <button class="transaction-delete" data-tx-id="${txId}" data-tx-pending="${isPending}" title="Удалить">🗑️</button>
                     <div class="transaction-status">${statusEmoji} ${statusText}</div>
                     <div class="transaction-header">
@@ -279,6 +387,7 @@ class App {
                     </div>
                     <div class="transaction-details">
                         <div><strong>Категория:</strong> ${tx.category_name || 'Не указана'}</div>
+                        ${tx.project_name ? `<div><strong>Проект:</strong> ${tx.project_name}</div>` : ''}
                         ${tx.contractor_name ? `<div><strong>Контрагент:</strong> ${tx.contractor_name}</div>` : ''}
                         ${tx.description ? `<div><strong>Описание:</strong> ${tx.description}</div>` : ''}
                         <div><strong>Дата:</strong> ${new Date(tx.date).toLocaleDateString('ru-RU')}</div>
@@ -294,6 +403,18 @@ class App {
                 const txId = btn.dataset.txId;
                 const isPending = btn.dataset.txPending === 'true';
                 this.showDeleteConfirm(txId, isPending);
+            });
+        });
+        
+        // Добавляем обработчики клика на транзакцию
+        listEl.querySelectorAll('.transaction-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                // Игнорируем клик на кнопку удаления
+                if (e.target.closest('.transaction-delete')) {
+                    return;
+                }
+                const txData = JSON.parse(item.dataset.txData || '{}');
+                this.openTransactionCard(txData);
             });
         });
     }
@@ -445,6 +566,173 @@ class App {
         
         this.currentView = viewName;
     }
+    
+    // === Карточка транзакции ===
+    openTransactionCard(txData) {
+        // Заполняем форму данными транзакции
+        document.getElementById('card-tx-id').value = txData.id || '';
+        document.getElementById('card-tx-pending').value = txData.sync_status === 'pending' ? 'true' : 'false';
+        document.getElementById('card-date').value = txData.date ? txData.date.split('T')[0] : '';
+        document.getElementById('card-type').value = txData.transaction_type || 'expense';
+        document.getElementById('card-amount').value = txData.amount || '';
+        document.getElementById('card-category').value = txData.category || '';
+        document.getElementById('card-contractor').value = txData.contractor || '';
+        document.getElementById('card-description').value = txData.description || '';
+        
+        // Устанавливаем проект, этап и смету
+        const cardProject = document.getElementById('card-project');
+        const cardStage = document.getElementById('card-stage');
+        const cardEstimate = document.getElementById('card-estimate');
+        
+        // Если есть project_id, устанавливаем проект
+        if (txData.project_id) {
+            cardProject.value = txData.project_id;
+            // Обновляем этапы для этого проекта
+            this.updateStagesSelect(txData.project_id, cardStage);
+            
+            // Если есть stage, устанавливаем его
+            if (txData.stage) {
+                setTimeout(() => {
+                    cardStage.value = txData.stage;
+                    // Обновляем сметы для этого этапа
+                    this.updateEstimatesSelect(txData.stage, cardEstimate);
+                    
+                    // Если есть estimate, устанавливаем его
+                    if (txData.estimate) {
+                        setTimeout(() => {
+                            cardEstimate.value = txData.estimate;
+                        }, 100);
+                    }
+                }, 100);
+            }
+        } else {
+            // Если нет project_id, но есть stage, пытаемся найти проект через stage
+            if (txData.stage) {
+                const stage = (this.referenceData.stages || []).find(s => s.id === txData.stage);
+                if (stage) {
+                    const object = (this.referenceData.objects || []).find(o => o.id === stage.object);
+                    if (object) {
+                        cardProject.value = object.project;
+                        this.updateStagesSelect(object.project, cardStage);
+                        setTimeout(() => {
+                            cardStage.value = txData.stage;
+                            this.updateEstimatesSelect(txData.stage, cardEstimate);
+                            if (txData.estimate) {
+                                setTimeout(() => {
+                                    cardEstimate.value = txData.estimate;
+                                }, 100);
+                            }
+                        }, 100);
+                    }
+                }
+            }
+        }
+        
+        // Переключаемся на вид карточки
+        this.switchView('transaction-card');
+    }
+    
+    setupTransactionCardForm() {
+        const form = document.getElementById('transaction-card-form');
+        const errorEl = document.getElementById('card-form-error');
+        const successEl = document.getElementById('card-form-success');
+        const backBtn = document.getElementById('card-back-btn');
+        
+        // Кнопка "Назад"
+        if (backBtn) {
+            backBtn.addEventListener('click', () => {
+                this.switchView('transactions');
+                form.reset();
+                errorEl.classList.add('hidden');
+                successEl.classList.add('hidden');
+            });
+        }
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            errorEl.classList.add('hidden');
+            successEl.classList.add('hidden');
+            
+            const txId = document.getElementById('card-tx-id').value;
+            const isPending = document.getElementById('card-tx-pending').value === 'true';
+            
+            const data = {
+                date: document.getElementById('card-date').value,
+                transaction_type: document.getElementById('card-type').value,
+                amount: parseFloat(document.getElementById('card-amount').value),
+                category: parseInt(document.getElementById('card-category').value),
+                description: document.getElementById('card-description').value || '',
+            };
+            
+            const contractor = document.getElementById('card-contractor').value;
+            if (contractor && contractor !== '') {
+                data.contractor = parseInt(contractor);
+            }
+            
+            const stage = document.getElementById('card-stage').value;
+            if (stage && stage !== '') {
+                data.stage = parseInt(stage);
+            }
+            
+            const estimate = document.getElementById('card-estimate').value;
+            if (estimate && estimate !== '') {
+                data.estimate = parseInt(estimate);
+            }
+            
+            try {
+                const isOnline = await api.checkConnection();
+                
+                if (isOnline) {
+                    // Обновляем на сервере
+                    if (isPending) {
+                        // Если это pending транзакция, создаем новую
+                        const created = await api.createTransaction(data);
+                        // Удаляем старую pending
+                        await localDB.deletePendingTransaction(txId);
+                        // Добавляем новую синхронизированную
+                        await localDB.addTransaction(created);
+                        successEl.textContent = '✅ Транзакция обновлена и синхронизирована';
+                    } else {
+                        // Обновляем существующую транзакцию
+                        const updated = await api.updateTransaction(txId, data);
+                        // Обновляем в локальной БД
+                        await localDB.addTransaction(updated);
+                        successEl.textContent = '✅ Изменения сохранены и синхронизированы';
+                    }
+                } else {
+                    // Сохраняем локально
+                    if (isPending) {
+                        // Обновляем pending транзакцию
+                        await localDB.deletePendingTransaction(txId);
+                        const newLocalId = await localDB.addPendingTransaction(data);
+                        successEl.textContent = '✅ Изменения сохранены локально';
+                    } else {
+                        // Для синхронизированных транзакций в оффлайне создаем новую pending
+                        await localDB.addPendingTransaction(data);
+                        successEl.textContent = '✅ Изменения сохранены локально (будут синхронизированы при подключении)';
+                    }
+                }
+                
+                successEl.classList.remove('hidden');
+                
+                // Обновляем список транзакций
+                await this.loadTransactions();
+                
+                // Возвращаемся к списку через 1.5 секунды
+                setTimeout(() => {
+                    this.switchView('transactions');
+                    form.reset();
+                    successEl.classList.add('hidden');
+                }, 1500);
+                
+            } catch (error) {
+                console.error('❌ Ошибка сохранения транзакции:', error);
+                errorEl.textContent = `❌ Ошибка: ${error.message || 'Неизвестная ошибка'}`;
+                errorEl.classList.remove('hidden');
+                this.showError(`❌ Ошибка сохранения транзакции: ${error.message || 'Неизвестная ошибка'}`);
+            }
+        });
+    }
 
     // === Кнопки ===
     setupButtons() {
@@ -554,7 +842,7 @@ class App {
             } else {
                 // Удаляем через API
                 try {
-                    await api.request(`/transactions/${txId}/`, { method: 'DELETE' });
+                    await api.deleteTransaction(parseInt(txId));
                     console.log(`✅ Транзакция ${txId} удалена с сервера`);
                     
                     // Также удаляем из локальной БД (используем числовой id)

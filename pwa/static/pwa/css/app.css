@@ -324,6 +324,13 @@ select:focus {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     position: relative;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.transaction-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 .transaction-item.pending {
@@ -533,9 +540,20 @@ select:focus {
     transform: scale(0.95);
 }
 
-.transaction-item {
-    position: relative;
-    padding-bottom: 50px; /* Место для кнопки удаления внизу */
+/* Карточка транзакции */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 20px;
+    flex: 1;
 }
 
 /* iOS специфичные стили */
