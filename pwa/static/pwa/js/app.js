@@ -168,9 +168,12 @@ class App {
             const statusEmoji = tx.sync_status === 'pending' ? '🟡' : '🟢';
             const statusText = tx.sync_status === 'pending' ? 'Не синхр.' : 'Синхр.';
             const amount = tx.transaction_type === 'income' ? `+${tx.amount}` : `-${tx.amount}`;
+            const txId = tx.id || tx.local_id;
+            const isPending = tx.sync_status === 'pending';
             
             return `
-                <div class="transaction-item ${tx.sync_status}">
+                <div class="transaction-item ${tx.sync_status}" data-tx-id="${txId}" data-tx-pending="${isPending}">
+                    <button class="transaction-delete" data-tx-id="${txId}" data-tx-pending="${isPending}" title="Удалить">🗑️</button>
                     <div class="transaction-status">${statusEmoji} ${statusText}</div>
                     <div class="transaction-header">
                         <span class="transaction-type ${typeClass}">${typeText}</span>
@@ -185,6 +188,16 @@ class App {
                 </div>
             `;
         }).join('');
+        
+        // Добавляем обработчики удаления
+        listEl.querySelectorAll('.transaction-delete').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const txId = btn.dataset.txId;
+                const isPending = btn.dataset.txPending === 'true';
+                this.showDeleteConfirm(txId, isPending);
+            });
+        });
     }
 
     // === Создание транзакции ===
@@ -222,13 +235,19 @@ class App {
                     const created = await api.createTransaction(data);
                     await localDB.addTransaction(created);
                     successEl.textContent = '✅ Транзакция создана и синхронизирована';
+                    successEl.classList.remove('hidden');
                 } else {
                     // Сохраняем локально
-                    const localId = await localDB.addPendingTransaction(data);
-                    successEl.textContent = `🟡 Транзакция сохранена локально (будет синхронизирована при восстановлении связи)`;
+                    try {
+                        const localId = await localDB.addPendingTransaction(data);
+                        successEl.textContent = `🟡 Транзакция сохранена локально (будет синхронизирована при восстановлении связи)`;
+                        successEl.classList.remove('hidden');
+                    } catch (dbError) {
+                        console.error('IndexedDB error:', dbError);
+                        throw new Error('Не удалось сохранить транзакцию локально. Проверьте доступность хранилища.');
+                    }
                 }
                 
-                successEl.classList.remove('hidden');
                 form.reset();
                 document.getElementById('tr-date').valueAsDate = new Date();
                 
@@ -241,7 +260,11 @@ class App {
                 }, 2000);
                 
             } catch (error) {
-                errorEl.textContent = `❌ Ошибка: ${error.message}`;
+                console.error('Ошибка создания транзакции:', error);
+                // Показываем ошибку в попапе
+                this.showError(`❌ Ошибка создания транзакции: ${error.message || 'Неизвестная ошибка'}`);
+                // Также показываем внизу формы для совместимости
+                errorEl.textContent = `❌ Ошибка: ${error.message || 'Неизвестная ошибка'}`;
                 errorEl.classList.remove('hidden');
             }
         });
@@ -292,6 +315,98 @@ class App {
         document.getElementById('filter-project').addEventListener('change', async (e) => {
             await this.loadTransactions();
         });
+        
+        // Модальные окна
+        this.setupModals();
+    }
+    
+    // === Модальные окна ===
+    setupModals() {
+        // Окно ошибок
+        const errorModal = document.getElementById('error-modal');
+        const errorClose = document.getElementById('error-modal-close');
+        const errorOk = document.getElementById('error-modal-ok');
+        
+        [errorClose, errorOk].forEach(btn => {
+            btn.addEventListener('click', () => {
+                errorModal.classList.add('hidden');
+            });
+        });
+        
+        // Окно удаления
+        const deleteModal = document.getElementById('delete-modal');
+        const deleteClose = document.getElementById('delete-modal-close');
+        const deleteCancel = document.getElementById('delete-modal-cancel');
+        const deleteConfirm = document.getElementById('delete-modal-confirm');
+        
+        [deleteClose, deleteCancel].forEach(btn => {
+            btn.addEventListener('click', () => {
+                deleteModal.classList.add('hidden');
+            });
+        });
+        
+        deleteConfirm.addEventListener('click', async () => {
+            const txId = deleteConfirm.dataset.txId;
+            const isPending = deleteConfirm.dataset.txPending === 'true';
+            await this.deleteTransaction(txId, isPending);
+            deleteModal.classList.add('hidden');
+        });
+    }
+    
+    showError(message) {
+        const modal = document.getElementById('error-modal');
+        const messageEl = document.getElementById('error-modal-message');
+        messageEl.textContent = message;
+        modal.classList.remove('hidden');
+    }
+    
+    showDeleteConfirm(txId, isPending) {
+        const modal = document.getElementById('delete-modal');
+        const confirmBtn = document.getElementById('delete-modal-confirm');
+        confirmBtn.dataset.txId = txId;
+        confirmBtn.dataset.txPending = isPending;
+        modal.classList.remove('hidden');
+    }
+    
+    async deleteTransaction(txId, isPending) {
+        try {
+            if (isPending) {
+                // Удаляем из локальной БД (pending_transactions)
+                await localDB.deletePendingTransaction(parseInt(txId));
+                console.log(`✅ Локальная транзакция ${txId} удалена`);
+            } else {
+                // Удаляем через API
+                try {
+                    await api.request(`/transactions/${txId}/`, { method: 'DELETE' });
+                    console.log(`✅ Транзакция ${txId} удалена с сервера`);
+                    
+                    // Также удаляем из локальной БД
+                    const tx = localDB.db.transaction('transactions', 'readwrite');
+                    await localDB._promisifyRequest(tx.objectStore('transactions').delete(parseInt(txId)));
+                } catch (error) {
+                    // Если нет соединения, удаляем локально
+                    if (!await api.checkConnection()) {
+                        const tx = localDB.db.transaction('transactions', 'readwrite');
+                        await localDB._promisifyRequest(tx.objectStore('transactions').delete(parseInt(txId)));
+                        console.log(`✅ Транзакция ${txId} удалена локально (оффлайн)`);
+                    } else {
+                        throw error;
+                    }
+                }
+            }
+            
+            // Обновляем список
+            await this.loadTransactions();
+            
+            // Показываем успех
+            this.showError('✅ Транзакция успешно удалена');
+            setTimeout(() => {
+                document.getElementById('error-modal').classList.add('hidden');
+            }, 2000);
+        } catch (error) {
+            console.error('Ошибка удаления:', error);
+            this.showError(`❌ Ошибка удаления: ${error.message || 'Неизвестная ошибка'}`);
+        }
     }
 }
 

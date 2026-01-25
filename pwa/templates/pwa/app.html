@@ -167,6 +167,39 @@
         </div>
     </div>
 
+    <!-- Модальное окно для ошибок -->
+    <div id="error-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>⚠️ Ошибка</h2>
+                <button class="modal-close" id="error-modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="error-modal-message"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="error-modal-ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно подтверждения удаления -->
+    <div id="delete-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🗑️ Удаление транзакции</h2>
+                <button class="modal-close" id="delete-modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <p>Вы уверены, что хотите удалить эту транзакцию?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" id="delete-modal-cancel">Отмена</button>
+                <button class="btn btn-danger" id="delete-modal-confirm">Удалить</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="{% static 'pwa/js/db.js' %}"></script>
     <script src="{% static 'pwa/js/api.js' %}"></script>

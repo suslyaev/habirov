@@ -60,7 +60,8 @@ class SyncManager {
             
             // Обновляем UI
             if (window.app) {
-                window.app.loadTransactions();
+                await window.app.loadReferenceData(); // Обновляем справочники
+                await window.app.loadTransactions(); // Обновляем транзакции
             }
         } catch (error) {
             console.error('Sync error:', error);
@@ -137,18 +138,35 @@ class SyncManager {
      */
     async syncTransactions() {
         try {
-            const response = await api.getTransactions({ page_size: 100 });
-            const transactions = response.results || response;
+            // Загружаем все транзакции (может быть несколько страниц)
+            let allTransactions = [];
+            let nextUrl = null;
+            let page = 1;
             
-            // Сохраняем в IndexedDB
+            do {
+                const params = { page_size: 100, page: page };
+                const response = await api.getTransactions(params);
+                
+                const transactions = response.results || response;
+                allTransactions = allTransactions.concat(transactions);
+                
+                nextUrl = response.next;
+                page++;
+                
+                // Ограничим максимум 10 страниц (1000 транзакций)
+                if (page > 10) break;
+            } while (nextUrl);
+            
+            // Очищаем старые синхронизированные транзакции
             const tx = localDB.db.transaction('transactions', 'readwrite');
-            const store = tx.objectStore('transactions');
+            await localDB._promisifyRequest(tx.objectStore('transactions').clear());
             
-            for (const transaction of transactions) {
-                await localDB._promisifyRequest(store.put(transaction));
+            // Сохраняем новые
+            for (const transaction of allTransactions) {
+                await localDB._promisifyRequest(tx.objectStore('transactions').put(transaction));
             }
             
-            console.log(`✅ Загружено ${transactions.length} транзакций`);
+            console.log(`✅ Загружено ${allTransactions.length} транзакций с сервера`);
         } catch (error) {
             console.error('Ошибка загрузки транзакций:', error);
             throw error;

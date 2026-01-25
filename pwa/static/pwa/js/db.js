@@ -75,16 +75,23 @@ class LocalDB {
     }
 
     async addPendingTransaction(transaction) {
-        transaction.created_at = new Date().toISOString();
-        transaction.sync_status = 'pending';
+        // Убираем id если есть (он будет сгенерирован автоматически)
+        const { id, ...dataToSave } = transaction;
+        
+        // Добавляем метаданные
+        dataToSave.created_at = new Date().toISOString();
+        dataToSave.sync_status = 'pending';
         
         const tx = this.db.transaction('pending_transactions', 'readwrite');
         const store = tx.objectStore('pending_transactions');
-        const request = store.add(transaction);
+        const request = store.add(dataToSave);
         
         return new Promise((resolve, reject) => {
             request.onsuccess = () => resolve(request.result); // Возвращаем local_id
-            request.onerror = () => reject(request.error);
+            request.onerror = () => {
+                console.error('IndexedDB error:', request.error);
+                reject(request.error);
+            };
         });
     }
 
