@@ -3,7 +3,7 @@
  * Кэширование ресурсов для работы оффлайн
  */
 
-const CACHE_NAME = 'habirov-v2'; // Обновлена версия для принудительного обновления кеша
+const CACHE_NAME = 'habirov-v3'; // Обновлена версия для принудительного обновления кеша
 const urlsToCache = [
     '/',
     '/static/pwa/css/app.css',
@@ -25,22 +25,41 @@ self.addEventListener('install', (event) => {
         caches.open(CACHE_NAME)
             .then((cache) => {
                 console.log('📦 Кэширование ресурсов');
-                // Используем addAll, но обрабатываем ошибки для каждого ресурса отдельно
-                return Promise.allSettled(
-                    urlsToCache.map(url => 
+                // Сначала кешируем статические ресурсы (они точно должны закешироваться)
+                const staticResources = urlsToCache.filter(url => url.startsWith('/static/') || url === '/manifest.json' || url === '/sw.js');
+                const mainPage = urlsToCache.filter(url => url === '/');
+                
+                return Promise.allSettled([
+                    // Кешируем статические ресурсы
+                    ...staticResources.map(url => 
                         cache.add(url).catch(err => {
                             console.warn(`⚠️ Не удалось закешировать ${url}:`, err);
                             return null;
                         })
+                    ),
+                    // Главную страницу кешируем отдельно, с обработкой ошибок
+                    ...mainPage.map(url => 
+                        fetch(url).then(response => {
+                            if (response.ok) {
+                                return cache.put(url, response);
+                            }
+                            throw new Error(`Failed to fetch ${url}: ${response.status}`);
+                        }).catch(err => {
+                            console.warn(`⚠️ Не удалось закешировать главную страницу ${url}:`, err);
+                            // Не критично, она закешируется при первом запросе
+                            return null;
+                        })
                     )
-                );
+                ]);
             })
             .then(() => {
-                console.log('✅ Все ресурсы закешированы');
+                console.log('✅ Ресурсы закешированы');
                 return self.skipWaiting(); // Активируем сразу
             })
             .catch(err => {
                 console.error('❌ Ошибка при установке Service Worker:', err);
+                // Все равно активируем Service Worker
+                return self.skipWaiting();
             })
     );
 });
@@ -104,7 +123,53 @@ self.addEventListener('fetch', (event) => {
         return;
     }
     
-    // Для главной страницы и других HTML используем Network First с fallback на Cache
+    // Для главной страницы используем Cache First (для работы офлайн)
+    // Но также обновляем кеш в фоне при наличии сети
+    if (url.pathname === '/' || url.pathname === '') {
+        event.respondWith(
+            caches.match(request).then((cachedResponse) => {
+                // Пытаемся загрузить из сети для обновления кеша (в фоне)
+                const fetchPromise = fetch(request).then((response) => {
+                    // Проверяем, что ответ валидный
+                    if (response && response.status === 200 && response.type !== 'error') {
+                        // Клонируем ответ для сохранения в кэш
+                        const responseToCache = response.clone();
+                        caches.open(CACHE_NAME).then((cache) => {
+                            cache.put(request, responseToCache);
+                            console.log('✅ Главная страница обновлена в кеше');
+                        });
+                    }
+                    return response;
+                }).catch(() => {
+                    // Игнорируем ошибки сети
+                    return null;
+                });
+                
+                // Если есть закешированная версия, возвращаем её сразу (работает офлайн)
+                if (cachedResponse) {
+                    // Обновляем кеш в фоне, но не ждем
+                    fetchPromise.catch(() => {});
+                    return cachedResponse;
+                }
+                
+                // Нет в кеше - ждем ответа из сети
+                return fetchPromise.then((response) => {
+                    if (response && response.status === 200) {
+                        return response;
+                    }
+                    // Если не удалось загрузить, возвращаем базовую HTML страницу
+                    throw new Error('Failed to fetch');
+                }).catch(() => {
+                    return new Response('<!DOCTYPE html><html><head><meta charset="utf-8"><title>Офлайн</title></head><body><h1>Приложение загружается...</h1><p>Пожалуйста, проверьте подключение к интернету.</p></body></html>', {
+                        headers: { 'Content-Type': 'text/html; charset=utf-8' }
+                    });
+                });
+            })
+        );
+        return;
+    }
+    
+    // Для других HTML страниц используем Network First с fallback на Cache
     event.respondWith(
         fetch(request)
             .then((response) => {
@@ -126,19 +191,6 @@ self.addEventListener('fetch', (event) => {
                 return caches.match(request).then((cachedResponse) => {
                     if (cachedResponse) {
                         return cachedResponse;
-                    }
-                    
-                    // Если в кэше нет главной страницы, пытаемся вернуть кешированную версию
-                    if (request.url.endsWith('/') || request.url.includes('/')) {
-                        return caches.match('/').then((indexResponse) => {
-                            if (indexResponse) {
-                                return indexResponse;
-                            }
-                            // Последний fallback
-                            return new Response('Офлайн режим. Приложение будет доступно после восстановления соединения.', {
-                                headers: { 'Content-Type': 'text/html; charset=utf-8' }
-                            });
-                        });
                     }
                     
                     return new Response('Resource not available offline', {
