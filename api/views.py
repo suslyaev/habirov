@@ -146,6 +146,13 @@ class TransactionViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
         instance = serializer.save()
         
+        # Перезагружаем объект с связанными данными для правильной сериализации
+        instance.refresh_from_db()
+        # Загружаем связанные объекты
+        instance = Transaction.objects.select_related(
+            'category', 'contractor', 'stage', 'estimate'
+        ).get(pk=instance.pk)
+        
         # Возвращаем полный объект через TransactionSerializer
         output_serializer = TransactionSerializer(instance)
         headers = self.get_success_headers(output_serializer.data)

@@ -482,6 +482,15 @@ class App {
                     // Отправляем сразу на сервер
                     const created = await api.createTransaction(data);
                     console.log('📥 Получена транзакция с сервера:', created);
+                    
+                    if (!created || !created.id) {
+                        console.error('❌ API вернул пустой ответ или транзакция без ID');
+                        errorEl.textContent = '❌ Ошибка: сервер не вернул данные транзакции';
+                        errorEl.classList.remove('hidden');
+                        this.showError('Сервер не вернул данные созданной транзакции. Попробуйте обновить список.');
+                        return;
+                    }
+                    
                     try {
                         await localDB.addTransaction(created);
                         console.log('✅ Транзакция сохранена в IndexedDB');

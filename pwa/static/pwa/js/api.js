@@ -52,29 +52,35 @@ class API {
                 throw new Error('Требуется авторизация');
             }
 
-            if (!response.ok) {
-                let error;
-                try {
-                    error = await response.json();
-                } catch (e) {
-                    error = { error: `HTTP ${response.status}: ${response.statusText}` };
-                }
-                throw new Error(error.detail || error.error || 'Ошибка API');
-            }
-
             // DELETE может вернуть 204 No Content без тела
-            if (response.status === 204 || response.status === 201) {
+            if (response.status === 204) {
                 return null;
             }
 
-            // Проверяем есть ли контент
+            // Читаем тело ответа один раз
             const contentType = response.headers.get('content-type');
+            let responseData = null;
+            
             if (contentType && contentType.includes('application/json')) {
                 const text = await response.text();
-                return text ? JSON.parse(text) : null;
+                if (text && text.trim()) {
+                    try {
+                        responseData = JSON.parse(text);
+                    } catch (e) {
+                        console.error('Ошибка парсинга JSON:', e, 'Текст:', text);
+                        responseData = null;
+                    }
+                }
             }
-            
-            return null;
+
+            if (!response.ok) {
+                // Если это ошибка, используем распарсенные данные или создаем объект ошибки
+                const error = responseData || { error: `HTTP ${response.status}: ${response.statusText}` };
+                throw new Error(error.detail || error.error || error.message || 'Ошибка API');
+            }
+
+            // Возвращаем данные (может быть null для пустых ответов)
+            return responseData;
         } catch (error) {
             console.error('API Error:', error);
             throw error;
