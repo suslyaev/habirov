@@ -53,11 +53,28 @@ class API {
             }
 
             if (!response.ok) {
-                const error = await response.json();
+                let error;
+                try {
+                    error = await response.json();
+                } catch (e) {
+                    error = { error: `HTTP ${response.status}: ${response.statusText}` };
+                }
                 throw new Error(error.detail || error.error || 'Ошибка API');
             }
 
-            return await response.json();
+            // DELETE может вернуть 204 No Content без тела
+            if (response.status === 204 || response.status === 201) {
+                return null;
+            }
+
+            // Проверяем есть ли контент
+            const contentType = response.headers.get('content-type');
+            if (contentType && contentType.includes('application/json')) {
+                const text = await response.text();
+                return text ? JSON.parse(text) : null;
+            }
+            
+            return null;
         } catch (error) {
             console.error('API Error:', error);
             throw error;

@@ -215,16 +215,34 @@ class App {
             successEl.classList.add('hidden');
             
             const formData = new FormData(form);
+            
+            // Валидация обязательных полей
+            const amount = parseFloat(formData.get('amount'));
+            const category = formData.get('category');
+            
+            if (!amount || amount <= 0) {
+                throw new Error('Сумма должна быть больше нуля');
+            }
+            
+            if (!category) {
+                throw new Error('Выберите категорию');
+            }
+            
             const data = {
                 date: formData.get('date'),
                 transaction_type: formData.get('transaction_type'),
-                amount: parseFloat(formData.get('amount')),
-                category: parseInt(formData.get('category')),
+                amount: amount,
+                category: parseInt(category),
                 contractor: formData.get('contractor') ? parseInt(formData.get('contractor')) : null,
                 stage: formData.get('stage') ? parseInt(formData.get('stage')) : null,
                 estimate: formData.get('estimate') ? parseInt(formData.get('estimate')) : null,
-                description: formData.get('description') || '',
+                description: (formData.get('description') || '').trim(),
             };
+            
+            // Убираем null значения для опциональных полей
+            if (!data.contractor) delete data.contractor;
+            if (!data.stage) delete data.stage;
+            if (!data.estimate) delete data.estimate;
             
             try {
                 // Проверяем соединение
@@ -372,7 +390,8 @@ class App {
         try {
             if (isPending) {
                 // Удаляем из локальной БД (pending_transactions)
-                await localDB.deletePendingTransaction(parseInt(txId));
+                // local_id может быть строкой для pending транзакций
+                await localDB.deletePendingTransaction(txId);
                 console.log(`✅ Локальная транзакция ${txId} удалена`);
             } else {
                 // Удаляем через API
@@ -380,7 +399,7 @@ class App {
                     await api.request(`/transactions/${txId}/`, { method: 'DELETE' });
                     console.log(`✅ Транзакция ${txId} удалена с сервера`);
                     
-                    // Также удаляем из локальной БД
+                    // Также удаляем из локальной БД (используем числовой id)
                     const tx = localDB.db.transaction('transactions', 'readwrite');
                     await localDB._promisifyRequest(tx.objectStore('transactions').delete(parseInt(txId)));
                 } catch (error) {

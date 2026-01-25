@@ -33,8 +33,7 @@ class LocalDB {
                 // Несинхронизированные транзакции (локальные)
                 if (!db.objectStoreNames.contains('pending_transactions')) {
                     const pendingStore = db.createObjectStore('pending_transactions', { 
-                        keyPath: 'local_id', 
-                        autoIncrement: true 
+                        keyPath: 'local_id'
                     });
                     pendingStore.createIndex('created_at', 'created_at', { unique: false });
                 }
@@ -75,10 +74,14 @@ class LocalDB {
     }
 
     async addPendingTransaction(transaction) {
-        // Убираем id если есть (он будет сгенерирован автоматически)
+        // Убираем id если есть
         const { id, ...dataToSave } = transaction;
         
+        // Генерируем уникальный local_id (timestamp + случайное число)
+        const localId = `pending_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        
         // Добавляем метаданные
+        dataToSave.local_id = localId;
         dataToSave.created_at = new Date().toISOString();
         dataToSave.sync_status = 'pending';
         
@@ -87,7 +90,7 @@ class LocalDB {
         const request = store.add(dataToSave);
         
         return new Promise((resolve, reject) => {
-            request.onsuccess = () => resolve(request.result); // Возвращаем local_id
+            request.onsuccess = () => resolve(localId);
             request.onerror = () => {
                 console.error('IndexedDB error:', request.error);
                 reject(request.error);
