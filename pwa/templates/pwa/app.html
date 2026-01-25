@@ -14,9 +14,14 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
     
-    <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'pwa/icons/icon-192.png' %}">
-    <link rel="apple-touch-icon" href="{% static 'pwa/icons/icon-192.png' %}">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{% static 'pwa/icons/icon.svg' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'pwa/icons/icon-32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'pwa/icons/icon-16.png' %}">
+    
+    <!-- PWA Icons -->
+    <link rel="apple-touch-icon" sizes="192x192" href="{% static 'pwa/icons/icon-192.png' %}">
+    <link rel="apple-touch-icon" sizes="512x512" href="{% static 'pwa/icons/icon-512.png' %}">
     
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'pwa/css/app.css' %}">
