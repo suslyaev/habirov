@@ -380,10 +380,12 @@ class App {
             return `
                 <div class="transaction-item ${tx.sync_status}" data-tx-id="${txId}" data-tx-pending="${isPending}" data-tx-data='${JSON.stringify(tx).replace(/'/g, "&apos;")}'>
                     <button class="transaction-delete" data-tx-id="${txId}" data-tx-pending="${isPending}" title="Удалить">🗑️</button>
-                    <div class="transaction-status">${statusEmoji} ${statusText}</div>
                     <div class="transaction-header">
                         <span class="transaction-type ${typeClass}">${typeText}</span>
                         <span class="transaction-amount">${amount} ₽</span>
+                    </div>
+                    <div class="transaction-status-row">
+                        <div class="transaction-status">${statusEmoji} ${statusText}</div>
                     </div>
                     <div class="transaction-details">
                         <div><strong>Категория:</strong> ${tx.category_name || 'Не указана'}</div>
