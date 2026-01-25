@@ -29,15 +29,33 @@ class App {
             this.showScreen('login');
             this.setupLoginForm();
         } else {
-            // Пробуем восстановить сессию
+            // Если есть токен, показываем главный экран сразу (для работы офлайн)
+            this.showScreen('main');
+            await this.loadApp();
+            
+            // Пробуем проверить сессию в фоне (если есть интернет)
+            // Не блокируем работу приложения, если нет интернета
             try {
-                await api.getMe();
-                this.showScreen('main');
-                await this.loadApp();
+                const isOnline = await api.checkConnection();
+                if (isOnline) {
+                    await api.getMe();
+                    console.log('✅ Сессия активна');
+                } else {
+                    console.log('📵 Офлайн режим, используем сохраненный токен');
+                }
             } catch (error) {
-                console.error('Сессия истекла:', error);
-                this.showScreen('login');
-                this.setupLoginForm();
+                console.warn('⚠️ Не удалось проверить сессию (возможно офлайн):', error);
+                // Если ошибка критическая (не просто отсутствие интернета), 
+                // проверяем, не истек ли токен
+                if (error.message && error.message.includes('Требуется авторизация')) {
+                    // Токен недействителен, показываем форму входа
+                    console.log('🔐 Токен недействителен, требуется повторная авторизация');
+                    localStorage.removeItem('access_token');
+                    localStorage.removeItem('refresh_token');
+                    this.showScreen('login');
+                    this.setupLoginForm();
+                }
+                // Иначе продолжаем работу в офлайн режиме
             }
         }
     }

@@ -3,7 +3,7 @@
  * Кэширование ресурсов для работы оффлайн
  */
 
-const CACHE_NAME = 'habirov-v1';
+const CACHE_NAME = 'habirov-v2'; // Обновлена версия для принудительного обновления кеша
 const urlsToCache = [
     '/',
     '/static/pwa/css/app.css',
@@ -12,6 +12,9 @@ const urlsToCache = [
     '/static/pwa/js/sync.js',
     '/static/pwa/js/app.js',
     '/manifest.json',
+    '/sw.js',
+    '/static/pwa/icons/icon-192.png',
+    '/static/pwa/icons/icon-512.png',
 ];
 
 // Установка Service Worker
@@ -22,9 +25,23 @@ self.addEventListener('install', (event) => {
         caches.open(CACHE_NAME)
             .then((cache) => {
                 console.log('📦 Кэширование ресурсов');
-                return cache.addAll(urlsToCache);
+                // Используем addAll, но обрабатываем ошибки для каждого ресурса отдельно
+                return Promise.allSettled(
+                    urlsToCache.map(url => 
+                        cache.add(url).catch(err => {
+                            console.warn(`⚠️ Не удалось закешировать ${url}:`, err);
+                            return null;
+                        })
+                    )
+                );
             })
-            .then(() => self.skipWaiting())
+            .then(() => {
+                console.log('✅ Все ресурсы закешированы');
+                return self.skipWaiting(); // Активируем сразу
+            })
+            .catch(err => {
+                console.error('❌ Ошибка при установке Service Worker:', err);
+            })
     );
 });
 
@@ -42,26 +59,62 @@ self.addEventListener('activate', (event) => {
                     }
                 })
             );
-        }).then(() => self.clients.claim())
+        }).then(() => {
+            // Немедленно берем контроль над всеми клиентами
+            return self.clients.claim();
+        })
     );
 });
 
 // Перехват запросов
 self.addEventListener('fetch', (event) => {
     const { request } = event;
+    const url = new URL(request.url);
     
     // Не кэшируем API запросы - они идут через fetch с проверкой соединения
-    if (request.url.includes('/api/')) {
+    if (url.pathname.startsWith('/api/')) {
         return; // Пропускаем, пусть обрабатывается обычным fetch
     }
     
-    // Стратегия: Network First, Fallback to Cache
+    // Для статических ресурсов (CSS, JS) используем Cache First
+    if (url.pathname.startsWith('/static/')) {
+        event.respondWith(
+            caches.match(request).then((cachedResponse) => {
+                if (cachedResponse) {
+                    return cachedResponse;
+                }
+                
+                // Если нет в кеше, пытаемся загрузить из сети
+                return fetch(request).then((response) => {
+                    // Клонируем для сохранения в кеш
+                    const responseToCache = response.clone();
+                    caches.open(CACHE_NAME).then((cache) => {
+                        cache.put(request, responseToCache);
+                    });
+                    return response;
+                }).catch(() => {
+                    // Если и сети нет, возвращаем пустой ответ
+                    return new Response('Resource not available offline', {
+                        status: 503,
+                        headers: { 'Content-Type': 'text/plain' }
+                    });
+                });
+            })
+        );
+        return;
+    }
+    
+    // Для главной страницы и других HTML используем Network First с fallback на Cache
     event.respondWith(
         fetch(request)
             .then((response) => {
+                // Проверяем, что ответ валидный
+                if (!response || response.status !== 200 || response.type === 'error') {
+                    throw new Error('Invalid response');
+                }
+                
                 // Клонируем ответ для сохранения в кэш
                 const responseToCache = response.clone();
-                
                 caches.open(CACHE_NAME).then((cache) => {
                     cache.put(request, responseToCache);
                 });
@@ -70,13 +123,26 @@ self.addEventListener('fetch', (event) => {
             })
             .catch(() => {
                 // Если сеть недоступна, берем из кэша
-                return caches.match(request).then((response) => {
-                    if (response) {
-                        return response;
+                return caches.match(request).then((cachedResponse) => {
+                    if (cachedResponse) {
+                        return cachedResponse;
                     }
                     
-                    // Если в кэше нет, возвращаем офлайн страницу (опционально)
-                    return new Response('Офлайн режим', {
+                    // Если в кэше нет главной страницы, пытаемся вернуть кешированную версию
+                    if (request.url.endsWith('/') || request.url.includes('/')) {
+                        return caches.match('/').then((indexResponse) => {
+                            if (indexResponse) {
+                                return indexResponse;
+                            }
+                            // Последний fallback
+                            return new Response('Офлайн режим. Приложение будет доступно после восстановления соединения.', {
+                                headers: { 'Content-Type': 'text/html; charset=utf-8' }
+                            });
+                        });
+                    }
+                    
+                    return new Response('Resource not available offline', {
+                        status: 503,
                         headers: { 'Content-Type': 'text/plain' }
                     });
                 });
