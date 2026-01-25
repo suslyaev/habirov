@@ -477,67 +477,73 @@ class App {
             console.log('📝 Данные для сохранения:', data);
             
             try {
-                // Проверяем соединение
+                // ВСЕГДА сначала сохраняем локально (даже если есть интернет)
+                let localId = null;
+                try {
+                    localId = await localDB.addPendingTransaction(data);
+                    console.log('✅ Транзакция успешно сохранена локально:', localId);
+                } catch (dbError) {
+                    console.error('❌ IndexedDB error при сохранении:', dbError);
+                    
+                    // Проверяем, может транзакция все-таки сохранилась
+                    try {
+                        const pending = await localDB.getPendingTransactions();
+                        const saved = pending.find(t => 
+                            t.date === data.date && 
+                            t.amount === data.amount && 
+                            t.transaction_type === data.transaction_type
+                        );
+                        
+                        if (saved) {
+                            console.log('✅ Транзакция найдена в БД после ошибки, игнорируем ошибку');
+                            localId = saved.local_id;
+                        } else {
+                            throw new Error(`Не удалось сохранить транзакцию: ${dbError.message || dbError.name || 'Неизвестная ошибка IndexedDB'}`);
+                        }
+                    } catch (checkError) {
+                        throw new Error(`Не удалось сохранить транзакцию локально: ${checkError.message || dbError.message || 'Неизвестная ошибка'}`);
+                    }
+                }
+                
+                if (!localId) {
+                    throw new Error('Не удалось сохранить транзакцию локально');
+                }
+                
+                // Теперь пытаемся отправить на сервер (если есть интернет)
                 const isOnline = await api.checkConnection();
                 
                 if (isOnline) {
-                    // Отправляем сразу на сервер
-                    const created = await api.createTransaction(data);
-                    console.log('📥 Получена транзакция с сервера:', created);
-                    
-                    if (!created || !created.id) {
-                        console.error('❌ API вернул пустой ответ или транзакция без ID');
-                        errorEl.textContent = '❌ Ошибка: сервер не вернул данные транзакции';
-                        errorEl.classList.remove('hidden');
-                        this.showError('Сервер не вернул данные созданной транзакции. Попробуйте обновить список.');
-                        return;
-                    }
-                    
                     try {
-                        await localDB.addTransaction(created);
-                        console.log('✅ Транзакция сохранена в IndexedDB');
-                    } catch (dbError) {
-                        console.error('❌ Ошибка сохранения в IndexedDB:', dbError);
-                        console.error('Данные транзакции:', created);
-                        // Показываем ошибку, но не блокируем успех создания
-                        this.showError(`Транзакция создана на сервере, но не сохранена локально: ${dbError.message}`);
-                    }
-                    successEl.textContent = '✅ Транзакция создана и синхронизирована';
-                    successEl.classList.remove('hidden');
-                } else {
-                    // Сохраняем локально
-                    let localId = null;
-                    try {
-                        localId = await localDB.addPendingTransaction(data);
-                        console.log('✅ Транзакция успешно сохранена локально:', localId);
-                    } catch (dbError) {
-                        console.error('❌ IndexedDB error при сохранении:', dbError);
+                        // Отправляем на сервер
+                        const created = await api.createTransaction(data);
+                        console.log('📥 Получена транзакция с сервера:', created);
                         
-                        // Проверяем, может транзакция все-таки сохранилась
-                        try {
-                            const pending = await localDB.getPendingTransactions();
-                            const saved = pending.find(t => 
-                                t.date === data.date && 
-                                t.amount === data.amount && 
-                                t.transaction_type === data.transaction_type
-                            );
+                        if (created && created.id) {
+                            // Успешно отправлено - сохраняем синхронизированную версию
+                            await localDB.addTransaction(created);
                             
-                            if (saved) {
-                                console.log('✅ Транзакция найдена в БД после ошибки, игнорируем ошибку');
-                                localId = saved.local_id;
-                            } else {
-                                throw new Error(`Не удалось сохранить транзакцию: ${dbError.message || dbError.name || 'Неизвестная ошибка IndexedDB'}`);
-                            }
-                        } catch (checkError) {
-                            throw new Error(`Не удалось сохранить транзакцию локально: ${dbError.message || dbError.name || 'Неизвестная ошибка'}`);
+                            // Удаляем из pending
+                            await localDB.deletePendingTransaction(localId);
+                            
+                            console.log('✅ Транзакция синхронизирована с сервером');
+                            successEl.textContent = '✅ Транзакция создана и синхронизирована';
+                        } else {
+                            // Сервер не вернул данные, но транзакция сохранена локально
+                            console.warn('⚠️ Сервер не вернул данные транзакции, оставляем в pending');
+                            successEl.textContent = '🟡 Транзакция сохранена локально (синхронизация при следующем обновлении)';
                         }
+                    } catch (syncError) {
+                        // Ошибка при отправке, но транзакция уже сохранена локально
+                        console.error('❌ Ошибка синхронизации с сервером:', syncError);
+                        console.log('💾 Транзакция сохранена локально, будет синхронизирована позже');
+                        successEl.textContent = '🟡 Транзакция сохранена локально (будет синхронизирована при восстановлении связи)';
                     }
-                    
-                    if (localId) {
-                        successEl.textContent = `🟡 Транзакция сохранена локально (будет синхронизирована при восстановлении связи)`;
-                        successEl.classList.remove('hidden');
-                    }
+                } else {
+                    // Нет интернета - транзакция уже сохранена локально
+                    successEl.textContent = '🟡 Транзакция сохранена локально (будет синхронизирована при восстановлении связи)';
                 }
+                
+                successEl.classList.remove('hidden');
                 
                 // Если дошли сюда, значит транзакция создана успешно
                 form.reset();
