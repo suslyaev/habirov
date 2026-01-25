@@ -82,6 +82,23 @@
                     </select>
                 </div>
                 
+                <!-- Пагинация -->
+                <div class="pagination-controls">
+                    <div class="pagination-info">
+                        <span id="pagination-info">Загрузка...</span>
+                    </div>
+                    <div class="pagination-buttons">
+                        <button id="pagination-prev" class="btn btn-small" disabled>← Назад</button>
+                        <select id="pagination-page-size" class="form-control-small">
+                            <option value="10">10</option>
+                            <option value="20" selected>20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <button id="pagination-next" class="btn btn-small" disabled>Вперед →</button>
+                    </div>
+                </div>
+                
                 <div id="transactions-list" class="transactions-list">
                     <!-- Транзакции загружаются динамически -->
                 </div>

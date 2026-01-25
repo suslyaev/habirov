@@ -270,6 +270,48 @@ select:focus {
     margin-bottom: 20px;
 }
 
+/* Пагинация */
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pagination-info {
+    font-size: 14px;
+    color: #666;
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.form-control-small {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 60px;
+    background: white;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .transactions-list {
     display: flex;
     flex-direction: column;
@@ -462,7 +504,7 @@ select:focus {
 /* Кнопка удаления в транзакции */
 .transaction-delete {
     position: absolute;
-    top: 12px;
+    bottom: 12px;
     right: 12px;
     background: var(--danger);
     color: white;
@@ -493,7 +535,7 @@ select:focus {
 
 .transaction-item {
     position: relative;
-    padding-right: 50px; /* Место для кнопки удаления */
+    padding-bottom: 50px; /* Место для кнопки удаления внизу */
 }
 
 /* iOS специфичные стили */

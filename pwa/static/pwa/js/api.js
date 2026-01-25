@@ -161,6 +161,12 @@ class API {
         return await this.request('/projects/');
     }
 
+    async getObjects(projectId = null) {
+        const params = projectId ? { project: projectId } : {};
+        const queryString = new URLSearchParams(params).toString();
+        return await this.request(`/objects/${queryString ? '?' + queryString : ''}`);
+    }
+
     async getStages(projectId = null) {
         const params = projectId ? { project: projectId } : {};
         const queryString = new URLSearchParams(params).toString();

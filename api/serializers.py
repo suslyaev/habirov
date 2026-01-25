@@ -70,6 +70,7 @@ class TransactionSerializer(serializers.ModelSerializer):
     category_name = serializers.CharField(source='category.name', read_only=True)
     contractor_name = serializers.CharField(source='contractor.__str__', read_only=True, allow_null=True)
     project_name = serializers.SerializerMethodField()
+    project_id = serializers.SerializerMethodField()
     stage_name = serializers.CharField(source='get_stage', read_only=True, allow_null=True)
     transaction_type_display = serializers.CharField(source='get_transaction_type_display', read_only=True)
     
@@ -79,13 +80,17 @@ class TransactionSerializer(serializers.ModelSerializer):
             'id', 'amount', 'transaction_type', 'transaction_type_display',
             'category', 'category_name', 'contractor', 'contractor_name',
             'description', 'date', 'stage', 'stage_name', 'estimate', 'estimate_item',
-            'project_name', 'created_at'
+            'project_name', 'project_id', 'created_at'
         ]
         read_only_fields = ['created_at']
     
     def get_project_name(self, obj):
         project = obj.get_project()
         return project.name if project else None
+    
+    def get_project_id(self, obj):
+        project = obj.get_project()
+        return project.id if project else None
 
 
 class TransactionCreateSerializer(serializers.ModelSerializer):

@@ -3,7 +3,7 @@
  */
 
 const DB_NAME = 'HabirovDB';
-const DB_VERSION = 1;
+const DB_VERSION = 4; // Увеличена версия для добавления objects в справочники
 
 class LocalDB {
     constructor() {
@@ -22,6 +22,7 @@ class LocalDB {
 
             request.onupgradeneeded = (event) => {
                 const db = event.target.result;
+                const oldVersion = event.oldVersion;
 
                 // Транзакции (синхронизированные)
                 if (!db.objectStoreNames.contains('transactions')) {
@@ -31,15 +32,22 @@ class LocalDB {
                 }
 
                 // Несинхронизированные транзакции (локальные)
+                // Если обновляем с версии 2 или меньше, пересоздаем структуру
+                if (oldVersion < 3 && db.objectStoreNames.contains('pending_transactions')) {
+                    db.deleteObjectStore('pending_transactions');
+                    console.log('🔄 Пересоздание pending_transactions для версии 3');
+                }
+                
                 if (!db.objectStoreNames.contains('pending_transactions')) {
                     const pendingStore = db.createObjectStore('pending_transactions', { 
                         keyPath: 'local_id'
                     });
                     pendingStore.createIndex('created_at', 'created_at', { unique: false });
+                    console.log('✅ Создан pending_transactions с keyPath: local_id');
                 }
 
                 // Справочники (кэш)
-                ['categories', 'projects', 'stages', 'estimates', 'contractors'].forEach(storeName => {
+                ['categories', 'projects', 'objects', 'stages', 'estimates', 'contractors'].forEach(storeName => {
                     if (!db.objectStoreNames.contains(storeName)) {
                         db.createObjectStore(storeName, { keyPath: 'id' });
                     }
@@ -74,26 +82,55 @@ class LocalDB {
     }
 
     async addPendingTransaction(transaction) {
-        // Убираем id если есть
-        const { id, ...dataToSave } = transaction;
-        
         // Генерируем уникальный local_id (timestamp + случайное число)
         const localId = `pending_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         
-        // Добавляем метаданные
-        dataToSave.local_id = localId;
-        dataToSave.created_at = new Date().toISOString();
-        dataToSave.sync_status = 'pending';
+        // Создаем чистый объект только с нужными полями
+        // IndexedDB не может сохранить undefined, поэтому используем только определенные значения
+        const dataToSave = {
+            local_id: localId,
+            date: String(transaction.date || ''),
+            transaction_type: String(transaction.transaction_type || ''),
+            amount: parseFloat(transaction.amount) || 0,
+            category: parseInt(transaction.category) || 0,
+            description: String(transaction.description || ''),
+            created_at: new Date().toISOString(),
+            sync_status: 'pending'
+        };
         
-        const tx = this.db.transaction('pending_transactions', 'readwrite');
-        const store = tx.objectStore('pending_transactions');
+        // Добавляем опциональные поля только если они есть и не пустые
+        if (transaction.contractor && transaction.contractor !== '' && transaction.contractor !== null) {
+            dataToSave.contractor = parseInt(transaction.contractor);
+        }
+        if (transaction.stage && transaction.stage !== '' && transaction.stage !== null) {
+            dataToSave.stage = parseInt(transaction.stage);
+        }
+        if (transaction.estimate && transaction.estimate !== '' && transaction.estimate !== null) {
+            dataToSave.estimate = parseInt(transaction.estimate);
+        }
+        
+        console.log('💾 Сохранение в IndexedDB:', dataToSave);
+        
+        // Проверяем что local_id установлен
+        if (!dataToSave.local_id) {
+            throw new Error('local_id не установлен перед сохранением');
+        }
+        
+        const dbTx = this.db.transaction('pending_transactions', 'readwrite');
+        const store = dbTx.objectStore('pending_transactions');
         const request = store.add(dataToSave);
         
         return new Promise((resolve, reject) => {
-            request.onsuccess = () => resolve(localId);
-            request.onerror = () => {
-                console.error('IndexedDB error:', request.error);
-                reject(request.error);
+            request.onsuccess = () => {
+                console.log('✅ Транзакция сохранена в IndexedDB:', localId);
+                resolve(localId);
+            };
+            request.onerror = (event) => {
+                const error = event.target.error;
+                console.error('❌ IndexedDB error:', error);
+                console.error('Данные которые пытались сохранить:', dataToSave);
+                console.error('local_id:', dataToSave.local_id);
+                reject(new Error(`Ошибка сохранения в IndexedDB: ${error.message || error.name || 'Неизвестная ошибка'}`));
             };
         });
     }

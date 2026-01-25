@@ -76,9 +76,10 @@ class SyncManager {
      */
     async syncReferenceData() {
         try {
-            const [categories, projects, stages, estimates, contractors] = await Promise.all([
+            const [categories, projects, objects, stages, estimates, contractors] = await Promise.all([
                 api.getCategories(),
                 api.getProjects(),
+                api.getObjects(),
                 api.getStages(),
                 api.getEstimates(),
                 api.getContractors(),
@@ -87,6 +88,7 @@ class SyncManager {
             await Promise.all([
                 localDB.saveReferenceData('categories', categories.results || categories),
                 localDB.saveReferenceData('projects', projects.results || projects),
+                localDB.saveReferenceData('objects', objects.results || objects),
                 localDB.saveReferenceData('stages', stages.results || stages),
                 localDB.saveReferenceData('estimates', estimates.results || estimates),
                 localDB.saveReferenceData('contractors', contractors.results || contractors),

@@ -6,6 +6,15 @@ class App {
     constructor() {
         this.currentView = 'transactions';
         this.referenceData = {};
+        this.pagination = {
+            currentPage: 1,
+            pageSize: 20,
+            totalItems: 0,
+            filteredItems: []
+        };
+        this.currentFilter = {
+            project: null
+        };
     }
 
     async init() {
@@ -84,6 +93,7 @@ class App {
         try {
             this.referenceData.categories = await localDB.getReferenceData('categories');
             this.referenceData.projects = await localDB.getReferenceData('projects');
+            this.referenceData.objects = await localDB.getReferenceData('objects');
             this.referenceData.stages = await localDB.getReferenceData('stages');
             this.referenceData.estimates = await localDB.getReferenceData('estimates');
             this.referenceData.contractors = await localDB.getReferenceData('contractors');
@@ -143,10 +153,98 @@ class App {
     // === Транзакции ===
     async loadTransactions() {
         try {
-            const transactions = await localDB.getTransactions();
-            this.renderTransactions(transactions);
+            const allTransactions = await localDB.getTransactions();
+            
+            // Применяем фильтры
+            let filtered = this.applyFilters(allTransactions);
+            
+            // Сохраняем отфильтрованные транзакции
+            this.pagination.filteredItems = filtered;
+            this.pagination.totalItems = filtered.length;
+            
+            // Применяем пагинацию
+            const paginated = this.applyPagination(filtered);
+            
+            // Обновляем UI пагинации
+            this.updatePaginationUI();
+            
+            // Рендерим транзакции
+            this.renderTransactions(paginated);
         } catch (error) {
             console.error('Ошибка загрузки транзакций:', error);
+        }
+    }
+    
+    applyFilters(transactions) {
+        let filtered = [...transactions];
+        
+        // Фильтр по проекту
+        if (this.currentFilter.project) {
+            const projectId = parseInt(this.currentFilter.project);
+            
+            filtered = filtered.filter(tx => {
+                // Если есть project_id в транзакции (из API)
+                if (tx.project_id === projectId) {
+                    return true;
+                }
+                
+                // Если project_id нет, ищем через stage или estimate
+                if (tx.stage) {
+                    const stage = (this.referenceData.stages || []).find(s => s.id === tx.stage);
+                    if (stage) {
+                        const object = (this.referenceData.objects || []).find(o => o.id === stage.object);
+                        if (object && object.project === projectId) {
+                            return true;
+                        }
+                    }
+                }
+                if (tx.estimate) {
+                    const estimate = (this.referenceData.estimates || []).find(e => e.id === tx.estimate);
+                    if (estimate && estimate.stage) {
+                        const stage = (this.referenceData.stages || []).find(s => s.id === estimate.stage);
+                        if (stage) {
+                            const object = (this.referenceData.objects || []).find(o => o.id === stage.object);
+                            if (object && object.project === projectId) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                return false;
+            });
+        }
+        
+        return filtered;
+    }
+    
+    applyPagination(transactions) {
+        const start = (this.pagination.currentPage - 1) * this.pagination.pageSize;
+        const end = start + this.pagination.pageSize;
+        return transactions.slice(start, end);
+    }
+    
+    updatePaginationUI() {
+        const infoEl = document.getElementById('pagination-info');
+        const prevBtn = document.getElementById('pagination-prev');
+        const nextBtn = document.getElementById('pagination-next');
+        const totalPages = Math.ceil(this.pagination.totalItems / this.pagination.pageSize);
+        
+        if (infoEl) {
+            if (this.pagination.totalItems === 0) {
+                infoEl.textContent = 'Нет транзакций';
+            } else {
+                const start = (this.pagination.currentPage - 1) * this.pagination.pageSize + 1;
+                const end = Math.min(this.pagination.currentPage * this.pagination.pageSize, this.pagination.totalItems);
+                infoEl.textContent = `Показано ${start}-${end} из ${this.pagination.totalItems}`;
+            }
+        }
+        
+        if (prevBtn) {
+            prevBtn.disabled = this.pagination.currentPage <= 1;
+        }
+        
+        if (nextBtn) {
+            nextBtn.disabled = this.pagination.currentPage >= totalPages || totalPages === 0;
         }
     }
 
@@ -228,21 +326,32 @@ class App {
                 throw new Error('Выберите категорию');
             }
             
+            // Собираем данные с валидацией
             const data = {
                 date: formData.get('date'),
                 transaction_type: formData.get('transaction_type'),
                 amount: amount,
                 category: parseInt(category),
-                contractor: formData.get('contractor') ? parseInt(formData.get('contractor')) : null,
-                stage: formData.get('stage') ? parseInt(formData.get('stage')) : null,
-                estimate: formData.get('estimate') ? parseInt(formData.get('estimate')) : null,
                 description: (formData.get('description') || '').trim(),
             };
             
-            // Убираем null значения для опциональных полей
-            if (!data.contractor) delete data.contractor;
-            if (!data.stage) delete data.stage;
-            if (!data.estimate) delete data.estimate;
+            // Добавляем опциональные поля только если они заполнены
+            const contractor = formData.get('contractor');
+            if (contractor && contractor !== '') {
+                data.contractor = parseInt(contractor);
+            }
+            
+            const stage = formData.get('stage');
+            if (stage && stage !== '') {
+                data.stage = parseInt(stage);
+            }
+            
+            const estimate = formData.get('estimate');
+            if (estimate && estimate !== '') {
+                data.estimate = parseInt(estimate);
+            }
+            
+            console.log('📝 Данные для сохранения:', data);
             
             try {
                 // Проверяем соединение
@@ -256,16 +365,40 @@ class App {
                     successEl.classList.remove('hidden');
                 } else {
                     // Сохраняем локально
+                    let localId = null;
                     try {
-                        const localId = await localDB.addPendingTransaction(data);
+                        localId = await localDB.addPendingTransaction(data);
+                        console.log('✅ Транзакция успешно сохранена локально:', localId);
+                    } catch (dbError) {
+                        console.error('❌ IndexedDB error при сохранении:', dbError);
+                        
+                        // Проверяем, может транзакция все-таки сохранилась
+                        try {
+                            const pending = await localDB.getPendingTransactions();
+                            const saved = pending.find(t => 
+                                t.date === data.date && 
+                                t.amount === data.amount && 
+                                t.transaction_type === data.transaction_type
+                            );
+                            
+                            if (saved) {
+                                console.log('✅ Транзакция найдена в БД после ошибки, игнорируем ошибку');
+                                localId = saved.local_id;
+                            } else {
+                                throw new Error(`Не удалось сохранить транзакцию: ${dbError.message || dbError.name || 'Неизвестная ошибка IndexedDB'}`);
+                            }
+                        } catch (checkError) {
+                            throw new Error(`Не удалось сохранить транзакцию локально: ${dbError.message || dbError.name || 'Неизвестная ошибка'}`);
+                        }
+                    }
+                    
+                    if (localId) {
                         successEl.textContent = `🟡 Транзакция сохранена локально (будет синхронизирована при восстановлении связи)`;
                         successEl.classList.remove('hidden');
-                    } catch (dbError) {
-                        console.error('IndexedDB error:', dbError);
-                        throw new Error('Не удалось сохранить транзакцию локально. Проверьте доступность хранилища.');
                     }
                 }
                 
+                // Если дошли сюда, значит транзакция создана успешно
                 form.reset();
                 document.getElementById('tr-date').valueAsDate = new Date();
                 
@@ -278,7 +411,7 @@ class App {
                 }, 2000);
                 
             } catch (error) {
-                console.error('Ошибка создания транзакции:', error);
+                console.error('❌ Ошибка создания транзакции:', error);
                 // Показываем ошибку в попапе
                 this.showError(`❌ Ошибка создания транзакции: ${error.message || 'Неизвестная ошибка'}`);
                 // Также показываем внизу формы для совместимости
@@ -331,7 +464,32 @@ class App {
 
         // Фильтр по проектам
         document.getElementById('filter-project').addEventListener('change', async (e) => {
+            const projectId = e.target.value;
+            this.currentFilter.project = projectId || null;
+            this.pagination.currentPage = 1; // Сбрасываем на первую страницу при изменении фильтра
             await this.loadTransactions();
+        });
+        
+        // Пагинация
+        document.getElementById('pagination-prev').addEventListener('click', () => {
+            if (this.pagination.currentPage > 1) {
+                this.pagination.currentPage--;
+                this.loadTransactions();
+            }
+        });
+        
+        document.getElementById('pagination-next').addEventListener('click', () => {
+            const totalPages = Math.ceil(this.pagination.totalItems / this.pagination.pageSize);
+            if (this.pagination.currentPage < totalPages) {
+                this.pagination.currentPage++;
+                this.loadTransactions();
+            }
+        });
+        
+        document.getElementById('pagination-page-size').addEventListener('change', (e) => {
+            this.pagination.pageSize = parseInt(e.target.value);
+            this.pagination.currentPage = 1; // Сбрасываем на первую страницу
+            this.loadTransactions();
         });
         
         // Модальные окна
