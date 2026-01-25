@@ -140,6 +140,29 @@ class TransactionViewSet(viewsets.ModelViewSet):
             return TransactionCreateSerializer
         return TransactionSerializer
     
+    def create(self, request, *args, **kwargs):
+        """Переопределяем create, чтобы вернуть полный объект через TransactionSerializer"""
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        instance = serializer.save()
+        
+        # Возвращаем полный объект через TransactionSerializer
+        output_serializer = TransactionSerializer(instance)
+        headers = self.get_success_headers(output_serializer.data)
+        return Response(output_serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+    
+    def update(self, request, *args, **kwargs):
+        """Переопределяем update, чтобы вернуть полный объект через TransactionSerializer"""
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        instance = serializer.save()
+        
+        # Возвращаем полный объект через TransactionSerializer
+        output_serializer = TransactionSerializer(instance)
+        return Response(output_serializer.data)
+    
     def get_queryset(self):
         """Фильтрация по параметрам"""
         queryset = Transaction.objects.all().select_related(

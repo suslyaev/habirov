@@ -481,7 +481,16 @@ class App {
                 if (isOnline) {
                     // Отправляем сразу на сервер
                     const created = await api.createTransaction(data);
-                    await localDB.addTransaction(created);
+                    console.log('📥 Получена транзакция с сервера:', created);
+                    try {
+                        await localDB.addTransaction(created);
+                        console.log('✅ Транзакция сохранена в IndexedDB');
+                    } catch (dbError) {
+                        console.error('❌ Ошибка сохранения в IndexedDB:', dbError);
+                        console.error('Данные транзакции:', created);
+                        // Показываем ошибку, но не блокируем успех создания
+                        this.showError(`Транзакция создана на сервере, но не сохранена локально: ${dbError.message}`);
+                    }
                     successEl.textContent = '✅ Транзакция создана и синхронизирована';
                     successEl.classList.remove('hidden');
                 } else {

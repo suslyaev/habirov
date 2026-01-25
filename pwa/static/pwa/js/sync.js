@@ -163,9 +163,9 @@ class SyncManager {
             const tx = localDB.db.transaction('transactions', 'readwrite');
             await localDB._promisifyRequest(tx.objectStore('transactions').clear());
             
-            // Сохраняем новые
+            // Сохраняем новые (используем addTransaction для нормализации данных)
             for (const transaction of allTransactions) {
-                await localDB._promisifyRequest(tx.objectStore('transactions').put(transaction));
+                await localDB.addTransaction(transaction);
             }
             
             console.log(`✅ Загружено ${allTransactions.length} транзакций с сервера`);

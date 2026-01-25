@@ -76,9 +76,55 @@ class LocalDB {
     }
 
     async addTransaction(transaction) {
+        // Нормализуем данные перед сохранением
+        // IndexedDB требует, чтобы keyPath 'id' был числом
+        const normalized = {
+            id: parseInt(transaction.id),
+            amount: parseFloat(transaction.amount) || 0,
+            transaction_type: String(transaction.transaction_type || ''),
+            transaction_type_display: String(transaction.transaction_type_display || transaction.transaction_type || ''),
+            category: parseInt(transaction.category) || 0,
+            category_name: String(transaction.category_name || ''),
+            description: String(transaction.description || ''),
+            date: String(transaction.date || ''),
+            created_at: String(transaction.created_at || new Date().toISOString()),
+            sync_status: 'synced' // Помечаем как синхронизированную
+        };
+        
+        // Добавляем опциональные поля только если они есть
+        if (transaction.contractor !== null && transaction.contractor !== undefined) {
+            normalized.contractor = parseInt(transaction.contractor);
+            normalized.contractor_name = String(transaction.contractor_name || '');
+        }
+        
+        if (transaction.stage !== null && transaction.stage !== undefined) {
+            normalized.stage = parseInt(transaction.stage);
+            normalized.stage_name = String(transaction.stage_name || '');
+        }
+        
+        if (transaction.estimate !== null && transaction.estimate !== undefined) {
+            normalized.estimate = parseInt(transaction.estimate);
+        }
+        
+        if (transaction.estimate_item !== null && transaction.estimate_item !== undefined) {
+            normalized.estimate_item = parseInt(transaction.estimate_item);
+        }
+        
+        if (transaction.project_id !== null && transaction.project_id !== undefined) {
+            normalized.project_id = parseInt(transaction.project_id);
+            normalized.project_name = String(transaction.project_name || '');
+        }
+        
+        console.log('💾 Сохранение транзакции в IndexedDB:', normalized);
+        
+        // Проверяем что id установлен
+        if (!normalized.id || isNaN(normalized.id)) {
+            throw new Error('ID транзакции не установлен или не является числом');
+        }
+        
         const tx = this.db.transaction('transactions', 'readwrite');
         const store = tx.objectStore('transactions');
-        await this._promisifyRequest(store.put(transaction));
+        await this._promisifyRequest(store.put(normalized));
     }
 
     async addPendingTransaction(transaction) {
